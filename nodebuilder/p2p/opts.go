@@ -8,7 +8,7 @@ import (
 	hst "github.com/libp2p/go-libp2p/core/host"
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/libs/fxutil"
+	"github.com/sunrise-zone/sunrise-node/libs/fxutil"
 )
 
 // WithP2PKey sets custom Ed25519 private key for p2p networking.

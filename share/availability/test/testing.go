@@ -17,9 +17,9 @@ import (
 	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/ipld"
-	"github.com/celestiaorg/celestia-node/share/sharetest"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/share/sharetest"
 )
 
 // RandFillBS fills the given BlockService with a random block of a given size.

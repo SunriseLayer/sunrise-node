@@ -7,10 +7,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-app/pkg/da"
 	"github.com/celestiaorg/rsmt2d"
+	"github.com/sunrise-zone/sunrise-app/pkg/da"
 
-	"github.com/celestiaorg/celestia-node/share/eds/edstest"
+	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
 )
 
 // TestNamespaceFromCID checks that deriving the Namespaced hash from

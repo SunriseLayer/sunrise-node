@@ -10,13 +10,13 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-node/api/rpc/client"
-	"github.com/celestiaorg/celestia-node/blob"
-	"github.com/celestiaorg/celestia-node/blob/blobtest"
-	"github.com/celestiaorg/celestia-node/libs/authtoken"
-	"github.com/celestiaorg/celestia-node/nodebuilder"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/tests/swamp"
+	"github.com/sunrise-zone/sunrise-node/api/rpc/client"
+	"github.com/sunrise-zone/sunrise-node/blob"
+	"github.com/sunrise-zone/sunrise-node/blob/blobtest"
+	"github.com/sunrise-zone/sunrise-node/libs/authtoken"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/tests/swamp"
 )
 
 func getAdminClient(ctx context.Context, nd *nodebuilder.Node, t *testing.T) *client.Client {

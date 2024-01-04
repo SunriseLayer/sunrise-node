@@ -5,7 +5,7 @@ import (
 
 	logging "github.com/ipfs/go-log/v2"
 
-	"github.com/celestiaorg/celestia-node/share/p2p"
+	"github.com/sunrise-zone/sunrise-node/share/p2p"
 )
 
 const protocolString = "/shrex/eds/v0.0.1"

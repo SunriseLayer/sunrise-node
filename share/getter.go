@@ -9,7 +9,7 @@ import (
 	"github.com/celestiaorg/nmt"
 	"github.com/celestiaorg/rsmt2d"
 
-	"github.com/celestiaorg/celestia-node/header"
+	"github.com/sunrise-zone/sunrise-node/header"
 )
 
 var (

@@ -5,21 +5,21 @@ import (
 	"testing"
 	"time"
 
+	"github.com/cometbft/cometbft/libs/bytes"
+	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
+	"github.com/cometbft/cometbft/types"
 	"github.com/ipfs/boxo/blockservice"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/libs/bytes"
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
-	"github.com/tendermint/tendermint/types"
 
-	"github.com/celestiaorg/celestia-app/pkg/da"
 	"github.com/celestiaorg/nmt"
 	"github.com/celestiaorg/rsmt2d"
+	"github.com/sunrise-zone/sunrise-app/pkg/da"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/header/headertest"
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/eds/edstest"
-	"github.com/celestiaorg/celestia-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/header/headertest"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
 )
 
 // FraudMaker allows to produce an invalid header at the specified height in order to produce the

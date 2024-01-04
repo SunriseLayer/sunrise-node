@@ -3,7 +3,7 @@ package ipld
 import (
 	"github.com/ipfs/go-cid"
 
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 // FilterRootByNamespace returns the row roots from the given share.Root that contain the namespace.

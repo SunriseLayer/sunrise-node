@@ -1,12 +1,12 @@
 package share
 
 import (
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/getters"
-	disc "github.com/celestiaorg/celestia-node/share/p2p/discovery"
-	"github.com/celestiaorg/celestia-node/share/p2p/peers"
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexeds"
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexnd"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/getters"
+	disc "github.com/sunrise-zone/sunrise-node/share/p2p/discovery"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/peers"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexeds"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexnd"
 )
 
 // WithPeerManagerMetrics is a utility function to turn on peer manager metrics and that is

@@ -13,10 +13,10 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/celestiaorg/celestia-node/api/rpc/perms"
-	"github.com/celestiaorg/celestia-node/libs/authtoken"
-	"github.com/celestiaorg/celestia-node/libs/keystore"
-	nodemod "github.com/celestiaorg/celestia-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/api/rpc/perms"
+	"github.com/sunrise-zone/sunrise-node/libs/authtoken"
+	"github.com/sunrise-zone/sunrise-node/libs/keystore"
+	nodemod "github.com/sunrise-zone/sunrise-node/nodebuilder/node"
 )
 
 func AuthCmd(fsets ...*flag.FlagSet) *cobra.Command {

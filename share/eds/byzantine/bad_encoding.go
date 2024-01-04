@@ -5,14 +5,14 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/celestiaorg/celestia-app/pkg/wrapper"
 	"github.com/celestiaorg/go-fraud"
 	"github.com/celestiaorg/rsmt2d"
+	"github.com/sunrise-zone/sunrise-app/pkg/wrapper"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/share"
-	pb "github.com/celestiaorg/celestia-node/share/eds/byzantine/pb"
-	"github.com/celestiaorg/celestia-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/share"
+	pb "github.com/sunrise-zone/sunrise-node/share/eds/byzantine/pb"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
 )
 
 const (

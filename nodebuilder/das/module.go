@@ -5,10 +5,10 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/das"
-	"github.com/celestiaorg/celestia-node/header"
-	modfraud "github.com/celestiaorg/celestia-node/nodebuilder/fraud"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/das"
+	"github.com/sunrise-zone/sunrise-node/header"
+	modfraud "github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
 )
 
 func ConstructModule(tp node.Type, cfg *Config) fx.Option {

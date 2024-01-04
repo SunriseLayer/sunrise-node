@@ -1,13 +1,13 @@
 package header
 
 import (
+	core "github.com/cometbft/cometbft/types"
 	pb "github.com/libp2p/go-libp2p-pubsub/pb"
-	core "github.com/tendermint/tendermint/types"
 	"golang.org/x/crypto/blake2b"
 
-	"github.com/celestiaorg/celestia-app/pkg/da"
+	"github.com/sunrise-zone/sunrise-app/pkg/da"
 
-	header_pb "github.com/celestiaorg/celestia-node/header/pb"
+	header_pb "github.com/sunrise-zone/sunrise-node/header/pb"
 )
 
 // MarshalExtendedHeader serializes given ExtendedHeader to bytes using protobuf.

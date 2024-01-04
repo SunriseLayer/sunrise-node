@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/celestiaorg/celestia-node/libs/utils"
+	"github.com/sunrise-zone/sunrise-node/libs/utils"
 )
 
 type Config struct {

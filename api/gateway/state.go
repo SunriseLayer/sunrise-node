@@ -9,7 +9,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types"
 	"github.com/gorilla/mux"
 
-	"github.com/celestiaorg/celestia-node/state"
+	"github.com/sunrise-zone/sunrise-node/state"
 )
 
 const (

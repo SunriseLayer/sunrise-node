@@ -15,11 +15,11 @@ import (
 
 	"github.com/celestiaorg/go-header/p2p"
 
-	"github.com/celestiaorg/celestia-node/header"
-	nodep2p "github.com/celestiaorg/celestia-node/nodebuilder/p2p"
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexsub"
+	"github.com/sunrise-zone/sunrise-node/header"
+	nodep2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
 )
 
 const networkID = "private"

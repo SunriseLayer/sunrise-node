@@ -13,8 +13,8 @@ import (
 	"github.com/filecoin-project/go-jsonrpc/auth"
 	logging "github.com/ipfs/go-log/v2"
 
-	"github.com/celestiaorg/celestia-node/api/rpc/perms"
-	"github.com/celestiaorg/celestia-node/libs/authtoken"
+	"github.com/sunrise-zone/sunrise-node/api/rpc/perms"
+	"github.com/sunrise-zone/sunrise-node/libs/authtoken"
 )
 
 var log = logging.Logger("rpc")

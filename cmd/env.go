@@ -6,9 +6,9 @@ import (
 	logging "github.com/ipfs/go-log/v2"
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
 )
 
 var log = logging.Logger("cmd")

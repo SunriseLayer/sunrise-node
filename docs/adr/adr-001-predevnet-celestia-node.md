@@ -12,7 +12,7 @@
 
 **Celestia Core** = tendermint consensus node that lives in [the celestia-core repository](https://github.com/celestiaorg/celestia-core).
 
-**Celestia Node** = celestia `full` or `light` nodes that live in [this repository](https://github.com/celestiaorg/celestia-node).
+**Celestia Node** = celestia `full` or `light` nodes that live in [this repository](https://github.com/sunrise-zone/sunrise-node).
 
 ## Context
 

@@ -7,10 +7,10 @@ import (
 	"github.com/ipfs/boxo/blockservice"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/celestiaorg/celestia-app/pkg/da"
 	"github.com/celestiaorg/rsmt2d"
+	"github.com/sunrise-zone/sunrise-app/pkg/da"
 
-	"github.com/celestiaorg/celestia-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
 )
 
 // ErrByzantine is a thrown when recovered data square is not correct

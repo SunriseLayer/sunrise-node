@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 func Test_parseNamespaceID(t *testing.T) {

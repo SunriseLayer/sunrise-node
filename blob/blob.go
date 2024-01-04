@@ -6,14 +6,14 @@ import (
 	"errors"
 	"fmt"
 
-	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
 
-	"github.com/celestiaorg/celestia-app/pkg/appconsts"
-	"github.com/celestiaorg/celestia-app/pkg/shares"
-	"github.com/celestiaorg/celestia-app/x/blob/types"
 	"github.com/celestiaorg/nmt"
+	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	"github.com/sunrise-zone/sunrise-app/pkg/shares"
+	"github.com/sunrise-zone/sunrise-app/x/blob/types"
 
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 // Commitment is a Merkle Root of the subtree built from shares of the Blob.

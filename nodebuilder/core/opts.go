@@ -3,9 +3,9 @@ package core
 import (
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/core"
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/libs/fxutil"
+	"github.com/sunrise-zone/sunrise-node/core"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/libs/fxutil"
 )
 
 // WithClient sets custom client for core process

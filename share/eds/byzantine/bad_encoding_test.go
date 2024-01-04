@@ -5,19 +5,19 @@ import (
 	"testing"
 	"time"
 
+	core "github.com/cometbft/cometbft/types"
 	"github.com/stretchr/testify/require"
-	core "github.com/tendermint/tendermint/types"
 
-	"github.com/celestiaorg/celestia-app/pkg/da"
-	"github.com/celestiaorg/celestia-app/test/util/malicious"
 	"github.com/celestiaorg/nmt"
 	"github.com/celestiaorg/rsmt2d"
+	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunrise-zone/sunrise-app/testutil/malicious"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/eds/edstest"
-	"github.com/celestiaorg/celestia-node/share/ipld"
-	"github.com/celestiaorg/celestia-node/share/sharetest"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/share/sharetest"
 )
 
 func TestBEFP_Validate(t *testing.T) {

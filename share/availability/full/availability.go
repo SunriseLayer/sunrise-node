@@ -8,12 +8,12 @@ import (
 	"github.com/filecoin-project/dagstore"
 	logging "github.com/ipfs/go-log/v2"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/eds/byzantine"
-	"github.com/celestiaorg/celestia-node/share/ipld"
-	"github.com/celestiaorg/celestia-node/share/p2p/discovery"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/discovery"
 )
 
 var log = logging.Logger("share/full")

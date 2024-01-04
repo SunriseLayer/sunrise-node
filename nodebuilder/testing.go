@@ -8,16 +8,16 @@ import (
 	"github.com/stretchr/testify/require"
 	"go.uber.org/fx"
 
-	apptypes "github.com/celestiaorg/celestia-app/x/blob/types"
 	libhead "github.com/celestiaorg/go-header"
+	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
-	"github.com/celestiaorg/celestia-node/core"
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/header/headertest"
-	"github.com/celestiaorg/celestia-node/libs/fxutil"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
-	"github.com/celestiaorg/celestia-node/nodebuilder/state"
+	"github.com/sunrise-zone/sunrise-node/core"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/header/headertest"
+	"github.com/sunrise-zone/sunrise-node/libs/fxutil"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
 )
 
 // MockStore provides mock in memory Store for testing purposes.

@@ -9,19 +9,19 @@ import (
 	"os"
 	"testing"
 
+	"github.com/cometbft/cometbft/libs/rand"
 	bstore "github.com/ipfs/boxo/blockstore"
 	ds "github.com/ipfs/go-datastore"
 	carv1 "github.com/ipld/go-car"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/libs/rand"
 
-	"github.com/celestiaorg/celestia-app/pkg/appconsts"
-	"github.com/celestiaorg/celestia-app/pkg/da"
 	"github.com/celestiaorg/rsmt2d"
+	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	"github.com/sunrise-zone/sunrise-app/pkg/da"
 
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/eds/edstest"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
 )
 
 //go:embed "testdata/example-root.json"

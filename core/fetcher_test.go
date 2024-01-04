@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
+	"github.com/cometbft/cometbft/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/types"
 )
 
 func TestBlockFetcher_GetBlock_and_SubscribeNewBlockEvent(t *testing.T) {

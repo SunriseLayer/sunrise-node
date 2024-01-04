@@ -4,7 +4,7 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder"
 )
 
 // ResetStore constructs a CLI command to reset the store of Celestia Node.

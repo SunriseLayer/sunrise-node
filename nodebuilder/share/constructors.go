@@ -10,14 +10,14 @@ import (
 	"github.com/libp2p/go-libp2p/core/routing"
 	routingdisc "github.com/libp2p/go-libp2p/p2p/discovery/routing"
 
-	"github.com/celestiaorg/celestia-app/pkg/da"
+	"github.com/sunrise-zone/sunrise-app/pkg/da"
 
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/getters"
-	"github.com/celestiaorg/celestia-node/share/ipld"
-	disc "github.com/celestiaorg/celestia-node/share/p2p/discovery"
-	"github.com/celestiaorg/celestia-node/share/p2p/peers"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/getters"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	disc "github.com/sunrise-zone/sunrise-node/share/p2p/discovery"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/peers"
 )
 
 const (

@@ -16,15 +16,15 @@ import (
 	go_openrpc_reflect "github.com/etclabscore/go-openrpc-reflect"
 	meta_schema "github.com/open-rpc/meta-schema"
 
-	"github.com/celestiaorg/celestia-node/api/rpc/client"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/api/rpc/client"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
 )
 
 const (
 	APIDescription = "The Celestia Node API is the collection of RPC methods that " +
 		"can be used to interact with the services provided by Celestia Data Availability Nodes."
 	APIName  = "Celestia Node API"
-	DocsURL  = "https://github.com/celestiaorg/celestia-node"
+	DocsURL  = "https://github.com/sunrise-zone/sunrise-node"
 	DocsName = "Celestia Node GitHub"
 )
 

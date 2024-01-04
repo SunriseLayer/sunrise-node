@@ -16,7 +16,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/protocol"
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
 )
 
 const (
@@ -38,7 +38,7 @@ func dataExchange(params bitSwapParams) exchange.Interface {
 		params.Bs,
 		server.ProvideEnabled(false), // we don't provide blocks over DHT
 		// NOTE: These below are required for our protocol to work reliably.
-		// // See https://github.com/celestiaorg/celestia-node/issues/732
+		// // See https://github.com/sunrise-zone/sunrise-node/issues/732
 		server.SetSendDontHaves(false),
 	)
 

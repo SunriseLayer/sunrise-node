@@ -16,11 +16,11 @@ import (
 	mh "github.com/multiformats/go-multihash"
 	mhcore "github.com/multiformats/go-multihash/core"
 
-	"github.com/celestiaorg/celestia-app/pkg/appconsts"
-	"github.com/celestiaorg/celestia-app/pkg/da"
 	"github.com/celestiaorg/nmt"
+	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	"github.com/sunrise-zone/sunrise-app/pkg/da"
 
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 var (

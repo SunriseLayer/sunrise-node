@@ -9,9 +9,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-app/pkg/namespace"
+	"github.com/sunrise-zone/sunrise-app/pkg/namespace"
 
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 // RandShares generate 'total' amount of shares filled with random data. It uses require.TestingT

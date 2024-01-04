@@ -11,9 +11,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/tests/swamp"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/tests/swamp"
 )
 
 /*

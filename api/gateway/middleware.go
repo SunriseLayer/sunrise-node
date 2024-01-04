@@ -8,7 +8,7 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder/state"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
 )
 
 const timeout = time.Minute

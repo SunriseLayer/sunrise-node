@@ -5,6 +5,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/cometbft/cometbft/types"
 	"github.com/golang/mock/gomock"
 	"github.com/ipfs/boxo/blockservice"
 	"github.com/ipfs/go-datastore"
@@ -13,24 +14,23 @@ import (
 	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/types"
 
 	"github.com/celestiaorg/go-fraud"
 	"github.com/celestiaorg/go-fraud/fraudserv"
 	"github.com/celestiaorg/go-fraud/fraudtest"
 	libhead "github.com/celestiaorg/go-header"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/header/headertest"
-	headerfraud "github.com/celestiaorg/celestia-node/header/headertest/fraud"
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/availability/full"
-	"github.com/celestiaorg/celestia-node/share/availability/light"
-	"github.com/celestiaorg/celestia-node/share/availability/mocks"
-	availability_test "github.com/celestiaorg/celestia-node/share/availability/test"
-	"github.com/celestiaorg/celestia-node/share/eds/byzantine"
-	"github.com/celestiaorg/celestia-node/share/getters"
-	"github.com/celestiaorg/celestia-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/header/headertest"
+	headerfraud "github.com/sunrise-zone/sunrise-node/header/headertest/fraud"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/availability/full"
+	"github.com/sunrise-zone/sunrise-node/share/availability/light"
+	"github.com/sunrise-zone/sunrise-node/share/availability/mocks"
+	availability_test "github.com/sunrise-zone/sunrise-node/share/availability/test"
+	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
+	"github.com/sunrise-zone/sunrise-node/share/getters"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
 )
 
 var timeout = time.Second * 15

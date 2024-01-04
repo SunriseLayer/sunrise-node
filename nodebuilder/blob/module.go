@@ -5,11 +5,11 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/blob"
-	"github.com/celestiaorg/celestia-node/header"
-	headerService "github.com/celestiaorg/celestia-node/nodebuilder/header"
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/state"
+	"github.com/sunrise-zone/sunrise-node/blob"
+	"github.com/sunrise-zone/sunrise-node/header"
+	headerService "github.com/sunrise-zone/sunrise-node/nodebuilder/header"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/state"
 )
 
 func ConstructModule() fx.Option {

@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
+	coretypes "github.com/cometbft/cometbft/rpc/core/types"
+	"github.com/cometbft/cometbft/types"
 	logging "github.com/ipfs/go-log/v2"
-	coretypes "github.com/tendermint/tendermint/rpc/core/types"
-	"github.com/tendermint/tendermint/types"
 
 	libhead "github.com/celestiaorg/go-header"
 )

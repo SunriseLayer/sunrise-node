@@ -8,10 +8,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	rpc "github.com/celestiaorg/celestia-node/api/rpc/client"
-	cmdnode "github.com/celestiaorg/celestia-node/cmd"
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/share"
+	rpc "github.com/sunrise-zone/sunrise-node/api/rpc/client"
+	cmdnode "github.com/sunrise-zone/sunrise-node/cmd"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 func init() {

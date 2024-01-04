@@ -6,6 +6,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/cometbft/cometbft/libs/rand"
 	"github.com/ipfs/go-datastore"
 	"github.com/ipfs/go-datastore/sync"
 	dht "github.com/libp2p/go-libp2p-kad-dht"
@@ -16,14 +17,13 @@ import (
 	"github.com/libp2p/go-libp2p/p2p/net/conngater"
 	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/libs/rand"
 
 	libhead "github.com/celestiaorg/go-header"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/p2p/discovery"
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexsub"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/discovery"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
 )
 
 // TODO: add broadcast to tests

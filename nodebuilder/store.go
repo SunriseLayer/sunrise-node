@@ -15,9 +15,9 @@ import (
 
 	dsbadger "github.com/celestiaorg/go-ds-badger4"
 
-	"github.com/celestiaorg/celestia-node/libs/fslock"
-	"github.com/celestiaorg/celestia-node/libs/keystore"
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/libs/fslock"
+	"github.com/sunrise-zone/sunrise-node/libs/keystore"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 var (

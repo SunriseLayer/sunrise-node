@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder/tests/swamp"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/tests/swamp"
 )
 
 // Common consts for tests producing filled blocks

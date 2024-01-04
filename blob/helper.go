@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"sort"
 
-	"github.com/tendermint/tendermint/types"
+	"github.com/cometbft/cometbft/types"
 
-	"github.com/celestiaorg/celestia-app/pkg/shares"
+	"github.com/sunrise-zone/sunrise-app/pkg/shares"
 
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 // SharesToBlobs takes raw shares and converts them to the blobs.

@@ -4,7 +4,7 @@ run:
 linters:
   enable:
     - bodyclose
-     # - depguard as of v1.54.2, the default config throws errors on our repo
+      # - depguard as of v1.54.2, the default config throws errors on our repo
     - dogsled
     - dupl
     - errcheck
@@ -63,6 +63,6 @@ linters-settings:
   misspell:
     locale: US
   goimports:
-    local-prefixes: github.com/celestiaorg/celestia-node
+    local-prefixes: github.com/sunrise-zone/sunrise-node
   dupl:
     threshold: 200

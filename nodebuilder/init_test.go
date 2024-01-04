@@ -10,11 +10,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-app/app"
-	"github.com/celestiaorg/celestia-app/app/encoding"
+	"github.com/sunrise-zone/sunrise-app/app"
+	"github.com/sunrise-zone/sunrise-app/app/encoding"
 
-	"github.com/celestiaorg/celestia-node/libs/fslock"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/libs/fslock"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
 )
 
 func TestInit(t *testing.T) {

@@ -9,8 +9,8 @@ import (
 	"github.com/libp2p/go-libp2p/core/host"
 	"github.com/libp2p/go-libp2p/core/peer"
 
-	"github.com/celestiaorg/celestia-node/share"
-	pb "github.com/celestiaorg/celestia-node/share/p2p/shrexsub/pb"
+	"github.com/sunrise-zone/sunrise-node/share"
+	pb "github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub/pb"
 )
 
 var log = logging.Logger("shrex-sub")

@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	nodebuilder "github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
-	"github.com/celestiaorg/celestia-node/nodebuilder/state"
+	nodebuilder "github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
 )
 
 func TestNewLightWithP2PKey(t *testing.T) {

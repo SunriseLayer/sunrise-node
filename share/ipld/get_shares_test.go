@@ -16,13 +16,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-app/pkg/wrapper"
 	"github.com/celestiaorg/rsmt2d"
+	"github.com/sunrise-zone/sunrise-app/pkg/wrapper"
 
-	"github.com/celestiaorg/celestia-node/libs/utils"
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/eds/edstest"
-	"github.com/celestiaorg/celestia-node/share/sharetest"
+	"github.com/sunrise-zone/sunrise-node/libs/utils"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
+	"github.com/sunrise-zone/sunrise-node/share/sharetest"
 )
 
 func TestGetShare(t *testing.T) {

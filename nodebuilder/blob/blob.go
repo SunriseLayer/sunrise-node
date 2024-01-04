@@ -3,8 +3,8 @@ package blob
 import (
 	"context"
 
-	"github.com/celestiaorg/celestia-node/blob"
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/blob"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 var _ Module = (*API)(nil)

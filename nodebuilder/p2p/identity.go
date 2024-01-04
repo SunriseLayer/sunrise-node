@@ -8,7 +8,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/libp2p/go-libp2p/core/peerstore"
 
-	"github.com/celestiaorg/celestia-node/libs/keystore"
+	"github.com/sunrise-zone/sunrise-node/libs/keystore"
 )
 
 const keyName = "p2p-key"

@@ -6,11 +6,11 @@ import (
 	logging "github.com/ipfs/go-log/v2"
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/api/gateway"
-	headerServ "github.com/celestiaorg/celestia-node/nodebuilder/header"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	shareServ "github.com/celestiaorg/celestia-node/nodebuilder/share"
-	stateServ "github.com/celestiaorg/celestia-node/nodebuilder/state"
+	"github.com/sunrise-zone/sunrise-node/api/gateway"
+	headerServ "github.com/sunrise-zone/sunrise-node/nodebuilder/header"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	shareServ "github.com/sunrise-zone/sunrise-node/nodebuilder/share"
+	stateServ "github.com/sunrise-zone/sunrise-node/nodebuilder/state"
 )
 
 var log = logging.Logger("module/gateway")

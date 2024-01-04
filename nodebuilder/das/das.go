@@ -3,7 +3,7 @@ package das
 import (
 	"context"
 
-	"github.com/celestiaorg/celestia-node/das"
+	"github.com/sunrise-zone/sunrise-node/das"
 )
 
 var _ Module = (*API)(nil)

@@ -5,7 +5,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/celestiaorg/celestia-node/header"
+	"github.com/sunrise-zone/sunrise-node/header"
 )
 
 // coordinatorState represents the current state of sampling process

@@ -9,13 +9,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/celestiaorg/celestia-app/app"
-	"github.com/celestiaorg/celestia-app/app/encoding"
+	"github.com/sunrise-zone/sunrise-app/app"
+	"github.com/sunrise-zone/sunrise-app/app/encoding"
 
-	"github.com/celestiaorg/celestia-node/libs/fslock"
-	"github.com/celestiaorg/celestia-node/libs/utils"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/state"
+	"github.com/sunrise-zone/sunrise-node/libs/fslock"
+	"github.com/sunrise-zone/sunrise-node/libs/utils"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
 )
 
 // PrintKeyringInfo whether to print keyring information during init.

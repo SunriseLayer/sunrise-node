@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-node/header"
+	"github.com/sunrise-zone/sunrise-node/header"
 )
 
 func TestMarshalUnmarshalExtendedHeader(t *testing.T) {

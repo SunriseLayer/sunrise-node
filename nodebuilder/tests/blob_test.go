@@ -11,11 +11,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-node/blob"
-	"github.com/celestiaorg/celestia-node/blob/blobtest"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/tests/swamp"
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/blob"
+	"github.com/sunrise-zone/sunrise-node/blob/blobtest"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/tests/swamp"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 func TestBlobModule(t *testing.T) {
@@ -73,7 +73,7 @@ func TestBlobModule(t *testing.T) {
 		{
 			name: "Get",
 			doFn: func(t *testing.T) {
-				// https://github.com/celestiaorg/celestia-node/issues/2915
+				// https://github.com/sunrise-zone/sunrise-node/issues/2915
 				time.Sleep(time.Second)
 				blob1, err := fullClient.Blob.Get(ctx, height, blobs[0].Namespace(), blobs[0].Commitment)
 				require.NoError(t, err)
@@ -83,7 +83,7 @@ func TestBlobModule(t *testing.T) {
 		{
 			name: "GetAll",
 			doFn: func(t *testing.T) {
-				// https://github.com/celestiaorg/celestia-node/issues/2915
+				// https://github.com/sunrise-zone/sunrise-node/issues/2915
 				time.Sleep(time.Second)
 				newBlobs, err := fullClient.Blob.GetAll(ctx, height, []share.Namespace{blobs[0].Namespace()})
 				require.NoError(t, err)
@@ -95,7 +95,7 @@ func TestBlobModule(t *testing.T) {
 		{
 			name: "Included",
 			doFn: func(t *testing.T) {
-				// https://github.com/celestiaorg/celestia-node/issues/2915
+				// https://github.com/sunrise-zone/sunrise-node/issues/2915
 				time.Sleep(time.Second)
 				proof, err := fullClient.Blob.GetProof(ctx, height, blobs[0].Namespace(), blobs[0].Commitment)
 				require.NoError(t, err)
@@ -153,7 +153,7 @@ func TestBlobModule(t *testing.T) {
 
 				// give some time to store the data,
 				// otherwise the test will hang on the IPLD level.
-				// https://github.com/celestiaorg/celestia-node/issues/2915
+				// https://github.com/sunrise-zone/sunrise-node/issues/2915
 				time.Sleep(time.Second)
 
 				proof, err := fullClient.Blob.GetProof(ctx, height, b.Namespace(), b.Commitment)
@@ -182,7 +182,7 @@ func TestBlobModule(t *testing.T) {
 
 				// give some time to store the data,
 				// otherwise the test will hang on the IPLD level.
-				// https://github.com/celestiaorg/celestia-node/issues/2915
+				// https://github.com/sunrise-zone/sunrise-node/issues/2915
 				time.Sleep(time.Second)
 
 				proof, err := fullClient.Blob.GetProof(ctx, h, blobs[0].Namespace(), blobs[0].Commitment)

@@ -6,12 +6,12 @@ import (
 	logging "github.com/ipfs/go-log/v2"
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/libs/fxutil"
-	"github.com/celestiaorg/celestia-node/nodebuilder/core"
-	modfraud "github.com/celestiaorg/celestia-node/nodebuilder/fraud"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/state"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/libs/fxutil"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
+	modfraud "github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/state"
 )
 
 var log = logging.Logger("module/state")

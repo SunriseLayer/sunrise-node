@@ -5,8 +5,8 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/api/rpc"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/api/rpc"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
 )
 
 func ConstructModule(tp node.Type, cfg *Config) fx.Option {

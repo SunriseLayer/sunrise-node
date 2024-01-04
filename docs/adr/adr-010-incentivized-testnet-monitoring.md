@@ -279,7 +279,7 @@ In the case where a node operator wants to send data from celestia-node to an OT
             key_file: /home/cert-key.pem
     ```
 
-1. Ensure that celestia-node runs with a TLS config that contains the Root CA created in step 1. See [sample code](https://github.com/celestiaorg/celestia-node/blob/rp/tracing-with-tls/cmd/flags_misc.go#L173-L199)
+1. Ensure that celestia-node runs with a TLS config that contains the Root CA created in step 1. See [sample code](https://github.com/sunrise-zone/sunrise-node/blob/rp/tracing-with-tls/cmd/flags_misc.go#L173-L199)
 
 #### What are the resource requirements of OTEL collector?
 
@@ -291,8 +291,8 @@ Proposed
 
 ## References
 
-- <https://github.com/celestiaorg/celestia-node/pull/901>
-- <https://github.com/celestiaorg/celestia-node/pull/907>
+- <https://github.com/sunrise-zone/sunrise-node/pull/901>
+- <https://github.com/sunrise-zone/sunrise-node/pull/907>
 - <https://opentelemetry.io/docs/collector/>
 - <https://celestia-team.slack.com/archives/C03QAJVLHK3/p1658169362548589>
 - <https://www.notion.so/celestiaorg/Telemetry-Dashboard-d85550a3caee4004b00a2e3bf82619b1>

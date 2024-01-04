@@ -6,18 +6,18 @@ import (
 	"fmt"
 	"time"
 
+	"github.com/cometbft/cometbft/types"
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
-	"github.com/tendermint/tendermint/types"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
 
 	libhead "github.com/celestiaorg/go-header"
 	"github.com/celestiaorg/nmt"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/ipld"
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexsub"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
 )
 
 var (

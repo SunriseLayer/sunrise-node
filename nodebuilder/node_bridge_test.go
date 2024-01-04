@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-node/core"
-	coremodule "github.com/celestiaorg/celestia-node/nodebuilder/core"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/core"
+	coremodule "github.com/sunrise-zone/sunrise-node/nodebuilder/core"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
 )
 
 func TestBridge_WithMockedCoreClient(t *testing.T) {

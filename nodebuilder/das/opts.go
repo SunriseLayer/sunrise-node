@@ -1,7 +1,7 @@
 package das
 
 import (
-	"github.com/celestiaorg/celestia-node/das"
+	"github.com/sunrise-zone/sunrise-node/das"
 )
 
 // WithMetrics is a utility function that is expected to be

@@ -9,11 +9,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-node/header/headertest"
-	"github.com/celestiaorg/celestia-node/share"
-	availability_test "github.com/celestiaorg/celestia-node/share/availability/test"
-	"github.com/celestiaorg/celestia-node/share/ipld"
-	"github.com/celestiaorg/celestia-node/share/sharetest"
+	"github.com/sunrise-zone/sunrise-node/header/headertest"
+	"github.com/sunrise-zone/sunrise-node/share"
+	availability_test "github.com/sunrise-zone/sunrise-node/share/availability/test"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/share/sharetest"
 )
 
 func TestSharesAvailableCaches(t *testing.T) {

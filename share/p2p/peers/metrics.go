@@ -12,7 +12,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexsub"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
 )
 
 const (

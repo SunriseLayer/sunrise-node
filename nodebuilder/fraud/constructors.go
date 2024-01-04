@@ -10,8 +10,8 @@ import (
 	"github.com/celestiaorg/go-fraud/fraudserv"
 	libhead "github.com/celestiaorg/go-header"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
 )
 
 func fraudUnmarshaler() fraud.ProofUnmarshaler[*header.ExtendedHeader] {

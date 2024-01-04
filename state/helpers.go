@@ -1,8 +1,8 @@
 package state
 
 import (
+	sdk_abci "github.com/cometbft/cometbft/abci/types"
 	sdk_errors "github.com/cosmos/cosmos-sdk/types/errors"
-	sdk_abci "github.com/tendermint/tendermint/abci/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

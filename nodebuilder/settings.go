@@ -23,14 +23,14 @@ import (
 
 	"github.com/celestiaorg/go-fraud"
 
-	"github.com/celestiaorg/celestia-node/header"
-	modcore "github.com/celestiaorg/celestia-node/nodebuilder/core"
-	"github.com/celestiaorg/celestia-node/nodebuilder/das"
-	modhead "github.com/celestiaorg/celestia-node/nodebuilder/header"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
-	"github.com/celestiaorg/celestia-node/nodebuilder/share"
-	"github.com/celestiaorg/celestia-node/state"
+	"github.com/sunrise-zone/sunrise-node/header"
+	modcore "github.com/sunrise-zone/sunrise-node/nodebuilder/core"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/das"
+	modhead "github.com/sunrise-zone/sunrise-node/nodebuilder/header"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/share"
+	"github.com/sunrise-zone/sunrise-node/state"
 )
 
 const defaultMetricsCollectInterval = 10 * time.Second

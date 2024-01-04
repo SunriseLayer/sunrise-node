@@ -6,7 +6,7 @@ import (
 	"github.com/cristalhq/jwt"
 	"github.com/filecoin-project/go-jsonrpc/auth"
 
-	"github.com/celestiaorg/celestia-node/api/rpc/perms"
+	"github.com/sunrise-zone/sunrise-node/api/rpc/perms"
 )
 
 // ExtractSignedPermissions returns the permissions granted to the token by the passed signer.

@@ -10,12 +10,12 @@ import (
 	"github.com/libp2p/go-libp2p/p2p/discovery/routing"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-node/share"
-	availability_test "github.com/celestiaorg/celestia-node/share/availability/test"
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/getters"
-	"github.com/celestiaorg/celestia-node/share/ipld"
-	"github.com/celestiaorg/celestia-node/share/p2p/discovery"
+	"github.com/sunrise-zone/sunrise-node/share"
+	availability_test "github.com/sunrise-zone/sunrise-node/share/availability/test"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/getters"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/discovery"
 )
 
 // GetterWithRandSquare provides a share.Getter filled with 'n' NMT

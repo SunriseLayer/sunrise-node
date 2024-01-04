@@ -1,7 +1,7 @@
 package core
 
 import (
-	"github.com/celestiaorg/celestia-node/core"
+	"github.com/sunrise-zone/sunrise-node/core"
 )
 
 func remote(cfg Config) (core.Client, error) {

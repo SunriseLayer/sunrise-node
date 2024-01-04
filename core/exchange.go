@@ -11,9 +11,9 @@ import (
 	libhead "github.com/celestiaorg/go-header"
 	"github.com/celestiaorg/nmt"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
 )
 
 const concurrencyLimit = 4

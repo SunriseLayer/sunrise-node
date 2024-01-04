@@ -5,8 +5,8 @@ import (
 	"github.com/libp2p/go-libp2p/core/metrics"
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
 )
 
 var log = logging.Logger("module/p2p")

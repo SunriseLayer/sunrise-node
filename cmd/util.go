@@ -11,14 +11,14 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder/core"
-	"github.com/celestiaorg/celestia-node/nodebuilder/gateway"
-	"github.com/celestiaorg/celestia-node/nodebuilder/header"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
-	rpc_cfg "github.com/celestiaorg/celestia-node/nodebuilder/rpc"
-	"github.com/celestiaorg/celestia-node/nodebuilder/state"
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/gateway"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/header"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	rpc_cfg "github.com/sunrise-zone/sunrise-node/nodebuilder/rpc"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 func PrintOutput(data interface{}, err error, formatData func(interface{}) interface{}) error {

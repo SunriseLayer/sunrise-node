@@ -4,13 +4,13 @@ import (
 	"context"
 	"testing"
 
+	"github.com/cometbft/cometbft/libs/rand"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/libs/rand"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/header/headertest"
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/header/headertest"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 func TestMakeExtendedHeaderForEmptyBlock(t *testing.T) {

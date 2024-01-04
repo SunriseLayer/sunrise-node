@@ -8,8 +8,8 @@
 
 ## Changelog
 
-* 2021-11-25: initial draft
-* 2022-03-30: update to bridge node definition
+- 2021-11-25: initial draft
+- 2022-03-30: update to bridge node definition
 
 <hr style="border:2px solid gray"> </hr>
 
@@ -31,7 +31,7 @@ A **bridge** node does not care about what kind of celestia-core node it is conn
 it only cares that it has a direct RPC connection to a celestia-core node from which it can listen for new blocks.
 
 The name **bridge** was chosen as the purpose of this node type is to provide a mechanism to relay celestia-core blocks
-to the data availability network.  
+to the data availability network.
 
 ### **Full Node**
 
@@ -57,10 +57,10 @@ refactoring and improving this structure to include more features (defined later
 
 ## New Features
 
-### [New node type definitions](https://github.com/celestiaorg/celestia-node/issues/250)
+### [New node type definitions](https://github.com/sunrise-zone/sunrise-node/issues/250)
 
-* Introduce a standalone **full** node and rename current full node implementation to **bridge** node.
-* Remove **dev** as a node type and make it a flag on every available node type.
+- Introduce a standalone **full** node and rename current full node implementation to **bridge** node.
+- Remove **dev** as a node type and make it a flag on every available node type.
 
 ### Introduce bad encoding fraud proofs
 
@@ -80,28 +80,28 @@ operations as usual.
 Eventually, we may choose to use the reputation tracking system provided by [gossipsub](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#peer-scoring) for nodes who broadcast invalid fraud
 proofs to the network, but that is not a requirement for this iteration.
 
-### [Introduce an RPC structure and some basic APIs](https://github.com/celestiaorg/celestia-node/issues/169)
+### [Introduce an RPC structure and some basic APIs](https://github.com/sunrise-zone/sunrise-node/issues/169)
 
 Implement scaffolding for RPC on all node types, such that a user can access the following methods:
 
 `HeaderAPI`
 
-* `Header(_height_)` -> ExtendedHeader{}
-* `Header(_hash_)` -> ExtendedHeader{}
+- `Header(_height_)` -> ExtendedHeader{}
+- `Header(_hash_)` -> ExtendedHeader{}
 
 `NodeAPI`
 
-* `P2PInfo()` -> returns a blob of p2p info (can be broken into several subcommands, such as `net_info`)
-* `Config()` -> returns the node's config
-* `NodeType()` -> returns the node's type (e.g. **full** | **bridge** | **light** )
-* `RPCInfo()` -> RPC port, version, available APIs, etc.
+- `P2PInfo()` -> returns a blob of p2p info (can be broken into several subcommands, such as `net_info`)
+- `Config()` -> returns the node's config
+- `NodeType()` -> returns the node's type (e.g. **full** | **bridge** | **light** )
+- `RPCInfo()` -> RPC port, version, available APIs, etc.
 
 `UserAPI`
 
-* `AccountBalance(_acct_)` -> returns balance for given account
-* `SubmitTx(_txdata_)` -> submits a transaction to the network
+- `AccountBalance(_acct_)` -> returns balance for given account
+- `SubmitTx(_txdata_)` -> submits a transaction to the network
 
-*Note: it is likely more methods will be added, but the above listed are the essential ones for this iteration.*
+_Note: it is likely more methods will be added, but the above listed are the essential ones for this iteration._
 
 ### Introduce `StateService`
 
@@ -112,9 +112,9 @@ transactions to `TxSub`, but do not need to listen for them.
 
 Celestia-node's state interaction will be detailed further in a subsequent ADR.
 
-### [Data Availability Sampling during `HeaderSync`](https://github.com/celestiaorg/celestia-node/issues/181)
+### [Data Availability Sampling during `HeaderSync`](https://github.com/sunrise-zone/sunrise-node/issues/181)
 
-Currently, both **light** and **full* nodes are unable to perform data availability sampling (DAS) while syncing.
+Currently, both **light** and \*_full_ nodes are unable to perform data availability sampling (DAS) while syncing.
 They only begin sampling once the node is synced up to head of chain.
 
 `HeaderSync` and the `DASer` will be refactored such that the `DASer` will be able to perform sampling on past headers
@@ -141,13 +141,13 @@ work otherwise, leading to last-minute solutions, like having to hand both the c
 “trusted” hash of a header from the already-running chain so that it can sync from that point and start listening for
 new headers.
 
-#### Proposed new architecture: [`BlockService` is only responsible for reconstructing the block from Shares handed to it by the `ShareService`](https://github.com/celestiaorg/celestia-node/issues/251)
+#### Proposed new architecture: [`BlockService` is only responsible for reconstructing the block from Shares handed to it by the `ShareService`](https://github.com/sunrise-zone/sunrise-node/issues/251)
 
 Right now, the `BlockService` is in charge of fetching new blocks from the core node, erasure coding them, generating
 DAH, generating `ExtendedHeader`, broadcasting `ExtendedHeader` to `HeaderSub` network, and storing the block data
 (after some validation checks).
 
-Instead, a **full** node will rely on `ShareService` sampling to fetch us *enough* shares to reconstruct the block
+Instead, a **full** node will rely on `ShareService` sampling to fetch us _enough_ shares to reconstruct the block
 inside of `BlockService`. Contrastingly, a **bridge** node will not do block reconstruction via sampling, but rather
 rely on the `header.CoreSubscriber` implementation of `header.Subscriber` for blocks. `header.CoreSubscriber` will
 handle listening for new block events from the core node via RPC, erasure code the new block, generate the
@@ -155,11 +155,11 @@ handle listening for new block events from the core node via RPC, erasure code t
 
 ### `HeaderSync` optimizations
 
-* Implement disconnect toleration
+- Implement disconnect toleration
 
 ### Unbonding period handling
 
-The **light** and **full**  nodes currently are prone to long-range attacks. To mitigate it, we should
+The **light** and **full** nodes currently are prone to long-range attacks. To mitigate it, we should
 introduce an additional `trustPeriod` variable (equal to unbonding period) which applies to headers. Suppose a node
 starts with the period between subjective head and objective head being higher than the unbonding period -
 in that case, the **light** node must not trust the subjective head anymore, specifically its `ValidatorSet`. Therefore,
@@ -174,16 +174,16 @@ for
 
 ### `ShareService` optimizations
 
-* Implement parallelization for retrieving shares by namespace. This
-  [issue](https://github.com/celestiaorg/celestia-node/issues/184) is already being worked on.
-* NMT/Shares/Namespace storage optimizations:
-  * Right now we prepend to each Share 17 additional bytes, Luckily, for each reason why the prepended bytes were added,
-  there is an alternative solution: It is possible to get NMT Node type indirectly, without serializing the type itself
-  by looking at the amount of links. To recover the namespace of the erasured data, we should not encode namespaces into
-  the data itself. It is possible to get the namespace for each share encoded in inner non-leaf nodes of the NMT tree.
-* Pruning for shares.
+- Implement parallelization for retrieving shares by namespace. This
+  [issue](https://github.com/sunrise-zone/sunrise-node/issues/184) is already being worked on.
+- NMT/Shares/Namespace storage optimizations:
+  - Right now we prepend to each Share 17 additional bytes, Luckily, for each reason why the prepended bytes were added,
+    there is an alternative solution: It is possible to get NMT Node type indirectly, without serializing the type itself
+    by looking at the amount of links. To recover the namespace of the erasured data, we should not encode namespaces into
+    the data itself. It is possible to get the namespace for each share encoded in inner non-leaf nodes of the NMT tree.
+- Pruning for shares.
 
-### [Move IPLD from celetia-node repo into its own repo](https://github.com/celestiaorg/celestia-node/issues/111)
+### [Move IPLD from celetia-node repo into its own repo](https://github.com/sunrise-zone/sunrise-node/issues/111)
 
 Since the IPLD package is pretty much entirely separate from the celestia-node implementation, it makes sense that it
 is removed from the celestia-node repository and maintained separately. The extraction of IPLD should also include a
@@ -194,7 +194,7 @@ documentation also needs updating.
 
 At the moment, the syncing logic for a **light** nodes is simple in that it syncs each header from a single peer.
 Instead, the **light** node should double-check headers with another randomly chosen
-["witness"](https://github.com/tendermint/tendermint/blob/02d456b8b8274088e8d3c6e1714263a47ffe13ac/light/client.go#L154-L161)
+["witness"](https://github.com/cometbft/cometbft/blob/02d456b8b8274088e8d3c6e1714263a47ffe13ac/light/client.go#L154-L161)
 peer than the primary peer from which it received the header, as described in the
 [light client attack detector](https://github.com/tendermint/spec/blob/master/spec/light-client/detection/detection_003_reviewed.md#light-client-attack-detector)
 model from Tendermint.

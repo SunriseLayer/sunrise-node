@@ -7,7 +7,7 @@ import (
 	"github.com/filecoin-project/go-jsonrpc/auth"
 	"github.com/spf13/cobra"
 
-	cmdnode "github.com/celestiaorg/celestia-node/cmd"
+	cmdnode "github.com/sunrise-zone/sunrise-node/cmd"
 )
 
 func init() {

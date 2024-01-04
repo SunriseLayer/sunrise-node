@@ -7,7 +7,7 @@ import (
 	"github.com/filecoin-project/go-jsonrpc/auth"
 	logging "github.com/ipfs/go-log/v2"
 
-	"github.com/celestiaorg/celestia-node/libs/authtoken"
+	"github.com/sunrise-zone/sunrise-node/libs/authtoken"
 )
 
 const APIVersion = "v0.11.0"

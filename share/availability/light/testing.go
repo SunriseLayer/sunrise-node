@@ -6,12 +6,12 @@ import (
 	"github.com/ipfs/boxo/blockservice"
 	"github.com/ipfs/go-datastore"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/header/headertest"
-	"github.com/celestiaorg/celestia-node/share"
-	availability_test "github.com/celestiaorg/celestia-node/share/availability/test"
-	"github.com/celestiaorg/celestia-node/share/getters"
-	"github.com/celestiaorg/celestia-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/header/headertest"
+	"github.com/sunrise-zone/sunrise-node/share"
+	availability_test "github.com/sunrise-zone/sunrise-node/share/availability/test"
+	"github.com/sunrise-zone/sunrise-node/share/getters"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
 )
 
 // GetterWithRandSquare provides a share.Getter filled with 'n' NMT trees of 'n' random shares,

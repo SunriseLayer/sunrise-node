@@ -4,13 +4,13 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/cometbft/cometbft/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/types"
 
-	apptypes "github.com/celestiaorg/celestia-app/x/blob/types"
+	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
-	"github.com/celestiaorg/celestia-node/blob/blobtest"
+	"github.com/sunrise-zone/sunrise-node/blob/blobtest"
 )
 
 func TestBlob(t *testing.T) {

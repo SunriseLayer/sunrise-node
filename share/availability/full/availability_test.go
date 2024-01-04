@@ -8,13 +8,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-app/pkg/da"
+	"github.com/sunrise-zone/sunrise-app/pkg/da"
 
-	"github.com/celestiaorg/celestia-node/header/headertest"
-	"github.com/celestiaorg/celestia-node/share"
-	availability_test "github.com/celestiaorg/celestia-node/share/availability/test"
-	"github.com/celestiaorg/celestia-node/share/eds/edstest"
-	"github.com/celestiaorg/celestia-node/share/mocks"
+	"github.com/sunrise-zone/sunrise-node/header/headertest"
+	"github.com/sunrise-zone/sunrise-node/share"
+	availability_test "github.com/sunrise-zone/sunrise-node/share/availability/test"
+	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
+	"github.com/sunrise-zone/sunrise-node/share/mocks"
 )
 
 func TestShareAvailableOverMocknet_Full(t *testing.T) {

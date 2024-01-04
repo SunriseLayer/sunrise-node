@@ -13,13 +13,13 @@ import (
 	"github.com/ipld/go-car"
 	"github.com/ipld/go-car/util"
 
-	"github.com/celestiaorg/celestia-app/pkg/wrapper"
 	"github.com/celestiaorg/nmt"
 	"github.com/celestiaorg/rsmt2d"
+	"github.com/sunrise-zone/sunrise-app/pkg/wrapper"
 
-	"github.com/celestiaorg/celestia-node/libs/utils"
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/libs/utils"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
 )
 
 var ErrEmptySquare = errors.New("share: importing empty data")

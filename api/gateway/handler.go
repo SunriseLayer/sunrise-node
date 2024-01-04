@@ -3,10 +3,10 @@ package gateway
 import (
 	logging "github.com/ipfs/go-log/v2"
 
-	"github.com/celestiaorg/celestia-node/das"
-	"github.com/celestiaorg/celestia-node/nodebuilder/header"
-	"github.com/celestiaorg/celestia-node/nodebuilder/share"
-	"github.com/celestiaorg/celestia-node/nodebuilder/state"
+	"github.com/sunrise-zone/sunrise-node/das"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/header"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/share"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
 )
 
 var log = logging.Logger("gateway")

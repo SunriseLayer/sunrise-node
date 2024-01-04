@@ -7,7 +7,7 @@ import (
 
 	"github.com/celestiaorg/go-fraud"
 
-	"github.com/celestiaorg/celestia-node/header"
+	"github.com/sunrise-zone/sunrise-node/header"
 )
 
 var _ Module = (*API)(nil)

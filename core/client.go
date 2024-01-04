@@ -3,9 +3,9 @@ package core
 import (
 	"fmt"
 
+	"github.com/cometbft/cometbft/rpc/client"
+	"github.com/cometbft/cometbft/rpc/client/http"
 	retryhttp "github.com/hashicorp/go-retryablehttp"
-	"github.com/tendermint/tendermint/rpc/client"
-	"github.com/tendermint/tendermint/rpc/client/http"
 )
 
 // Client is an alias to Core Client.

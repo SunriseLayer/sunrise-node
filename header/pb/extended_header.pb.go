@@ -5,9 +5,9 @@ package header_pb
 
 import (
 	fmt "fmt"
-	da "github.com/celestiaorg/celestia-app/proto/celestia/da"
+	da "github.com/sunrise-zone/sunrise-app/proto/celestia/da"
 	proto "github.com/gogo/protobuf/proto"
-	types "github.com/tendermint/tendermint/proto/tendermint/types"
+	types "github.com/cometbft/cometbft/proto/tendermint/types"
 	io "io"
 	math "math"
 	math_bits "math/bits"

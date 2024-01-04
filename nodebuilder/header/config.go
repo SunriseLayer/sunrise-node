@@ -12,8 +12,8 @@ import (
 	"github.com/celestiaorg/go-header/store"
 	"github.com/celestiaorg/go-header/sync"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
 )
 
 // MetricsEnabled will be set during runtime if metrics are enabled on the node.

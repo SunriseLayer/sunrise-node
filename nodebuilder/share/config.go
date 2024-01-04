@@ -3,13 +3,13 @@ package share
 import (
 	"fmt"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/share/availability/light"
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/p2p/discovery"
-	"github.com/celestiaorg/celestia-node/share/p2p/peers"
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexeds"
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexnd"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/share/availability/light"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/discovery"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/peers"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexeds"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexnd"
 )
 
 // TODO: some params are pointers and other are not, Let's fix this.

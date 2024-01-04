@@ -9,8 +9,8 @@ import (
 	"go.uber.org/fx"
 	"go.uber.org/fx/fxtest"
 
-	"github.com/celestiaorg/celestia-node/libs/keystore"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/libs/keystore"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
 )
 
 func testModule(tp node.Type) fx.Option {

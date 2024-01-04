@@ -3,8 +3,8 @@ package fraud
 import (
 	"github.com/celestiaorg/go-fraud"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/share/eds/byzantine"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
 )
 
 var defaultProofUnmarshaler proofRegistry

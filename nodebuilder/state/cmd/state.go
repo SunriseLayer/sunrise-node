@@ -8,8 +8,8 @@ import (
 	"cosmossdk.io/math"
 	"github.com/spf13/cobra"
 
-	cmdnode "github.com/celestiaorg/celestia-node/cmd"
-	"github.com/celestiaorg/celestia-node/state"
+	cmdnode "github.com/sunrise-zone/sunrise-node/cmd"
+	"github.com/sunrise-zone/sunrise-node/state"
 )
 
 func init() {

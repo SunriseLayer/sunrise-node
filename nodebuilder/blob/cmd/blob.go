@@ -8,9 +8,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/celestiaorg/celestia-node/blob"
-	cmdnode "github.com/celestiaorg/celestia-node/cmd"
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/blob"
+	cmdnode "github.com/sunrise-zone/sunrise-node/cmd"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 var (

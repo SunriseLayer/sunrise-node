@@ -11,10 +11,10 @@ import (
 
 	"github.com/ipfs/go-datastore"
 
-	"github.com/celestiaorg/celestia-app/pkg/da"
+	"github.com/sunrise-zone/sunrise-app/pkg/da"
 
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/eds/edstest"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
 )
 
 type Config struct {

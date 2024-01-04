@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/celestiaorg/celestia-node/cmd"
-	blob "github.com/celestiaorg/celestia-node/nodebuilder/blob/cmd"
-	das "github.com/celestiaorg/celestia-node/nodebuilder/das/cmd"
-	header "github.com/celestiaorg/celestia-node/nodebuilder/header/cmd"
-	node "github.com/celestiaorg/celestia-node/nodebuilder/node/cmd"
-	p2p "github.com/celestiaorg/celestia-node/nodebuilder/p2p/cmd"
-	share "github.com/celestiaorg/celestia-node/nodebuilder/share/cmd"
-	state "github.com/celestiaorg/celestia-node/nodebuilder/state/cmd"
+	"github.com/sunrise-zone/sunrise-node/cmd"
+	blob "github.com/sunrise-zone/sunrise-node/nodebuilder/blob/cmd"
+	das "github.com/sunrise-zone/sunrise-node/nodebuilder/das/cmd"
+	header "github.com/sunrise-zone/sunrise-node/nodebuilder/header/cmd"
+	node "github.com/sunrise-zone/sunrise-node/nodebuilder/node/cmd"
+	p2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p/cmd"
+	share "github.com/sunrise-zone/sunrise-node/nodebuilder/share/cmd"
+	state "github.com/sunrise-zone/sunrise-node/nodebuilder/state/cmd"
 )
 
 func init() {

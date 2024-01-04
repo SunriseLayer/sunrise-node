@@ -7,16 +7,16 @@ import (
 	"github.com/BurntSushi/toml"
 	"github.com/imdario/mergo"
 
-	"github.com/celestiaorg/celestia-node/libs/fslock"
-	"github.com/celestiaorg/celestia-node/nodebuilder/core"
-	"github.com/celestiaorg/celestia-node/nodebuilder/das"
-	"github.com/celestiaorg/celestia-node/nodebuilder/gateway"
-	"github.com/celestiaorg/celestia-node/nodebuilder/header"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
-	"github.com/celestiaorg/celestia-node/nodebuilder/rpc"
-	"github.com/celestiaorg/celestia-node/nodebuilder/share"
-	"github.com/celestiaorg/celestia-node/nodebuilder/state"
+	"github.com/sunrise-zone/sunrise-node/libs/fslock"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/das"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/gateway"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/header"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/rpc"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/share"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
 )
 
 // ConfigLoader defines a function that loads a config from any source.

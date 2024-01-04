@@ -3,10 +3,10 @@ package state
 import (
 	kr "github.com/cosmos/cosmos-sdk/crypto/keyring"
 
-	apptypes "github.com/celestiaorg/celestia-app/x/blob/types"
+	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
-	"github.com/celestiaorg/celestia-node/libs/keystore"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/libs/keystore"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
 )
 
 const DefaultAccountName = "my_celes_key"

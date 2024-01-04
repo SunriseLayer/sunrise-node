@@ -6,8 +6,8 @@ import (
 
 	"github.com/celestiaorg/go-fraud"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
 )
 
 var log = logging.Logger("module/fraud")

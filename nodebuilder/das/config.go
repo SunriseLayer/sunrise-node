@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/celestiaorg/celestia-node/das"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	modp2p "github.com/celestiaorg/celestia-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/das"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	modp2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
 )
 
 // Config contains configuration parameters for the DASer (or DASing process)

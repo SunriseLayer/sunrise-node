@@ -10,10 +10,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/types"
 	logging "github.com/ipfs/go-log/v2"
 
-	"github.com/celestiaorg/celestia-app/pkg/shares"
+	"github.com/sunrise-zone/sunrise-app/pkg/shares"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 var (

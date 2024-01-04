@@ -10,7 +10,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/routing"
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
 )
 
 // contentRouting constructs nil content routing,

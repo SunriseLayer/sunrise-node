@@ -9,9 +9,9 @@ import (
 
 	"github.com/celestiaorg/go-header/store"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/nodebuilder"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
 )
 
 func init() {

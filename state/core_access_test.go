@@ -12,13 +12,13 @@ import (
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/celestiaorg/celestia-app/app"
-	"github.com/celestiaorg/celestia-app/pkg/appconsts"
-	"github.com/celestiaorg/celestia-app/test/util/testnode"
-	blobtypes "github.com/celestiaorg/celestia-app/x/blob/types"
+	"github.com/sunrise-zone/sunrise-app/app"
+	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	"github.com/sunrise-zone/sunrise-app/testutil/testnode"
+	blobtypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
-	"github.com/celestiaorg/celestia-node/blob"
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/blob"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 func TestSubmitPayForBlob(t *testing.T) {

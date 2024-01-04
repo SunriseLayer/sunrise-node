@@ -14,11 +14,11 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/celestiaorg/celestia-app/test/util/testnode"
+	"github.com/sunrise-zone/sunrise-app/testutil/testnode"
 )
 
 /*
-StartGRPCServer is a copy of https://github.com/celestiaorg/celestia-app/blob/e5a679d11b464d583b616d4d686de9dd44bdab2e/testutil/testnode/rpc_client.go#L46
+StartGRPCServer is a copy of https://github.com/sunrise-zone/sunrise-app/blob/e5a679d11b464d583b616d4d686de9dd44bdab2e/testutil/testnode/rpc_client.go#L46
 // It's copied as internal Cosmos SDK logic take 5 seconds to run: https://github.com/cosmos/cosmos-sdk/blob/6dfa0c98062d5d8b38d85ca1d2807937f47da4a3/server/grpc/server.go#L80
 // FIXME once the fix for https://github.com/cosmos/cosmos-sdk/issues/14429 lands in our fork
 */

@@ -19,7 +19,7 @@ import (
 	"github.com/celestiaorg/go-fraud/fraudserv"
 	headp2p "github.com/celestiaorg/go-header/p2p"
 
-	"github.com/celestiaorg/celestia-node/header"
+	"github.com/sunrise-zone/sunrise-node/header"
 )
 
 func init() {

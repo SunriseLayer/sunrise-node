@@ -18,17 +18,17 @@ import (
 	"github.com/celestiaorg/nmt"
 	"github.com/celestiaorg/rsmt2d"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/header/headertest"
-	"github.com/celestiaorg/celestia-node/share"
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/eds/edstest"
-	"github.com/celestiaorg/celestia-node/share/ipld"
-	"github.com/celestiaorg/celestia-node/share/p2p/peers"
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexeds"
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexnd"
-	"github.com/celestiaorg/celestia-node/share/p2p/shrexsub"
-	"github.com/celestiaorg/celestia-node/share/sharetest"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/header/headertest"
+	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
+	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/peers"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexeds"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexnd"
+	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
+	"github.com/sunrise-zone/sunrise-node/share/sharetest"
 )
 
 func TestShrexGetter(t *testing.T) {

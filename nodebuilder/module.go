@@ -5,19 +5,19 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/libs/fxutil"
-	"github.com/celestiaorg/celestia-node/nodebuilder/blob"
-	"github.com/celestiaorg/celestia-node/nodebuilder/core"
-	"github.com/celestiaorg/celestia-node/nodebuilder/das"
-	"github.com/celestiaorg/celestia-node/nodebuilder/fraud"
-	"github.com/celestiaorg/celestia-node/nodebuilder/gateway"
-	modhead "github.com/celestiaorg/celestia-node/nodebuilder/header"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/p2p"
-	"github.com/celestiaorg/celestia-node/nodebuilder/rpc"
-	"github.com/celestiaorg/celestia-node/nodebuilder/share"
-	"github.com/celestiaorg/celestia-node/nodebuilder/state"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/libs/fxutil"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/blob"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/das"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/gateway"
+	modhead "github.com/sunrise-zone/sunrise-node/nodebuilder/header"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/rpc"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/share"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
 )
 
 func ConstructModule(tp node.Type, network p2p.Network, cfg *Config, store Store) fx.Option {

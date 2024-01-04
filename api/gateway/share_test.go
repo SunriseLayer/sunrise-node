@@ -4,13 +4,13 @@ import (
 	_ "embed"
 	"testing"
 
+	coretypes "github.com/cometbft/cometbft/types"
 	"github.com/stretchr/testify/require"
-	coretypes "github.com/tendermint/tendermint/types"
 
-	"github.com/celestiaorg/celestia-app/pkg/appconsts"
-	"github.com/celestiaorg/celestia-app/pkg/shares"
+	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	"github.com/sunrise-zone/sunrise-app/pkg/shares"
 
-	"github.com/celestiaorg/celestia-node/share/sharetest"
+	"github.com/sunrise-zone/sunrise-node/share/sharetest"
 )
 
 func Test_dataFromShares(t *testing.T) {

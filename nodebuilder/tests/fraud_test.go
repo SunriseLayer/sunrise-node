@@ -5,24 +5,24 @@ import (
 	"testing"
 	"time"
 
+	"github.com/cometbft/cometbft/types"
 	"github.com/ipfs/go-datastore"
 	ds_sync "github.com/ipfs/go-datastore/sync"
 	"github.com/libp2p/go-libp2p/core/host"
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/types"
 	"go.uber.org/fx"
 
 	"github.com/celestiaorg/go-fraud"
 
-	"github.com/celestiaorg/celestia-node/header"
-	headerfraud "github.com/celestiaorg/celestia-node/header/headertest/fraud"
-	"github.com/celestiaorg/celestia-node/nodebuilder"
-	"github.com/celestiaorg/celestia-node/nodebuilder/core"
-	"github.com/celestiaorg/celestia-node/nodebuilder/node"
-	"github.com/celestiaorg/celestia-node/nodebuilder/tests/swamp"
-	"github.com/celestiaorg/celestia-node/share/eds"
-	"github.com/celestiaorg/celestia-node/share/eds/byzantine"
+	"github.com/sunrise-zone/sunrise-node/header"
+	headerfraud "github.com/sunrise-zone/sunrise-node/header/headertest/fraud"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/tests/swamp"
+	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
 )
 
 /*

@@ -5,7 +5,7 @@ import (
 
 	libhead "github.com/celestiaorg/go-header"
 
-	"github.com/celestiaorg/celestia-node/header"
+	"github.com/sunrise-zone/sunrise-node/header"
 )
 
 // subscriber subscribes to notifications about new headers in the network to keep

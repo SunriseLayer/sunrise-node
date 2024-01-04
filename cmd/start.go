@@ -10,10 +10,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	"github.com/spf13/cobra"
 
-	"github.com/celestiaorg/celestia-app/app"
-	"github.com/celestiaorg/celestia-app/app/encoding"
+	"github.com/sunrise-zone/sunrise-app/app"
+	"github.com/sunrise-zone/sunrise-app/app/encoding"
 
-	"github.com/celestiaorg/celestia-node/nodebuilder"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder"
 )
 
 // Start constructs a CLI command to start Celestia Node daemon of any type with the given flags.
@@ -36,7 +36,7 @@ Options passed on start override configuration options only on start and are not
 
 			// construct ring
 			// TODO @renaynay: Include option for setting custom `userInput` parameter with
-			//  implementation of https://github.com/celestiaorg/celestia-node/issues/415.
+			//  implementation of https://github.com/sunrise-zone/sunrise-node/issues/415.
 			encConf := encoding.MakeConfig(app.ModuleEncodingRegisters...)
 			ring, err := keyring.New(app.Name, cfg.State.KeyringBackend, keysPath, os.Stdin, encConf.Codec)
 			if err != nil {

@@ -1,15 +1,15 @@
 package state
 
 import (
-	apptypes "github.com/celestiaorg/celestia-app/x/blob/types"
 	libfraud "github.com/celestiaorg/go-fraud"
 	"github.com/celestiaorg/go-header/sync"
+	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
-	"github.com/celestiaorg/celestia-node/header"
-	"github.com/celestiaorg/celestia-node/nodebuilder/core"
-	modfraud "github.com/celestiaorg/celestia-node/nodebuilder/fraud"
-	"github.com/celestiaorg/celestia-node/share/eds/byzantine"
-	"github.com/celestiaorg/celestia-node/state"
+	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
+	modfraud "github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
+	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
+	"github.com/sunrise-zone/sunrise-node/state"
 )
 
 // coreAccessor constructs a new instance of state.Module over

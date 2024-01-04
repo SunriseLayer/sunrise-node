@@ -1,9 +1,9 @@
 # Celestia Node
 
-[![Go Reference](https://pkg.go.dev/badge/github.com/celestiaorg/celestia-node.svg)](https://pkg.go.dev/github.com/celestiaorg/celestia-node)
-[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/celestiaorg/celestia-node)](https://github.com/celestiaorg/celestia-node/releases/latest)
-[![Go CI](https://github.com/celestiaorg/celestia-node/actions/workflows/go-ci.yml/badge.svg)](https://github.com/celestiaorg/celestia-node/actions/workflows/go-ci.yml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/celestiaorg/celestia-node)](https://goreportcard.com/report/github.com/celestiaorg/celestia-node)
+[![Go Reference](https://pkg.go.dev/badge/github.com/sunrise-zone/sunrise-node.svg)](https://pkg.go.dev/github.com/sunrise-zone/sunrise-node)
+[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/celestiaorg/celestia-node)](https://github.com/sunrise-zone/sunrise-node/releases/latest)
+[![Go CI](https://github.com/sunrise-zone/sunrise-node/actions/workflows/go-ci.yml/badge.svg)](https://github.com/sunrise-zone/sunrise-node/actions/workflows/go-ci.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/sunrise-zone/sunrise-node)](https://goreportcard.com/report/github.com/sunrise-zone/sunrise-node)
 [![codecov](https://codecov.io/gh/celestiaorg/celestia-node/branch/main/graph/badge.svg?token=CWGA4RLDS9)](https://codecov.io/gh/celestiaorg/celestia-node)
 
 Golang implementation of Celestia's data availability node types (`light` | `full` | `bridge`).
@@ -45,7 +45,7 @@ See the official docs page for system requirements per node type:
 ## Installation
 
 ```sh
-git clone https://github.com/celestiaorg/celestia-node.git
+git clone https://github.com/sunrise-zone/sunrise-node.git
 cd celestia-node
 make build
 sudo make install
@@ -63,7 +63,7 @@ The celestia-node public API is documented [here](https://node-rpc-docs.celestia
 - **Full** nodes - fully reconstruct and store blocks by sampling the DA network for shares
 - **Light** nodes - verify the availability of block data by sampling the DA network for shares
 
-More information can be found [here](https://github.com/celestiaorg/celestia-node/blob/main/docs/adr/adr-003-march2022-testnet.md#legend).
+More information can be found [here](https://github.com/sunrise-zone/sunrise-node/blob/main/docs/adr/adr-003-march2022-testnet.md#legend).
 
 ## Run a node
 

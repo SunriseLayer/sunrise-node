@@ -3,9 +3,9 @@ package swamp
 import (
 	"time"
 
-	"github.com/celestiaorg/celestia-app/test/util/testnode"
+	"github.com/sunrise-zone/sunrise-app/testutil/testnode"
 
-	"github.com/celestiaorg/celestia-node/core"
+	"github.com/sunrise-zone/sunrise-node/core"
 )
 
 // DefaultConfig creates a celestia-app instance with a block time of around
