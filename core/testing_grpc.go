@@ -14,7 +14,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/sunrise-zone/sunrise-app/testutil/testnode"
+	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
 )
 
 /*

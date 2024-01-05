@@ -3,7 +3,7 @@ package swamp
 import (
 	"time"
 
-	"github.com/sunrise-zone/sunrise-app/testutil/testnode"
+	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
 
 	"github.com/sunrise-zone/sunrise-node/core"
 )

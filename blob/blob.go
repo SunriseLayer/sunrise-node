@@ -6,12 +6,11 @@ import (
 	"errors"
 	"fmt"
 
-	tmproto "github.com/cometbft/cometbft/proto/tendermint/types"
-
 	"github.com/celestiaorg/nmt"
 	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	types "github.com/sunrise-zone/sunrise-app/pkg/blob"
+	"github.com/sunrise-zone/sunrise-app/pkg/inclusion"
 	"github.com/sunrise-zone/sunrise-app/pkg/shares"
-	"github.com/sunrise-zone/sunrise-app/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/share"
 )
@@ -89,14 +88,14 @@ func NewBlob(shareVersion uint8, namespace share.Namespace, data []byte) (*Blob,
 		return nil, err
 	}
 
-	blob := tmproto.Blob{
+	blob := types.Blob{
 		NamespaceId:      namespace.ID(),
 		Data:             data,
 		ShareVersion:     uint32(shareVersion),
 		NamespaceVersion: uint32(namespace.Version()),
 	}
 
-	com, err := types.CreateCommitment(&blob)
+	com, err := inclusion.CreateCommitment(&blob)
 	if err != nil {
 		return nil, err
 	}

@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-app/testutil/testnode"
+	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
 
 	"github.com/sunrise-zone/sunrise-node/header"
 	"github.com/sunrise-zone/sunrise-node/share/eds"

@@ -77,7 +77,7 @@ func (s *Service) Submit(ctx context.Context, blobs []*Blob, options *SubmitOpti
 		options = DefaultSubmitOptions()
 	}
 
-	resp, err := s.blobSubmitter.SubmitPayForBlob(ctx, types.NewInt(options.Fee), options.GasLimit, blobs)
+	resp, err := s.blobSubmitter.SubmitPayForBlob(ctx, math.NewInt(options.Fee), options.GasLimit, blobs)
 	if err != nil {
 		return 0, err
 	}

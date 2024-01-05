@@ -5,7 +5,7 @@ package header_pb
 
 import (
 	fmt "fmt"
-	da "github.com/sunrise-zone/sunrise-app/proto/celestia/da"
+	da "github.com/sunrise-zone/sunrise-app/proto/sunrise/core/v1/da"
 	proto "github.com/gogo/protobuf/proto"
 	types "github.com/cometbft/cometbft/proto/tendermint/types"
 	io "io"

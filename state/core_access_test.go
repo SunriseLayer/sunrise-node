@@ -14,7 +14,7 @@ import (
 
 	"github.com/sunrise-zone/sunrise-app/app"
 	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/testutil/testnode"
+	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
 	blobtypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/blob"

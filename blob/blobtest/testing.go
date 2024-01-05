@@ -6,7 +6,7 @@ import (
 
 	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
 	"github.com/sunrise-zone/sunrise-app/pkg/shares"
-	"github.com/sunrise-zone/sunrise-app/testutil/testfactory"
+	"github.com/sunrise-zone/sunrise-app/test/util/testfactory"
 
 	"github.com/sunrise-zone/sunrise-node/share"
 )

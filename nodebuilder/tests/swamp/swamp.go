@@ -22,7 +22,7 @@ import (
 	"golang.org/x/exp/maps"
 
 	libhead "github.com/celestiaorg/go-header"
-	"github.com/sunrise-zone/sunrise-app/testutil/testnode"
+	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
 	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/core"

@@ -18,8 +18,8 @@ import (
 
 	libhead "github.com/celestiaorg/go-header"
 	"github.com/sunrise-zone/sunrise-app/app"
-	"github.com/sunrise-zone/sunrise-app/testutil/testfactory"
-	"github.com/sunrise-zone/sunrise-app/testutil/testnode"
+	"github.com/sunrise-zone/sunrise-app/test/util/testfactory"
+	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
 	blobtypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/core"

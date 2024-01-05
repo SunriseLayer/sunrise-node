@@ -9,6 +9,7 @@ import (
 	"time"
 
 	sdkErrors "cosmossdk.io/errors"
+	sdkmath "cosmossdk.io/math"
 	storetypes "cosmossdk.io/store/types"
 	"github.com/cometbft/cometbft/crypto/merkle"
 	rpcclient "github.com/cometbft/cometbft/rpc/client"
@@ -28,6 +29,7 @@ import (
 	"github.com/sunrise-zone/sunrise-app/app"
 	apperrors "github.com/sunrise-zone/sunrise-app/app/errors"
 	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	pkgblob "github.com/sunrise-zone/sunrise-app/pkg/blob"
 	appblob "github.com/sunrise-zone/sunrise-app/x/blob"
 	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
@@ -194,7 +196,7 @@ func (ca *CoreAccessor) SubmitPayForBlob(
 		return nil, errors.New("state: no blobs provided")
 	}
 
-	appblobs := make([]*apptypes.Blob, len(blobs))
+	appblobs := make([]*pkgblob.Blob, len(blobs))
 	for i := range blobs {
 		if err := blobs[i].Namespace().ValidateForBlob(); err != nil {
 			return nil, err
@@ -222,7 +224,7 @@ func (ca *CoreAccessor) SubmitPayForBlob(
 	estimatedFee := false
 	if fee.IsNegative() {
 		estimatedFee = true
-		fee = sdktypes.NewInt(int64(math.Ceil(minGasPrice * float64(gasLim))))
+		fee = sdkmath.NewInt(int64(math.Ceil(minGasPrice * float64(gasLim))))
 	}
 
 	var lastErr error
@@ -248,7 +250,7 @@ func (ca *CoreAccessor) SubmitPayForBlob(
 			ca.setMinGasPrice(minGasPrice)
 			lastErr = err
 			// update the fee to retry again
-			fee = sdktypes.NewInt(int64(math.Ceil(minGasPrice * float64(gasLim))))
+			fee = sdkmath.NewInt(int64(math.Ceil(minGasPrice * float64(gasLim))))
 			continue
 		}
 
@@ -317,15 +319,15 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 		log.Errorf("balance for account %s does not exist at block height %d", addr.String(), head.Height()-1)
 		return &Balance{
 			Denom:  app.BondDenom,
-			Amount: sdktypes.NewInt(0),
+			Amount: sdkmath.NewInt(0),
 		}, nil
 	}
-	coin, ok := sdktypes.NewIntFromString(string(value))
+	coin, ok := sdkmath.NewIntFromString(string(value))
 	if !ok {
 		return nil, fmt.Errorf("cannot convert %s into sdktypes.Int", string(value))
 	}
 	// verify balance
-	err = ca.prt.VerifyValueFromKeys(
+	err = ca.prt.VerifyValue(
 		result.Response.GetProofOps(),
 		head.AppHash,
 		[][]byte{[]byte(banktypes.StoreKey),
@@ -402,7 +404,7 @@ func (ca *CoreAccessor) CancelUnbondingDelegation(
 		return nil, err
 	}
 	coins := sdktypes.NewCoin(app.BondDenom, amount)
-	msg := stakingtypes.NewMsgCancelUnbondingDelegation(from, valAddr, height.Int64(), coins)
+	msg := stakingtypes.NewMsgCancelUnbondingDelegation(from.String(), valAddr.String(), height.Int64(), coins)
 	signedTx, err := ca.constructSignedTx(ctx, msg, apptypes.SetGasLimit(gasLim), withFee(fee))
 	if err != nil {
 		return nil, err
@@ -427,7 +429,7 @@ func (ca *CoreAccessor) BeginRedelegate(
 		return nil, err
 	}
 	coins := sdktypes.NewCoin(app.BondDenom, amount)
-	msg := stakingtypes.NewMsgBeginRedelegate(from, srcValAddr, dstValAddr, coins)
+	msg := stakingtypes.NewMsgBeginRedelegate(from.String(), srcValAddr.String(), dstValAddr.String(), coins)
 	signedTx, err := ca.constructSignedTx(ctx, msg, apptypes.SetGasLimit(gasLim), withFee(fee))
 	if err != nil {
 		return nil, err
@@ -451,7 +453,7 @@ func (ca *CoreAccessor) Undelegate(
 		return nil, err
 	}
 	coins := sdktypes.NewCoin(app.BondDenom, amount)
-	msg := stakingtypes.NewMsgUndelegate(from, delAddr, coins)
+	msg := stakingtypes.NewMsgUndelegate(from.String(), delAddr.String(), coins)
 	signedTx, err := ca.constructSignedTx(ctx, msg, apptypes.SetGasLimit(gasLim), withFee(fee))
 	if err != nil {
 		return nil, err
@@ -475,7 +477,7 @@ func (ca *CoreAccessor) Delegate(
 		return nil, err
 	}
 	coins := sdktypes.NewCoin(app.BondDenom, amount)
-	msg := stakingtypes.NewMsgDelegate(from, delAddr, coins)
+	msg := stakingtypes.NewMsgDelegate(from.String(), delAddr.String(), coins)
 	signedTx, err := ca.constructSignedTx(ctx, msg, apptypes.SetGasLimit(gasLim), withFee(fee))
 	if err != nil {
 		return nil, err

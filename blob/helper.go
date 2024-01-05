@@ -4,8 +4,7 @@ import (
 	"bytes"
 	"sort"
 
-	"github.com/cometbft/cometbft/types"
-
+	pkgblob "github.com/sunrise-zone/sunrise-app/pkg/blob"
 	"github.com/sunrise-zone/sunrise-app/pkg/shares"
 
 	"github.com/sunrise-zone/sunrise-node/share"
@@ -62,19 +61,19 @@ func parseShares(appShrs []shares.Share) ([]*Blob, error) {
 
 // BlobsToShares accepts blobs and convert them to the Shares.
 func BlobsToShares(blobs ...*Blob) ([]share.Share, error) {
-	b := make([]types.Blob, len(blobs))
+	b := make([]*pkgblob.Blob, len(blobs))
 	for i, blob := range blobs {
 		namespace := blob.Namespace()
-		b[i] = types.Blob{
-			NamespaceVersion: namespace[0],
-			NamespaceID:      namespace[1:],
+		b[i] = &pkgblob.Blob{
+			NamespaceVersion: uint32(namespace[0]),
+			NamespaceId:      namespace[1:],
 			Data:             blob.Data,
-			ShareVersion:     uint8(blob.ShareVersion),
+			ShareVersion:     uint32(blob.ShareVersion),
 		}
 	}
 
 	sort.Slice(b, func(i, j int) bool {
-		val := bytes.Compare(b[i].NamespaceID, b[j].NamespaceID)
+		val := bytes.Compare(b[i].NamespaceId, b[j].NamespaceId)
 		return val <= 0
 	})
 
