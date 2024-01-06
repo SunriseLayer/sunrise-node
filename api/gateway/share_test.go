@@ -4,10 +4,10 @@ import (
 	_ "embed"
 	"testing"
 
-	coretypes "github.com/cometbft/cometbft/types"
 	"github.com/stretchr/testify/require"
 
 	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	"github.com/sunrise-zone/sunrise-app/pkg/blob"
 	"github.com/sunrise-zone/sunrise-app/pkg/shares"
 
 	"github.com/sunrise-zone/sunrise-node/share/sharetest"
@@ -23,11 +23,11 @@ func Test_dataFromShares(t *testing.T) {
 	ns := sharetest.RandV0Namespace()
 	sss := shares.NewSparseShareSplitter()
 	for _, data := range testData {
-		b := coretypes.Blob{
+		b := &blob.Blob{
 			Data:             data,
-			NamespaceID:      ns.ID(),
-			NamespaceVersion: ns.Version(),
-			ShareVersion:     appconsts.ShareVersionZero,
+			NamespaceId:      ns.ID(),
+			NamespaceVersion: uint32(ns.Version()),
+			ShareVersion:     uint32(appconsts.ShareVersionZero),
 		}
 		err := sss.Write(b)
 		require.NoError(t, err)

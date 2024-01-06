@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	sdk "github.com/cosmos/cosmos-sdk/types"
+	sdkmath "cosmossdk.io/math"
 	"github.com/cristalhq/jwt"
 	"github.com/golang/mock/gomock"
 	"github.com/libp2p/go-libp2p/core/network"
@@ -69,7 +69,7 @@ func TestRPCCallsUnderlyingNode(t *testing.T) {
 	require.NoError(t, err)
 
 	expectedBalance := &state.Balance{
-		Amount: sdk.NewInt(100),
+		Amount: sdkmath.NewInt(100),
 		Denom:  "utia",
 	}
 

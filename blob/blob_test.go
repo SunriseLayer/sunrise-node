@@ -4,10 +4,11 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/cometbft/cometbft/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/sunrise-zone/sunrise-app/pkg/blob"
+	"github.com/sunrise-zone/sunrise-app/pkg/inclusion"
 	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/blob/blobtest"
@@ -35,7 +36,7 @@ func TestBlob(t *testing.T) {
 		{
 			name: "compare commitments",
 			expectedRes: func(t *testing.T) {
-				comm, err := apptypes.CreateCommitment(&blob[0].Blob)
+				comm, err := inclusion.CreateCommitment(&blob[0].Blob)
 				require.NoError(t, err)
 				assert.Equal(t, blob[0].Commitment, Commitment(comm))
 			},
@@ -77,10 +78,10 @@ func TestBlob(t *testing.T) {
 	}
 }
 
-func convertBlobs(appBlobs ...types.Blob) ([]*Blob, error) {
+func convertBlobs(appBlobs ...blob.Blob) ([]*Blob, error) {
 	blobs := make([]*Blob, 0, len(appBlobs))
 	for _, b := range appBlobs {
-		blob, err := NewBlob(b.ShareVersion, append([]byte{b.NamespaceVersion}, b.NamespaceID...), b.Data)
+		blob, err := NewBlob(uint8(b.ShareVersion), append([]byte{byte(b.NamespaceVersion)}, b.NamespaceId...), b.Data)
 		if err != nil {
 			return nil, err
 		}
