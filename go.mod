@@ -132,6 +132,7 @@ require (
 	github.com/sagikazarmark/slog-shim v0.1.0 // indirect
 	github.com/sourcegraph/conc v0.3.0 // indirect
 	github.com/supranational/blst v0.3.11 // indirect
+	github.com/tendermint/tendermint v0.35.9 // indirect
 	go.uber.org/mock v0.3.0 // indirect
 	gotest.tools/v3 v3.5.1 // indirect
 	pgregory.net/rapid v1.1.0 // indirect
@@ -367,7 +368,7 @@ require (
 )
 
 replace (
-	github.com/cometbft/cometbft => github.com/sunrise-zone/sunrise-core v0.38.3-0.20231231025910-32991fef438b
+	github.com/cometbft/cometbft => github.com/sunrise-zone/sunrise-core v0.38.3-0.20240106061655-09870f8d9bdc
 	github.com/filecoin-project/dagstore => github.com/celestiaorg/dagstore v0.0.0-20230824094345-537c012aa403
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	// broken goleveldb needs to be replaced for the cosmos-sdk and celestia-app
