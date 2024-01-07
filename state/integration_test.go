@@ -6,6 +6,7 @@ import (
 	"os"
 	"testing"
 
+	sdkmath "cosmossdk.io/math"
 	abci "github.com/cometbft/cometbft/abci/types"
 	rpcclient "github.com/cometbft/cometbft/rpc/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
@@ -51,7 +52,7 @@ func (s *IntegrationTestSuite) SetupSuite() {
 	s.accounts = cfg.Accounts
 
 	signer := blobtypes.NewKeyringSigner(s.cctx.Keyring, s.accounts[0], s.cctx.ChainID)
-	accessor := NewCoreAccessor(signer, localHeader{s.cctx.Client}, "", "", "")
+	accessor := NewCoreAccessor(signer, localHeader{s.cctx.RpcClient}, "", "", "")
 	setClients(accessor, s.cctx.GRPCClient, s.cctx.Client)
 	s.accessor = accessor
 
@@ -112,7 +113,7 @@ func (l localHeader) Head(
 
 func (s *IntegrationTestSuite) TestGetBalance() {
 	require := s.Require()
-	expectedBal := sdk.NewCoin(app.BondDenom, sdk.NewInt(int64(99999999999999999)))
+	expectedBal := sdk.NewCoin(app.BondDenom, sdkmath.NewInt(int64(99999999999999999)))
 	for _, acc := range s.accounts {
 		bal, err := s.accessor.BalanceForAddress(context.Background(), Address{s.getAddress(acc)})
 		require.NoError(err)
@@ -125,7 +126,7 @@ func (s *IntegrationTestSuite) TestGetBalance() {
 func (s *IntegrationTestSuite) TestGenerateJSONBlock() {
 	t := s.T()
 	t.Skip("skipping testdata generation test")
-	resp, err := s.cctx.FillBlock(4, s.accounts, flags.BroadcastSync)
+	resp, err := s.cctx.FillBlock(4, s.accounts[0], flags.BroadcastSync)
 	require := s.Require()
 	require.NoError(err)
 	require.Equal(abci.CodeTypeOK, resp.Code)

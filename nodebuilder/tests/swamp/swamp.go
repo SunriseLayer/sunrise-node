@@ -177,7 +177,7 @@ func (s *Swamp) setupGenesis() {
 	require.NoError(s.t, err)
 
 	ex, err := core.NewExchange(
-		core.NewBlockFetcher(s.ClientContext.Client),
+		core.NewBlockFetcher(s.ClientContext.RpcClient),
 		store,
 		header.MakeExtendedHeader,
 	)
@@ -265,7 +265,7 @@ func (s *Swamp) NewNodeWithStore(
 	switch tp {
 	case node.Bridge:
 		options = append(options,
-			coremodule.WithClient(s.ClientContext.Client),
+			coremodule.WithClient(s.ClientContext.RpcClient),
 		)
 	default:
 	}

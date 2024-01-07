@@ -5,6 +5,7 @@ import (
 	"testing"
 	"time"
 
+	"github.com/cometbft/cometbft/types"
 	"github.com/stretchr/testify/require"
 )
 
@@ -22,7 +23,7 @@ func TestRemoteClient_StartBlockSubscription_And_GetBlock(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*10)
 	t.Cleanup(cancel)
 
-	client := StartTestNode(t).Client
+	client := StartTestNode(t).RpcClient
 	eventChan, err := client.Subscribe(ctx, newBlockSubscriber, newDataSignedBlockQuery)
 	require.NoError(t, err)
 

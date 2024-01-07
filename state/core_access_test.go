@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"cosmossdk.io/math"
-	sdktypes "github.com/cosmos/cosmos-sdk/types"
+	sdkmath "cosmossdk.io/math"
 	"github.com/stretchr/testify/require"
 
 	"github.com/sunrise-zone/sunrise-app/app"
@@ -62,14 +62,14 @@ func TestSubmitPayForBlob(t *testing.T) {
 		{
 			name:   "empty blobs",
 			blobs:  []*blob.Blob{},
-			fee:    sdktypes.ZeroInt(),
+			fee:    sdkmath.ZeroInt(),
 			gasLim: 0,
 			expErr: errors.New("state: no blobs provided"),
 		},
 		{
 			name:   "good blob with user provided gas and fees",
 			blobs:  []*blob.Blob{blobbyTheBlob},
-			fee:    sdktypes.NewInt(10_000), // roughly 0.12 utia per gas (should be good)
+			fee:    sdkmath.NewInt(10_000), // roughly 0.12 utia per gas (should be good)
 			gasLim: blobtypes.DefaultEstimateGas([]uint32{uint32(len(blobbyTheBlob.Data))}),
 			expErr: nil,
 		},

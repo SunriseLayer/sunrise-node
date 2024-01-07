@@ -189,7 +189,7 @@ func (s *TestSuite) Commit(h *header.RawHeader) *types.Commit {
 		comms[i] = v.CommitSig()
 	}
 
-	return types.NewCommit(h.Height, round, bid, comms)
+	return &types.Commit{Height: h.Height, Round: round, BlockID: bid, Signatures: comms}
 }
 
 func (s *TestSuite) nextProposer() *types.Validator {

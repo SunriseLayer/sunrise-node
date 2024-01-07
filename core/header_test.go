@@ -17,7 +17,7 @@ func TestMakeExtendedHeaderForEmptyBlock(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
 	t.Cleanup(cancel)
 
-	client := StartTestNode(t).Client
+	client := StartTestNode(t).RpcClient
 	fetcher := NewBlockFetcher(client)
 
 	sub, err := fetcher.SubscribeNewBlockEvent(ctx)
