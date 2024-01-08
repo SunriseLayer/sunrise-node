@@ -102,7 +102,7 @@ func MakeCommit(blockID types.BlockID, height int64, round int32,
 		}
 	}
 
-	return voteSet.MakeCommit(), nil
+	return voteSet.MakeExtendedCommit(types.DefaultABCIParams()).ToCommit(), nil
 }
 
 func signAddVote(privVal types.PrivValidator, vote *types.Vote, voteSet *types.VoteSet) (signed bool, err error) {
