@@ -47,7 +47,7 @@ func TestSyncAgainstBridge_NonEmptyChain(t *testing.T) {
 
 	sw := swamp.NewSwamp(t, swamp.WithBlockTime(btime))
 	// wait for core network to fill 20 blocks
-	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts, bsize, numBlocks)
+	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts[0].Name, bsize, numBlocks)
 	sw.WaitTillHeight(ctx, numBlocks)
 
 	// create a bridge node and set it as the bootstrapper for the suite
@@ -216,7 +216,7 @@ func TestSyncStartStopLightWithBridge(t *testing.T) {
 
 	sw := swamp.NewSwamp(t)
 	// wait for core network to fill 20 blocks
-	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts, bsize, numBlocks)
+	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts[0].Name, bsize, numBlocks)
 	sw.WaitTillHeight(ctx, numBlocks)
 
 	// create bridge and set it as a bootstrapper
@@ -283,7 +283,7 @@ func TestSyncLightAgainstFull(t *testing.T) {
 
 	sw := swamp.NewSwamp(t)
 	// wait for the core network to fill up 20 blocks
-	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts, bsize, numBlocks)
+	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts[0].Name, bsize, numBlocks)
 	sw.WaitTillHeight(ctx, numBlocks)
 
 	// create bridge and set it as a bootstrapper
@@ -361,7 +361,7 @@ func TestSyncLightWithTrustedPeers(t *testing.T) {
 	t.Cleanup(cancel)
 
 	sw := swamp.NewSwamp(t)
-	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts, bsize, numBlocks)
+	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts[0].Name, bsize, numBlocks)
 	sw.WaitTillHeight(ctx, numBlocks)
 
 	// create a BN and set as a bootstrapper

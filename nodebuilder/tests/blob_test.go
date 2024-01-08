@@ -30,7 +30,7 @@ func TestBlobModule(t *testing.T) {
 	blobs := make([]*blob.Blob, 0, len(appBlobs0)+len(appBlobs1))
 
 	for _, b := range append(appBlobs0, appBlobs1...) {
-		blob, err := blob.NewBlob(b.ShareVersion, append([]byte{b.NamespaceVersion}, b.NamespaceID...), b.Data)
+		blob, err := blob.NewBlob(uint8(b.ShareVersion), append([]byte{uint8(b.NamespaceVersion)}, b.NamespaceId...), b.Data)
 		require.NoError(t, err)
 		blobs = append(blobs, blob)
 	}
@@ -117,8 +117,8 @@ func TestBlobModule(t *testing.T) {
 				appBlob, err := blobtest.GenerateV0Blobs([]int{4}, false)
 				require.NoError(t, err)
 				newBlob, err := blob.NewBlob(
-					appBlob[0].ShareVersion,
-					append([]byte{appBlob[0].NamespaceVersion}, appBlob[0].NamespaceID...),
+					uint8(appBlob[0].ShareVersion),
+					append([]byte{uint8(appBlob[0].NamespaceVersion)}, appBlob[0].NamespaceId...),
 					appBlob[0].Data,
 				)
 				require.NoError(t, err)
@@ -135,8 +135,8 @@ func TestBlobModule(t *testing.T) {
 				appBlob, err := blobtest.GenerateV0Blobs([]int{8, 4}, true)
 				require.NoError(t, err)
 				b, err := blob.NewBlob(
-					appBlob[0].ShareVersion,
-					append([]byte{appBlob[0].NamespaceVersion}, appBlob[0].NamespaceID...),
+					uint8(appBlob[0].ShareVersion),
+					append([]byte{uint8(appBlob[0].NamespaceVersion)}, appBlob[0].NamespaceId...),
 					appBlob[0].Data,
 				)
 				require.NoError(t, err)

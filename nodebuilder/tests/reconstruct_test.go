@@ -48,7 +48,7 @@ func TestFullReconstructFromBridge(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), swamp.DefaultTestTimeout)
 	t.Cleanup(cancel)
 	sw := swamp.NewSwamp(t, swamp.WithBlockTime(btime))
-	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts, bsize, blocks)
+	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts[0].Name, bsize, blocks)
 
 	bridge := sw.NewBridgeNode()
 	err := bridge.Start(ctx)
@@ -101,7 +101,7 @@ func TestFullReconstructFromFulls(t *testing.T) {
 	t.Cleanup(cancel)
 
 	sw := swamp.NewSwamp(t, swamp.WithBlockTime(btime))
-	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts, bsize, blocks)
+	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts[0].Name, bsize, blocks)
 
 	const defaultTimeInterval = time.Second * 5
 	bridge := sw.NewBridgeNode()
@@ -268,7 +268,7 @@ func TestFullReconstructFromLights(t *testing.T) {
 
 	t.Cleanup(cancel)
 	sw := swamp.NewSwamp(t, swamp.WithBlockTime(btime))
-	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts, bsize, blocks)
+	fillDn := swamp.FillBlocks(ctx, sw.ClientContext, sw.Accounts[0].Name, bsize, blocks)
 
 	const defaultTimeInterval = time.Second * 5
 	cfg := nodebuilder.DefaultConfig(node.Full)

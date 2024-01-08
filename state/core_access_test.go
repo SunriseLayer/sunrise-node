@@ -14,6 +14,7 @@ import (
 
 	"github.com/sunrise-zone/sunrise-app/app"
 	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	"github.com/sunrise-zone/sunrise-app/test/util/genesis"
 	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
 	blobtypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
@@ -22,19 +23,20 @@ import (
 )
 
 func TestSubmitPayForBlob(t *testing.T) {
-	accounts := []string{"jimy", "rob"}
+	accounts := genesis.NewAccounts(1000000000, "jimy", "rob")
 	tmCfg := testnode.DefaultTendermintConfig()
 	tmCfg.Consensus.TimeoutCommit = time.Millisecond * 1
 	appConf := testnode.DefaultAppConfig()
 	appConf.API.Enable = true
 	appConf.MinGasPrices = fmt.Sprintf("0.002%s", app.BondDenom)
 
-	config := testnode.DefaultConfig().WithTendermintConfig(tmCfg).WithAppConfig(appConf).WithAccounts(accounts)
+	config := testnode.DefaultConfig().WithTendermintConfig(tmCfg).WithAppConfig(appConf)
+	config.Genesis = config.Genesis.WithAccounts(accounts...)
 	cctx, rpcAddr, grpcAddr := testnode.NewNetwork(t, config)
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 
-	signer := blobtypes.NewKeyringSigner(cctx.Keyring, accounts[0], cctx.ChainID)
+	signer := blobtypes.NewKeyringSigner(cctx.Keyring, accounts[0].Name, cctx.ChainID)
 	ca := NewCoreAccessor(signer, nil, "127.0.0.1", extractPort(rpcAddr), extractPort(grpcAddr))
 	// start the accessor
 	err := ca.Start(ctx)

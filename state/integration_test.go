@@ -19,6 +19,7 @@ import (
 
 	libhead "github.com/celestiaorg/go-header"
 	"github.com/sunrise-zone/sunrise-app/app"
+	"github.com/sunrise-zone/sunrise-app/test/util/genesis"
 	"github.com/sunrise-zone/sunrise-app/test/util/testfactory"
 	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
 	blobtypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
@@ -35,7 +36,7 @@ type IntegrationTestSuite struct {
 	suite.Suite
 
 	cleanups []func() error
-	accounts []string
+	accounts []genesis.Account
 	cctx     testnode.Context
 
 	accessor *CoreAccessor
@@ -49,9 +50,9 @@ func (s *IntegrationTestSuite) SetupSuite() {
 
 	cfg := core.DefaultTestConfig()
 	s.cctx = core.StartTestNodeWithConfig(s.T(), cfg)
-	s.accounts = cfg.Accounts
+	s.accounts = cfg.Genesis.Accounts()
 
-	signer := blobtypes.NewKeyringSigner(s.cctx.Keyring, s.accounts[0], s.cctx.ChainID)
+	signer := blobtypes.NewKeyringSigner(s.cctx.Keyring, s.accounts[0].Name, s.cctx.ChainID)
 	accessor := NewCoreAccessor(signer, localHeader{s.cctx.RpcClient}, "", "", "")
 	setClients(accessor, s.cctx.GRPCClient, s.cctx.Client)
 	s.accessor = accessor
@@ -115,7 +116,7 @@ func (s *IntegrationTestSuite) TestGetBalance() {
 	require := s.Require()
 	expectedBal := sdk.NewCoin(app.BondDenom, sdkmath.NewInt(int64(99999999999999999)))
 	for _, acc := range s.accounts {
-		bal, err := s.accessor.BalanceForAddress(context.Background(), Address{s.getAddress(acc)})
+		bal, err := s.accessor.BalanceForAddress(context.Background(), Address{s.getAddress(acc.Name)})
 		require.NoError(err)
 		require.Equal(&expectedBal, bal)
 	}
@@ -126,7 +127,7 @@ func (s *IntegrationTestSuite) TestGetBalance() {
 func (s *IntegrationTestSuite) TestGenerateJSONBlock() {
 	t := s.T()
 	t.Skip("skipping testdata generation test")
-	resp, err := s.cctx.FillBlock(4, s.accounts[0], flags.BroadcastSync)
+	resp, err := s.cctx.FillBlock(4, s.accounts[0].Name, flags.BroadcastSync)
 	require := s.Require()
 	require.NoError(err)
 	require.Equal(abci.CodeTypeOK, resp.Code)

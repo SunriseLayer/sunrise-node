@@ -10,6 +10,7 @@ import (
 	tmrand "github.com/cometbft/cometbft/libs/rand"
 	"github.com/stretchr/testify/require"
 
+	"github.com/sunrise-zone/sunrise-app/test/util/genesis"
 	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
 )
 
@@ -23,16 +24,17 @@ import (
 func DefaultTestConfig() *testnode.Config {
 	cfg := testnode.DefaultConfig()
 
-	// instructs creating funded accounts
+	// instructs creating funded accountNames
 	// 10 usually is enough for testing
-	accounts := make([]string, 10)
-	for i := range accounts {
-		accounts[i] = tmrand.Str(9)
+	accountNames := make([]string, 10)
+	for i := range accountNames {
+		accountNames[i] = tmrand.Str(9)
 	}
+	accounts := genesis.NewAccounts(1000000000, accountNames...)
 
 	cfg.TmConfig.Consensus.TimeoutCommit = time.Millisecond * 200
 
-	cfg.Genesis = cfg.Genesis.WithAccounts(accounts)
+	cfg.Genesis = cfg.Genesis.WithAccounts(accounts...)
 
 	return cfg
 }

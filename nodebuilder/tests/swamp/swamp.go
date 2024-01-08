@@ -22,6 +22,7 @@ import (
 	"golang.org/x/exp/maps"
 
 	libhead "github.com/celestiaorg/go-header"
+	"github.com/sunrise-zone/sunrise-app/test/util/genesis"
 	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
 	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
 
@@ -56,7 +57,7 @@ type Swamp struct {
 	Bootstrappers []ma.Multiaddr
 
 	ClientContext testnode.Context
-	Accounts      []string
+	Accounts      []genesis.Account
 
 	nodesMu sync.Mutex
 	nodes   map[*nodebuilder.Node]struct{}
@@ -84,7 +85,7 @@ func NewSwamp(t *testing.T, options ...Option) *Swamp {
 		cfg:           ic,
 		Network:       mocknet.New(),
 		ClientContext: cctx,
-		Accounts:      ic.Accounts,
+		Accounts:      ic.Genesis.Accounts(),
 		nodes:         map[*nodebuilder.Node]struct{}{},
 	}
 
@@ -257,7 +258,7 @@ func (s *Swamp) NewNodeWithStore(
 	store nodebuilder.Store,
 	options ...fx.Option,
 ) *nodebuilder.Node {
-	signer := apptypes.NewKeyringSigner(s.ClientContext.Keyring, s.Accounts[0], s.ClientContext.ChainID)
+	signer := apptypes.NewKeyringSigner(s.ClientContext.Keyring, s.Accounts[0].Name, s.ClientContext.ChainID)
 	options = append(options,
 		state.WithKeyringSigner(signer),
 	)
