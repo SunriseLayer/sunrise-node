@@ -8,6 +8,7 @@ import (
 	"sync"
 	"time"
 
+	"cosmossdk.io/collections"
 	sdkErrors "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"
 	storetypes "cosmossdk.io/store/types"
@@ -288,17 +289,14 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 	if err != nil {
 		return nil, err
 	}
-	// construct an ABCI query for the height at head-1 because
-	// the AppHash contained in the head is actually the state root
-	// after applying the transactions contained in the previous block.
-	// TODO @renaynay: once https://github.com/cosmos/cosmos-sdk/pull/12674 is merged, use this method
-	// instead
-	prefixedAccountKey := append(banktypes.CreateAccountBalancesPrefix(addr.Bytes()), []byte(app.BondDenom)...)
+
+	kc := collections.PairKeyCodec(sdktypes.AccAddressKey, collections.StringKey)
+	key, err := collections.EncodeKeyWithPrefix(banktypes.BalancesPrefix, kc, collections.Join(sdktypes.AccAddress(addr.Bytes()), app.BondDenom))
 	abciReq := abci.RequestQuery{
 		// TODO @renayay: once https://github.com/cosmos/cosmos-sdk/pull/12674 is merged, use const instead
 		Path:   fmt.Sprintf("store/%s/key", banktypes.StoreKey),
 		Height: int64(head.Height() - 1),
-		Data:   prefixedAccountKey,
+		Data:   key,
 		Prove:  true,
 	}
 	opts := rpcclient.ABCIQueryOptions{
@@ -330,9 +328,9 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 	err = ca.prt.VerifyValue(
 		result.Response.GetProofOps(),
 		head.AppHash,
-		[][]byte{[]byte(banktypes.StoreKey),
-			prefixedAccountKey,
-		}, value)
+		fmt.Sprintf("store/%s/key/%s", banktypes.StoreKey, key),
+		value,
+	)
 	if err != nil {
 		return nil, err
 	}
