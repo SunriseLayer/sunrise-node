@@ -3,6 +3,7 @@ module github.com/sunrise-zone/sunrise-node
 go 1.21.1
 
 require (
+	cosmossdk.io/collections v0.4.0
 	cosmossdk.io/errors v1.0.0
 	cosmossdk.io/math v1.2.0
 	cosmossdk.io/store v1.0.1
@@ -54,8 +55,8 @@ require (
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.8.4
-	github.com/sunrise-zone/sunrise-app v0.0.0-20240107103230-6d9f3c69d009
-	github.com/sunrise-zone/sunrise-app/pkg/blob v0.0.0-20240106114425-fcbe9cdfd972
+	github.com/sunrise-zone/sunrise-app v0.0.0-20240113025951-1c5ed30813f7
+	github.com/sunrise-zone/sunrise-app/pkg/blob v0.0.0-20240111014944-c906850a8c92
 	github.com/sunrise-zone/sunrise-app/pkg/namespace v0.0.0-20240106114425-fcbe9cdfd972
 	go.opentelemetry.io/contrib/instrumentation/runtime v0.45.0
 	go.opentelemetry.io/otel v1.19.0
@@ -80,16 +81,13 @@ require (
 require (
 	cosmossdk.io/api v0.7.2 // indirect
 	cosmossdk.io/client/v2 v2.0.0-beta.1 // indirect
-	cosmossdk.io/collections v0.4.0 // indirect
 	cosmossdk.io/core v0.11.0 // indirect
 	cosmossdk.io/depinject v1.0.0-alpha.4 // indirect
 	cosmossdk.io/log v1.2.1 // indirect
-	cosmossdk.io/simapp v0.0.0-20231211060251-d8fb76d4c267 // indirect
 	cosmossdk.io/tools/confix v0.1.1 // indirect
 	cosmossdk.io/x/circuit v0.1.0 // indirect
 	cosmossdk.io/x/evidence v0.1.0 // indirect
 	cosmossdk.io/x/feegrant v0.1.0 // indirect
-	cosmossdk.io/x/nft v0.1.0 // indirect
 	cosmossdk.io/x/tx v0.12.0 // indirect
 	cosmossdk.io/x/upgrade v0.1.1 // indirect
 	github.com/DataDog/datadog-go v3.2.0+incompatible // indirect
