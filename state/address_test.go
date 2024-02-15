@@ -18,7 +18,7 @@ func TestAddressMarshalling(t *testing.T) {
 	}{
 		{
 			name:           "Account Address",
-			addressString:  "celestia1377k5an3f94v6wyaceu0cf4nq6gk2jtpc46g7h",
+			addressString:  "sunrise1377k5an3f94v6wyaceu0cf4nq6gk2jtpmjqf4f",
 			addressFromStr: func(s string) (interface{}, error) { return sdk.AccAddressFromBech32(s) },
 			marshalJSON:    func(addr interface{}) ([]byte, error) { return addr.(sdk.AccAddress).MarshalJSON() },
 			unmarshalJSON: func(b []byte) (interface{}, error) {
@@ -29,7 +29,7 @@ func TestAddressMarshalling(t *testing.T) {
 		},
 		{
 			name:           "Validator Address",
-			addressString:  "celestiavaloper1q3v5cugc8cdpud87u4zwy0a74uxkk6u4q4gx4p",
+			addressString:  "sunrisevaloper1q3v5cugc8cdpud87u4zwy0a74uxkk6u4xvhxau",
 			addressFromStr: func(s string) (interface{}, error) { return sdk.ValAddressFromBech32(s) },
 			marshalJSON:    func(addr interface{}) ([]byte, error) { return addr.(sdk.ValAddress).MarshalJSON() },
 			unmarshalJSON: func(b []byte) (interface{}, error) {

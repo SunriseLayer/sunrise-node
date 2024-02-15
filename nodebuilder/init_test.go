@@ -86,10 +86,10 @@ func TestInit_generateNewKey(t *testing.T) {
 	require.NoError(t, err)
 	assert.Equal(t, originalKey, keys[0])
 
-	// ensure the generated account is actually a celestia account
+	// ensure the generated account is actually a sunrise account
 	addr, err := originalKey.GetAddress()
 	require.NoError(t, err)
-	assert.Contains(t, addr.String(), "celestia")
+	assert.Contains(t, addr.String(), "sunrise")
 
 	// ensure account is recoverable from mnemonic
 	ring2, err := keyring.New(app.Name, cfg.State.KeyringBackend, t.TempDir(), os.Stdin, encConf.Codec)
