@@ -55,9 +55,9 @@ require (
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.8.4
-	github.com/sunrise-zone/sunrise-app v0.0.0-20240113025951-1c5ed30813f7
-	github.com/sunrise-zone/sunrise-app/pkg/blob v0.0.0-20240111014944-c906850a8c92
-	github.com/sunrise-zone/sunrise-app/pkg/namespace v0.0.0-20240106114425-fcbe9cdfd972
+	github.com/sunrise-zone/sunrise-app v0.0.0-20240214141150-6abb036f6a26
+	github.com/sunrise-zone/sunrise-app/pkg/blob v0.0.0-20240214141150-6abb036f6a26
+	github.com/sunrise-zone/sunrise-app/pkg/namespace v0.0.0-20240214141150-6abb036f6a26
 	go.opentelemetry.io/contrib/instrumentation/runtime v0.45.0
 	go.opentelemetry.io/otel v1.19.0
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp v0.42.0

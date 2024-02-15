@@ -2143,10 +2143,16 @@ github.com/subosito/gotenv v1.6.0 h1:9NlTDc1FTs4qu0DDq7AEtTPNw6SVm7uBMsUCUjABIf8
 github.com/subosito/gotenv v1.6.0/go.mod h1:Dk4QP5c2W3ibzajGcXpNraDfq2IrhjMIvMSWPKKo0FU=
 github.com/sunrise-zone/sunrise-app v0.0.0-20240113025951-1c5ed30813f7 h1:EOiYFQok4oTikY5QDPnActwvB54rb3wQPaJpBYDSml0=
 github.com/sunrise-zone/sunrise-app v0.0.0-20240113025951-1c5ed30813f7/go.mod h1:uekQNkPW4VJHZZ+GAFIhgRavG14OzfsZ37Y8FbIHR4s=
+github.com/sunrise-zone/sunrise-app v0.0.0-20240214141150-6abb036f6a26 h1:qdNZr36jL+QvPNDE54PRGx/txxtI9yTFzRLKlGE/XKk=
+github.com/sunrise-zone/sunrise-app v0.0.0-20240214141150-6abb036f6a26/go.mod h1:uekQNkPW4VJHZZ+GAFIhgRavG14OzfsZ37Y8FbIHR4s=
 github.com/sunrise-zone/sunrise-app/pkg/blob v0.0.0-20240111014944-c906850a8c92 h1:p64RFWNsSNZtdgWvEdpxfkFotbld2Lm4uCLIsz5TqRY=
 github.com/sunrise-zone/sunrise-app/pkg/blob v0.0.0-20240111014944-c906850a8c92/go.mod h1:MIVUvA/uJMLG6BN1AfFi/1tLm6374w6V2l36Ow2X6I0=
+github.com/sunrise-zone/sunrise-app/pkg/blob v0.0.0-20240214141150-6abb036f6a26 h1:py9cqyufCUBOxVb/J3q/w/VaOodDBWvuV5m/P6ZUWvQ=
+github.com/sunrise-zone/sunrise-app/pkg/blob v0.0.0-20240214141150-6abb036f6a26/go.mod h1:MIVUvA/uJMLG6BN1AfFi/1tLm6374w6V2l36Ow2X6I0=
 github.com/sunrise-zone/sunrise-app/pkg/namespace v0.0.0-20240106114425-fcbe9cdfd972 h1:G/7AApJQ6KU+DEqQ0y1BQDcLySj21RoSg/sRqtodaB8=
 github.com/sunrise-zone/sunrise-app/pkg/namespace v0.0.0-20240106114425-fcbe9cdfd972/go.mod h1:u36JI/3vny+qvLQqKS2wTZeK9xQ55ijkmlcp6YodBtA=
+github.com/sunrise-zone/sunrise-app/pkg/namespace v0.0.0-20240214141150-6abb036f6a26 h1:FjB7qJyYeAzkHio7wMizM5Nj/JMpDFJL5o9t0w6wtTo=
+github.com/sunrise-zone/sunrise-app/pkg/namespace v0.0.0-20240214141150-6abb036f6a26/go.mod h1:u36JI/3vny+qvLQqKS2wTZeK9xQ55ijkmlcp6YodBtA=
 github.com/sunrise-zone/sunrise-core v0.38.3-0.20240106114736-30ccacf8cfa9 h1:/DjwunJ9eVlsMq2EHTLDHSVOI3bZp674zllc9bPY3M4=
 github.com/sunrise-zone/sunrise-core v0.38.3-0.20240106114736-30ccacf8cfa9/go.mod h1:y+21SZ2TVD1qS7lvEXfDKI15hEryT9sNvJ+t3LyAFi0=
 github.com/supranational/blst v0.3.11 h1:LyU6FolezeWAhvQk0k6O/d49jqgO52MSDDfYgbeoEm4=
