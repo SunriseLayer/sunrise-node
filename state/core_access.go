@@ -8,6 +8,7 @@ import (
 	"sync"
 	"time"
 
+	"cosmossdk.io/api/tendermint/abci"
 	"cosmossdk.io/collections"
 	sdkErrors "cosmossdk.io/errors"
 	sdkmath "cosmossdk.io/math"
@@ -15,7 +16,6 @@ import (
 	"github.com/cometbft/cometbft/crypto/merkle"
 	rpcclient "github.com/cometbft/cometbft/rpc/client"
 	"github.com/cometbft/cometbft/rpc/client/http"
-	"github.com/cosmos/cosmos-sdk/api/tendermint/abci"
 	nodeservice "github.com/cosmos/cosmos-sdk/client/grpc/node"
 	sdktypes "github.com/cosmos/cosmos-sdk/types"
 	sdktx "github.com/cosmos/cosmos-sdk/types/tx"

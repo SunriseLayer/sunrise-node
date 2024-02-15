@@ -3,6 +3,7 @@ module github.com/sunrise-zone/sunrise-node
 go 1.21.1
 
 require (
+	cosmossdk.io/api v0.7.2
 	cosmossdk.io/collections v0.4.0
 	cosmossdk.io/errors v1.0.0
 	cosmossdk.io/math v1.2.0
@@ -18,7 +19,6 @@ require (
 	github.com/celestiaorg/rsmt2d v0.11.0
 	github.com/cometbft/cometbft v0.38.2
 	github.com/cosmos/cosmos-sdk v0.50.2
-	github.com/cosmos/cosmos-sdk/api v0.1.0
 	github.com/cristalhq/jwt v1.2.0
 	github.com/etclabscore/go-openrpc-reflect v0.0.37
 	github.com/filecoin-project/dagstore v0.5.6
@@ -79,7 +79,6 @@ require (
 )
 
 require (
-	cosmossdk.io/api v0.7.2 // indirect
 	cosmossdk.io/client/v2 v2.0.0-beta.1 // indirect
 	cosmossdk.io/core v0.11.0 // indirect
 	cosmossdk.io/depinject v1.0.0-alpha.4 // indirect
