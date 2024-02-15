@@ -266,7 +266,7 @@ func RandValidator(randPower bool, minPower int64) (*types.Validator, types.Priv
 // RandRawHeader provides a RawHeader fixture.
 func RandRawHeader(t testing.TB) *header.RawHeader {
 	return &header.RawHeader{
-		Version:            version.Consensus{Block: 11, App: 1},
+		Version:            version.Consensus{Block: 11, App: 2},
 		ChainID:            "test",
 		Height:             mrand.Int63(), //nolint:gosec
 		Time:               time.Now(),
