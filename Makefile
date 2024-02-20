@@ -25,19 +25,19 @@ install-hooks:
 	@git config core.hooksPath .githooks
 .PHONY: install-hooks
 
-## build: Build celestia-node binary.
+## build: Build sunrise-node binary.
 build:
-	@echo "--> Building Celestia"
+	@echo "--> Building Sunrise"
 	@go build -o build/ ${LDFLAGS} ./cmd/celestia
 .PHONY: build
 
-## build-jemalloc: Build celestia-node binary with jemalloc allocator for BadgerDB instead of Go's native one
+## build-jemalloc: Build sunrise-node binary with jemalloc allocator for BadgerDB instead of Go's native one
 build-jemalloc: jemalloc
-	@echo "--> Building Celestia with jemalloc"
+	@echo "--> Building Sunrise with jemalloc"
 	@go build -o build/ ${LDFLAGS} -tags jemalloc ./cmd/celestia
 .PHONY: build-jemalloc
 
-## clean: Clean up celestia-node binary.
+## clean: Clean up sunrise-node binary.
 clean:
 	@echo "--> Cleaning up ./build"
 	@rm -rf build/*
@@ -58,13 +58,13 @@ deps:
 
 ## install: Install all build binaries into the $PREFIX (/usr/local/ by default) directory.
 install:
-	@echo "--> Installing Celestia"
+	@echo "--> Installing Sunrise"
 	@install -v ./build/* -t ${PREFIX}/bin/
 .PHONY: install
 
-## go-install: Build and install the celestia-node binary into the GOBIN directory.
+## go-install: Build and install the sunrise-node binary into the GOBIN directory.
 go-install:
-	@echo "--> Installing Celestia"
+	@echo "--> Installing Sunrise"
 	@go install ${LDFLAGS} ./cmd/celestia
 .PHONY: go-install
 
@@ -165,7 +165,7 @@ pb-gen:
 .PHONY: pb-gen
 
 
-## openrpc-gen: Generate OpenRPC spec for Celestia-Node's RPC api
+## openrpc-gen: Generate OpenRPC spec for Sunrise-Node's RPC api
 openrpc-gen:
 	@echo "--> Generating OpenRPC spec"
 	@go run ./cmd/docgen fraud header state share das p2p node blob
@@ -210,12 +210,12 @@ goreleaser: Makefile
 	@goreleaser --version
 .PHONY: goreleaser
 
-## goreleaser-build: Builds the celestia binary using GoReleaser for your local OS.
+## goreleaser-build: Builds the sunrise binary using GoReleaser for your local OS.
 goreleaser-build:
 	goreleaser build --snapshot --clean --single-target
 .PHONY: goreleaser-build
 
-## goreleaser-release: Builds the release celestia binaries as defined in .goreleaser.yaml. This requires there be a git tag for the release in the local git history.
+## goreleaser-release: Builds the release sunrise binaries as defined in .goreleaser.yaml. This requires there be a git tag for the release in the local git history.
 goreleaser-release:
 	goreleaser release --clean --fail-fast --skip-publish
 .PHONY: goreleaser-release
