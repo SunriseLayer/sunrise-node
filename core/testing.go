@@ -65,6 +65,7 @@ func StartTestNodeWithConfig(t *testing.T, cfg *testnode.Config) testnode.Contex
 	})
 
 	cctx.WithClient(client)
+	cctx.RpcClient = client
 	return cctx
 }
 
