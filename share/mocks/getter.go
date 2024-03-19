@@ -13,6 +13,7 @@ import (
 	header "github.com/sunrise-zone/sunrise-node/header"
 	share "github.com/sunrise-zone/sunrise-node/share"
 	rsmt2d "github.com/celestiaorg/rsmt2d"
+	gomock "github.com/golang/mock/gomock"
 )
 
 // MockGetter is a mock of Getter interface.

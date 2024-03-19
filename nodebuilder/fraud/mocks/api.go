@@ -8,10 +8,10 @@ import (
 	context "context"
 	reflect "reflect"
 
+	fraud0 "github.com/celestiaorg/go-fraud"
 	gomock "github.com/golang/mock/gomock"
 
 	fraud "github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
-	fraud0 "github.com/celestiaorg/go-fraud"
 )
 
 // MockModule is a mock of Module interface.
