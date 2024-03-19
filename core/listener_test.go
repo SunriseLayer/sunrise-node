@@ -19,7 +19,7 @@ import (
 	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
 )
 
-const networkID = "private"
+const networkID = "test-app"
 
 // TestListener tests the lifecycle of the core listener.
 func TestListener(t *testing.T) {
