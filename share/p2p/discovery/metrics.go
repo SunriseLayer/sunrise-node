@@ -9,7 +9,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 
-	"github.com/celestiaorg/celestia-node/libs/utils"
+	"github.com/sunrise-zone/sunrise-node/libs/utils"
 )
 
 const (

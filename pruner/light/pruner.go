@@ -3,7 +3,7 @@ package light
 import (
 	"context"
 
-	"github.com/celestiaorg/celestia-node/header"
+	"github.com/sunrise-zone/sunrise-node/header"
 )
 
 type Pruner struct{}

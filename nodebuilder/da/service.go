@@ -10,11 +10,11 @@ import (
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/rollkit/go-da"
 
-	"github.com/celestiaorg/celestia-app/pkg/appconsts"
+	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
 
-	"github.com/celestiaorg/celestia-node/blob"
-	nodeblob "github.com/celestiaorg/celestia-node/nodebuilder/blob"
-	"github.com/celestiaorg/celestia-node/share"
+	"github.com/sunrise-zone/sunrise-node/blob"
+	nodeblob "github.com/sunrise-zone/sunrise-node/nodebuilder/blob"
+	"github.com/sunrise-zone/sunrise-node/share"
 )
 
 var _ da.DA = (*Service)(nil)

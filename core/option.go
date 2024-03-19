@@ -1,6 +1,6 @@
 package core
 
-import "github.com/celestiaorg/celestia-node/nodebuilder/p2p"
+import "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
 
 type Option func(*params)
 

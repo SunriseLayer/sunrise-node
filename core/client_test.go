@@ -2,6 +2,7 @@ package core
 
 import (
 	"context"
+	"fmt"
 	"testing"
 	"time"
 
@@ -30,11 +31,13 @@ func TestRemoteClient_StartBlockSubscription_And_GetBlock(t *testing.T) {
 	for i := 1; i <= 3; i++ {
 		select {
 		case evt := <-eventChan:
+			fmt.Println("evt: ", evt)
 			h := evt.Data.(types.EventDataSignedBlock).Header.Height
 			block, err := client.Block(ctx, &h)
 			require.NoError(t, err)
 			require.GreaterOrEqual(t, block.Block.Height, int64(i))
 		case <-ctx.Done():
+			fmt.Println("ctx.Err(): ", eventChan)
 			require.NoError(t, ctx.Err())
 		}
 	}

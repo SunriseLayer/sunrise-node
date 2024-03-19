@@ -7,7 +7,7 @@ import (
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/metric"
 
-	"github.com/celestiaorg/celestia-node/libs/utils"
+	"github.com/sunrise-zone/sunrise-node/libs/utils"
 )
 
 var meter = otel.Meter("core")
