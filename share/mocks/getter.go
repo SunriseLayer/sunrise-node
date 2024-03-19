@@ -8,8 +8,6 @@ import (
 	context "context"
 	reflect "reflect"
 
-	gomock "github.com/golang/mock/gomock"
-
 	header "github.com/sunrise-zone/sunrise-node/header"
 	share "github.com/sunrise-zone/sunrise-node/share"
 	rsmt2d "github.com/celestiaorg/rsmt2d"
