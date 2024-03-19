@@ -15,7 +15,6 @@ import (
 
 	"github.com/sunrise-zone/sunrise-node/header"
 	nodep2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
-	"github.com/sunrise-zone/sunrise-node/share"
 	"github.com/sunrise-zone/sunrise-node/share/eds"
 	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
 )
