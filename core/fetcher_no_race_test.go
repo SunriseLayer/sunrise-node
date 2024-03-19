@@ -9,7 +9,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"github.com/tendermint/tendermint/types"
+
+	"github.com/cometbft/cometbft/types"
 )
 
 // TestBlockFetcherHeaderValues tests that both the Commit and ValidatorSet
