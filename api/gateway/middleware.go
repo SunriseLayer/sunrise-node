@@ -4,10 +4,6 @@ import (
 	"context"
 	"net/http"
 	"time"
-
-	"github.com/gorilla/mux"
-
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
 )
 
 const timeout = time.Minute
