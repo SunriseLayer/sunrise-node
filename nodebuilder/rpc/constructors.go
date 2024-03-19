@@ -5,6 +5,7 @@ import (
 
 	"github.com/sunrise-zone/sunrise-node/api/rpc"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/blob"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/da"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/das"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/header"
@@ -24,18 +25,20 @@ func registerEndpoints(
 	p2pMod p2p.Module,
 	nodeMod node.Module,
 	blobMod blob.Module,
+	daMod da.Module,
 	serv *rpc.Server,
 ) {
-	serv.RegisterAuthedService("fraud", fraudMod, &fraud.API{})
-	serv.RegisterAuthedService("das", daserMod, &das.API{})
-	serv.RegisterAuthedService("header", headerMod, &header.API{})
-	serv.RegisterAuthedService("state", stateMod, &state.API{})
-	serv.RegisterAuthedService("share", shareMod, &share.API{})
-	serv.RegisterAuthedService("p2p", p2pMod, &p2p.API{})
-	serv.RegisterAuthedService("node", nodeMod, &node.API{})
-	serv.RegisterAuthedService("blob", blobMod, &blob.API{})
+	serv.RegisterService("fraud", fraudMod, &fraud.API{})
+	serv.RegisterService("das", daserMod, &das.API{})
+	serv.RegisterService("header", headerMod, &header.API{})
+	serv.RegisterService("state", stateMod, &state.API{})
+	serv.RegisterService("share", shareMod, &share.API{})
+	serv.RegisterService("p2p", p2pMod, &p2p.API{})
+	serv.RegisterService("node", nodeMod, &node.API{})
+	serv.RegisterService("blob", blobMod, &blob.API{})
+	serv.RegisterService("da", daMod, &da.API{})
 }
 
 func server(cfg *Config, auth jwt.Signer) *rpc.Server {
-	return rpc.NewServer(cfg.Address, cfg.Port, auth)
+	return rpc.NewServer(cfg.Address, cfg.Port, cfg.SkipAuth, auth)
 }

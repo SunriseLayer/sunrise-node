@@ -9,7 +9,6 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-
 	header "github.com/sunrise-zone/sunrise-node/header"
 )
 

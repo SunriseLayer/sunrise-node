@@ -13,11 +13,11 @@ import (
 	"github.com/ipfs/go-cid"
 	"github.com/ipfs/go-datastore"
 	ds_sync "github.com/ipfs/go-datastore/sync"
+	dsbadger "github.com/ipfs/go-ds-badger4"
 	"github.com/ipld/go-car"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	dsbadger "github.com/celestiaorg/go-ds-badger4"
 	"github.com/celestiaorg/rsmt2d"
 	"github.com/sunrise-zone/sunrise-app/pkg/da"
 

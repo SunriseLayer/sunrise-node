@@ -9,12 +9,14 @@ import (
 	"github.com/sunrise-zone/sunrise-node/libs/fxutil"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/blob"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/da"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/das"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/gateway"
 	modhead "github.com/sunrise-zone/sunrise-node/nodebuilder/header"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunrise-zone/sunrise-node/nodebuilder/prune"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/rpc"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/share"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
@@ -49,13 +51,15 @@ func ConstructModule(tp node.Type, network p2p.Network, cfg *Config, store Store
 		state.ConstructModule(tp, &cfg.State, &cfg.Core),
 		modhead.ConstructModule[*header.ExtendedHeader](tp, &cfg.Header),
 		share.ConstructModule(tp, &cfg.Share),
-		rpc.ConstructModule(tp, &cfg.RPC),
 		gateway.ConstructModule(tp, &cfg.Gateway),
 		core.ConstructModule(tp, &cfg.Core),
 		das.ConstructModule(tp, &cfg.DASer),
 		fraud.ConstructModule(tp),
 		blob.ConstructModule(),
+		da.ConstructModule(),
 		node.ConstructModule(tp),
+		prune.ConstructModule(tp),
+		rpc.ConstructModule(tp, &cfg.RPC),
 	)
 
 	return fx.Module(
