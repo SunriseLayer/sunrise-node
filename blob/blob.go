@@ -8,10 +8,10 @@ import (
 
 	"github.com/celestiaorg/nmt"
 	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/x/blob/types"
-	// types "github.com/sunrise-zone/sunrise-app/pkg/blob"
+
+	// "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	types "github.com/sunrise-zone/sunrise-app/pkg/blob"
 	"github.com/sunrise-zone/sunrise-app/pkg/inclusion"
-	"github.com/sunrise-zone/sunrise-app/pkg/shares"
 
 	"github.com/sunrise-zone/sunrise-node/share"
 )

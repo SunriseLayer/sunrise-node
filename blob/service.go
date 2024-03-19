@@ -100,10 +100,10 @@ func (s *Service) Submit(ctx context.Context, blobs []*Blob, gasPrice GasPrice) 
 			blobSizes[i] = uint32(len(blob.Data))
 		}
 		options.GasLimit = blobtypes.EstimateGas(blobSizes, appconsts.DefaultGasPerBlobByte, auth.DefaultTxSizeCostPerByte)
-		options.Fee = types.NewInt(int64(math.Ceil(float64(gasPrice) * float64(options.GasLimit)))).Int64()
+		options.Fee = sdkmath.NewInt(int64(math.Ceil(float64(gasPrice) * float64(options.GasLimit)))).Int64()
 	}
 
-	resp, err := s.blobSubmitter.SubmitPayForBlob(ctx, math.NewInt(options.Fee), options.GasLimit, blobs)
+	resp, err := s.blobSubmitter.SubmitPayForBlob(ctx, sdkmath.NewInt(options.Fee), options.GasLimit, blobs)
 	if err != nil {
 		return 0, err
 	}

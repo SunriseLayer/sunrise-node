@@ -24,7 +24,7 @@ func BlobsToShares(blobs ...*Blob) ([]share.Share, error) {
 	}
 
 	sort.Slice(b, func(i, j int) bool {
-		val := bytes.Compare(b[i].NamespaceID, b[j].NamespaceID)
+		val := bytes.Compare(b[i].NamespaceId, b[j].NamespaceId)
 		return val < 0
 	})
 
