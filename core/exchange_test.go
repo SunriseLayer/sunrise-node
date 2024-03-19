@@ -21,7 +21,7 @@ func TestCoreExchange_RequestHeaders(t *testing.T) {
 	t.Cleanup(cancel)
 
 	cfg := DefaultTestConfig()
-	cfg.ChainID = networkID
+	cfg.Genesis.ChainID = networkID
 	fetcher, _ := createCoreFetcher(t, cfg)
 
 	// generate 10 blocks

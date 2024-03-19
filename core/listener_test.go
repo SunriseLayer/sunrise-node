@@ -45,7 +45,7 @@ func TestListener(t *testing.T) {
 
 	// create one block to store as Head in local store and then unsubscribe from block events
 	cfg := DefaultTestConfig()
-	cfg.ChainID = networkID
+	cfg.Genesis.ChainID = networkID
 	fetcher, _ := createCoreFetcher(t, cfg)
 
 	eds := createEdsPubSub(ctx, t)
@@ -79,7 +79,7 @@ func TestListenerWithWrongChainRPC(t *testing.T) {
 
 	// create one block to store as Head in local store and then unsubscribe from block events
 	cfg := DefaultTestConfig()
-	cfg.ChainID = networkID
+	cfg.Genesis.ChainID = networkID
 	fetcher, _ := createCoreFetcher(t, cfg)
 	eds := createEdsPubSub(ctx, t)
 
