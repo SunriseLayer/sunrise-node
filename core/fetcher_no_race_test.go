@@ -19,7 +19,7 @@ func TestBlockFetcherHeaderValues(t *testing.T) {
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*10)
 	t.Cleanup(cancel)
 
-	client := StartTestNode(t).Client
+	client := StartTestNode(t).RpcClient
 	fetcher := NewBlockFetcher(client)
 
 	// generate some blocks
