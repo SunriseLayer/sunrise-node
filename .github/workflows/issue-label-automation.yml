@@ -20,7 +20,7 @@ jobs:
         id: teamCheck
         with:
           username: ${{ github.actor }}
-          team: "celestia-node"
+          team: sunrise-node"
           GITHUB_TOKEN: ${{ secrets.PAT_TEAM_CHECK }}
 
       # For issues we want to add a `needs:triage` label if it is unlabeled

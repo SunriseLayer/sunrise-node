@@ -70,11 +70,11 @@ More information can be found [here](https://github.com/sunrise-zone/sunrise-nod
 `<node_type>` can be: `bridge`, `full` or `light`.
 
 ```sh
-celestia <node_type> init
+sunrise <node_type> init
 ```
 
 ```sh
-celestia <node_type> start
+sunrise <node_type> start
 ```
 
 Please refer to [this guide](https://docs.celestia.org/nodes/celestia-node/) for more information on running a node.
