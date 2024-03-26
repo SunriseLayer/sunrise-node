@@ -35,13 +35,13 @@ install-hooks:
 ## build: Build sunrise-node binary.
 build:
 	@echo "--> Building Sunrise"
-	@go build -o build/ ${LDFLAGS} ./cmd/celestia
+	@go build -o build/ ${LDFLAGS} ./cmd/sunrise
 .PHONY: build
 
 ## build-jemalloc: Build sunrise-node binary with jemalloc allocator for BadgerDB instead of Go's native one
 build-jemalloc: jemalloc
 	@echo "--> Building Sunrise with jemalloc"
-	@go build -o build/ ${LDFLAGS} -tags jemalloc ./cmd/celestia
+	@go build -o build/ ${LDFLAGS} -tags jemalloc ./cmd/sunrise
 .PHONY: build-jemalloc
 
 ## clean: Clean up sunrise-node binary.
@@ -72,7 +72,7 @@ install:
 ## go-install: Build and install the sunrise-node binary into the GOBIN directory.
 go-install:
 	@echo "--> Installing Sunrise"
-	@go install ${LDFLAGS} ./cmd/celestia
+	@go install ${LDFLAGS} ./cmd/sunrise
 .PHONY: go-install
 
 ## cel-shed: Build cel-shed binary.

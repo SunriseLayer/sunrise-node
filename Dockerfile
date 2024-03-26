@@ -29,7 +29,7 @@ FROM docker.io/alpine:3.19.1
 
 # Read here why UID 10001: https://github.com/hexops/dockerfile/blob/main/README.md#do-not-use-a-uid-below-10000
 ARG UID=10001
-ARG USER_NAME=celestia
+ARG USER_NAME=sunrise
 
 ENV CELESTIA_HOME=/home/${USER_NAME}
 
@@ -52,7 +52,7 @@ RUN uname -a &&\
     -u ${UID}
 
 # Copy in the binary
-COPY --from=builder /src/build/celestia /bin/celestia
+COPY --from=builder /src/build/sunrise /bin/sunrise
 COPY --from=builder /src/./cel-key /bin/cel-key
 
 COPY --chown=${USER_NAME}:${USER_NAME} docker/entrypoint.sh /opt/entrypoint.sh
@@ -62,4 +62,4 @@ USER ${USER_NAME}
 EXPOSE 2121
 
 ENTRYPOINT [ "/bin/bash", "/opt/entrypoint.sh" ]
-CMD [ "celestia" ]
+CMD [ "sunrise" ]

@@ -16,6 +16,7 @@ vendor
 .idea/
 .vscode/
 /celestia
+/sunrise
 /cel-shed
 /cel-key
 coverage.txt
