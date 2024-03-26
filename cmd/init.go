@@ -11,7 +11,7 @@ import (
 func Init(fsets ...*flag.FlagSet) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "init",
-		Short: "Initialization for Celestia Node. Passed flags have persisted effect.",
+		Short: "Initialization for Sunrise Node. Passed flags have persisted effect.",
 		Args:  cobra.NoArgs,
 		RunE: func(cmd *cobra.Command, args []string) error {
 			ctx := cmd.Context()

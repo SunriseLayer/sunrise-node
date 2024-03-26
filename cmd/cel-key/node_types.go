@@ -26,12 +26,12 @@ func DirectoryFlags() *flag.FlagSet {
 		nodeDirKey,
 		"",
 		"Sets key utility to use the node type's directory (e.g. "+
-			"~/.celestia-light-"+strings.ToLower(defaultNetwork)+" if --node.type light is passed).")
+			"~/.sunrise-light-"+strings.ToLower(defaultNetwork)+" if --node.type light is passed).")
 	flags.String(
 		networkKey,
 		defaultNetwork,
 		"Sets key utility to use the node network's directory (e.g. "+
-			"~/.celestia-light-mynetwork if --p2p.network MyNetwork is passed).")
+			"~/.sunrise-light-mynetwork if --p2p.network MyNetwork is passed).")
 
 	return flags
 }

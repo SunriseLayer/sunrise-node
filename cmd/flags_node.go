@@ -88,11 +88,11 @@ func DefaultNodeStorePath(tp string, network string) (string, error) {
 		}
 	}
 	if network == p2p.Mainnet.String() {
-		return fmt.Sprintf("%s/.celestia-%s", home, strings.ToLower(tp)), nil
+		return fmt.Sprintf("%s/.sunrise-%s", home, strings.ToLower(tp)), nil
 	}
 	// only include network name in path for testnets and custom networks
 	return fmt.Sprintf(
-		"%s/.celestia-%s-%s",
+		"%s/.sunrise-%s-%s",
 		home,
 		strings.ToLower(tp),
 		strings.ToLower(network),

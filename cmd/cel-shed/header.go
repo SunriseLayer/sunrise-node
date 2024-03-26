@@ -46,7 +46,7 @@ Custom store path is not supported yet.`,
 			return fmt.Errorf("invalid height: %w", err)
 		}
 
-		s, err := nodebuilder.OpenStore(fmt.Sprintf("~/.celestia-%s-%s", strings.ToLower(tp.String()),
+		s, err := nodebuilder.OpenStore(fmt.Sprintf("~/.sunrise-%s-%s", strings.ToLower(tp.String()),
 			strings.ToLower(network)), nil)
 		if err != nil {
 			return err
