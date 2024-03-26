@@ -50,7 +50,7 @@ func TestLight(t *testing.T) {
 		rootCmd.SetOut(output)
 		rootCmd.SetArgs([]string{
 			"bridge",
-			"--node.store", ".celestia-light",
+			"--node.store", ".sunrise-light",
 			"init",
 		})
 		err := rootCmd.ExecuteContext(context.Background())
@@ -96,7 +96,7 @@ func TestBridge(t *testing.T) {
 		rootCmd.SetOut(output)
 		rootCmd.SetArgs([]string{
 			"bridge",
-			"--node.store", ".celestia-bridge",
+			"--node.store", ".sunrise-bridge",
 			"init",
 		})
 		err := rootCmd.ExecuteContext(context.Background())

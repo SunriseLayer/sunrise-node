@@ -48,13 +48,14 @@ func run() error {
 }
 
 var rootCmd = &cobra.Command{
-	Use: "celestia [  bridge  ||  full ||  light  ] [subcommand]",
+	Use: "sunrise [  bridge  ||  full ||  light  ] [subcommand]",
 	Short: `
-	    ____      __          __  _
-	  / ____/__  / /__  _____/ /_(_)___ _
-	 / /   / _ \/ / _ \/ ___/ __/ / __  /
-	/ /___/  __/ /  __(__  ) /_/ / /_/ /
-	\____/\___/_/\___/____/\__/_/\__,_/
+	  _____                      _
+	 / ____|                    (_)
+    | (___   _   _  _ __   _ __  _  ___   ___
+	 \___ \ | | | || '_ \ | '__|| |/ __| / _ \
+	 ____) || |_| || | | || |   | |\__ \|  __/
+    |_____/  \__,_||_| |_||_|   |_||___/ \___|
 	`,
 	Args: cobra.NoArgs,
 	CompletionOptions: cobra.CompletionOptions{
