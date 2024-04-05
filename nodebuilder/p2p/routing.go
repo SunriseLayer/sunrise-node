@@ -25,7 +25,7 @@ func peerRouting(cfg Config, tp node.Type, params routingParams) (routing.PeerRo
 	opts := []dht.Option{
 		dht.Mode(dht.ModeAuto),
 		dht.BootstrapPeers(params.Peers...),
-		dht.ProtocolPrefix(protocol.ID(fmt.Sprintf("/celestia/%s", params.Net))),
+		dht.ProtocolPrefix(protocol.ID(fmt.Sprintf("/sunrise/%s", params.Net))),
 		dht.Datastore(params.DataStore),
 		dht.RoutingTableRefreshPeriod(cfg.RoutingTableRefreshPeriod),
 	}

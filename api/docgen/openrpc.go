@@ -1,4 +1,4 @@
-// Package docgen generates an OpenRPC spec for the Celestia Node. It has been inspired by and
+// Package docgen generates an OpenRPC spec for the Sunrise Node. It has been inspired by and
 // adapted from Filecoin's Lotus API implementation.
 package docgen
 
@@ -21,11 +21,11 @@ import (
 )
 
 const (
-	APIDescription = "The Celestia Node API is the collection of RPC methods that " +
-		"can be used to interact with the services provided by Celestia Data Availability Nodes."
-	APIName  = "Celestia Node API"
+	APIDescription = "The Sunrise Node API is the collection of RPC methods that " +
+		"can be used to interact with the services provided by Sunrise Data Availability Nodes."
+	APIName  = "Sunrise Node API"
 	DocsURL  = "https://github.com/sunrise-zone/sunrise-node"
-	DocsName = "Celestia Node GitHub"
+	DocsName = "Sunrise Node GitHub"
 )
 
 type Visitor struct {

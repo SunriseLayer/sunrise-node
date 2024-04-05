@@ -97,5 +97,5 @@ type bitSwapParams struct {
 }
 
 func protocolID(network Network) protocol.ID {
-	return protocol.ID(fmt.Sprintf("/celestia/%s", network))
+	return protocol.ID(fmt.Sprintf("/sunrise/%s", network))
 }
