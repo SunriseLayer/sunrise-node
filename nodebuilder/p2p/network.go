@@ -10,15 +10,19 @@ import (
 // NOTE: Every time we add a new long-running network, it has to be added here.
 const (
 	// DefaultNetwork is the default network of the current build.
-	DefaultNetwork = Mainnet
-	// Arabica testnet. See: celestiaorg/networks.
-	Arabica Network = "arabica-11"
-	// Mocha testnet. See: celestiaorg/networks.
-	Mocha Network = "mocha-4"
+	DefaultNetwork = Private
+	// sunrise testnet See: SunriseLayer/networks.
+	Testnet Network = "sunrise-test-1"
+
+	// // Arabica testnet. See: celestiaorg/networks.
+	// Arabica Network = "arabica-11"
+	// // Mocha testnet. See: celestiaorg/networks.
+	// Mocha Network = "mocha-4"
+
 	// Private can be used to set up any private network, including local testing setups.
 	Private Network = "private"
-	// Celestia mainnet. See: celestiaorg/networks.
-	Mainnet Network = "celestia"
+	// Sunrise mainnet. See: SunriseLayer/networks.
+	Mainnet Network = "sunrise"
 	// BlockTime is a network block time.
 	// TODO @renaynay @Wondertan (#790)
 	BlockTime = time.Second * 10
@@ -53,8 +57,9 @@ func (n Network) String() string {
 // networksList is a strict list of all known long-standing networks.
 var networksList = map[Network]struct{}{
 	Mainnet: {},
-	Arabica: {},
-	Mocha:   {},
+	Testnet: {},
+	// Arabica: {},
+	// Mocha:   {},
 	Private: {},
 }
 
@@ -63,8 +68,9 @@ var networksList = map[Network]struct{}{
 // their actual value) to the Network.
 var networkAliases = map[string]Network{
 	"mainnet": Mainnet,
-	"arabica": Arabica,
-	"mocha":   Mocha,
+	"testnet": Testnet,
+	// "arabica": Arabica,
+	// "mocha":   Mocha,
 	"private": Private,
 }
 
