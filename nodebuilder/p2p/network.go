@@ -20,9 +20,9 @@ const (
 	// Mocha Network = "mocha-4"
 
 	// Private can be used to set up any private network, including local testing setups.
-	Private Network = "private"
+	Private Network = "sunrise-private-1"
 	// Sunrise mainnet. See: SunriseLayer/networks.
-	Mainnet Network = "sunrise"
+	Mainnet Network = "sunrise-1"
 	// BlockTime is a network block time.
 	// TODO @renaynay @Wondertan (#790)
 	BlockTime = time.Second * 10
