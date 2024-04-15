@@ -9,7 +9,7 @@ import (
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
 )
 
-const DefaultAccountName = "my_celes_key"
+const DefaultAccountName = "my_sunrise_key"
 
 // KeyringSigner constructs a new keyring signer.
 // NOTE: we construct keyring signer before constructing node for easier UX
