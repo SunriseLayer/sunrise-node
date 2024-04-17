@@ -9,9 +9,9 @@ body:
   - type: input
     id: version
     attributes:
-      label: Celestia Node version
+      label: Sunrise Node version
       description: >
-        use 'celestia version' or 'git rev-parse --verify HEAD' if installed
+        use 'sunrise version' or 'git rev-parse --verify HEAD' if installed
         from source code
     validations:
       required: true
@@ -36,7 +36,7 @@ body:
     attributes:
       label: Others
       description: >
-        e.g. flag options, celestia config file changes, resources
+        e.g. flag options, sunrise config file changes, resources
         limitation(like cpu, ram limit, swap etc.)
   - type: textarea
     id: steps
