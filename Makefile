@@ -149,7 +149,7 @@ benchmark:
 PB_PKGS=$(shell find . -name 'pb' -type d)
 PB_CORE=$(shell go list -f {{.Dir}} -m github.com/cometbft/cometbft)
 PB_GOGO=$(shell go list -f {{.Dir}} -m github.com/gogo/protobuf)
-PB_CELESTIA_APP=$(shell go list -f {{.Dir}} -m github.com/sunrise-zone/sunrise-app)
+PB_SUNRISE_APP=$(shell go list -f {{.Dir}} -m github.com/sunrise-zone/sunrise-app)
 PB_NMT=$(shell go list -f {{.Dir}} -m github.com/celestiaorg/nmt)
 
 ## pb-gen: Generate protobuf code for all /pb/*.proto files in the project.
@@ -157,7 +157,7 @@ pb-gen:
 	@echo '--> Generating protobuf'
 	@for dir in $(PB_PKGS); \
 		do for file in `find $$dir -type f -name "*.proto"`; \
-			do protoc -I=. -I=${PB_CORE}/proto/ -I=${PB_GOGO} -I=${PB_CELESTIA_APP}/proto -I=${PB_NMT} --gogofaster_out=paths=source_relative:. $$file; \
+			do protoc -I=. -I=${PB_CORE}/proto/ -I=${PB_GOGO} -I=${PB_SUNRISE_APP}/proto -I=${PB_NMT} --gogofaster_out=paths=source_relative:. $$file; \
 			echo '-->' $$file; \
 		done; \
 	done;

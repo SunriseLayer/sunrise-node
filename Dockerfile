@@ -31,7 +31,7 @@ FROM docker.io/alpine:3.19.1
 ARG UID=10001
 ARG USER_NAME=sunrise
 
-ENV CELESTIA_HOME=/home/${USER_NAME}
+ENV SUNRISE_HOME=/home/${USER_NAME}
 
 # Default node type can be overwritten in deployment manifest
 ENV NODE_TYPE bridge
@@ -47,7 +47,7 @@ RUN uname -a &&\
     && adduser ${USER_NAME} \
     -D \
     -g ${USER_NAME} \
-    -h ${CELESTIA_HOME} \
+    -h ${SUNRISE_HOME} \
     -s /sbin/nologin \
     -u ${UID}
 
