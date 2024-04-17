@@ -1,4 +1,4 @@
-# ADR #003: March 2022 Testnet Celestia Node
+# ADR #003: March 2022 Testnet Sunrise Node
 
 <hr style="border:3px solid gray"> </hr>
 
@@ -15,22 +15,22 @@
 
 ## Legend
 
-### Celestia DA Network
+### Sunrise DA Network
 
 Refers to the data availability "halo" network created around the Core network.
 
 ### **Bridge Node**
 
-A **bridge** node is a node that is connected to a celestia-core node via RPC. It receives a remote address from a
-running celestia-core node and listens for blocks from celestia-core. For each new block from celestia-core, the **bridge**
+A **bridge** node is a node that is connected to a sunrise-core node via RPC. It receives a remote address from a
+running sunrise-core node and listens for blocks from sunrise-core. For each new block from sunrise-core, the **bridge**
 node performs basic validation on the block via `ValidateBasic()`, extends the block data, generates a Data Availability
 Header (DAH) from the extended block data, and creates an `ExtendedHeader` from the block header and the DAH, and finally
 broadcasts it to the data availability network (DA network).
 
-A **bridge** node does not care about what kind of celestia-core node it is connected to (validator or regular full node),
-it only cares that it has a direct RPC connection to a celestia-core node from which it can listen for new blocks.
+A **bridge** node does not care about what kind of sunrise-core node it is connected to (validator or regular full node),
+it only cares that it has a direct RPC connection to a sunrise-core node from which it can listen for new blocks.
 
-The name **bridge** was chosen as the purpose of this node type is to provide a mechanism to relay celestia-core blocks
+The name **bridge** was chosen as the purpose of this node type is to provide a mechanism to relay sunrise-core blocks
 to the data availability network.
 
 ### **Full Node**
@@ -47,8 +47,8 @@ A **light** node listens for `ExtendedHeader`s from the DA network and performs 
 
 ## Context
 
-This ADR describes a design for the March 2022 Celestia Testnet that we decided at the Berlin 2021 offsite. Now that
-we have a basic scaffolding and structure for a celestia node, the focus of the next engineering sprint is to continue
+This ADR describes a design for the March 2022 Sunrise Testnet that we decided at the Berlin 2021 offsite. Now that
+we have a basic scaffolding and structure for a sunrise node, the focus of the next engineering sprint is to continue
 refactoring and improving this structure to include more features (defined later in this document).
 
 <hr style="border:2px solid gray"> </hr>
@@ -57,7 +57,7 @@ refactoring and improving this structure to include more features (defined later
 
 ## New Features
 
-### [New node type definitions](https://github.com/sunrise-zone/sunrise-node/issues/250)
+### [New node type definitions](https://github.com/celestiaorg/celestia-node/issues/250)
 
 - Introduce a standalone **full** node and rename current full node implementation to **bridge** node.
 - Remove **dev** as a node type and make it a flag on every available node type.
@@ -80,7 +80,7 @@ operations as usual.
 Eventually, we may choose to use the reputation tracking system provided by [gossipsub](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#peer-scoring) for nodes who broadcast invalid fraud
 proofs to the network, but that is not a requirement for this iteration.
 
-### [Introduce an RPC structure and some basic APIs](https://github.com/sunrise-zone/sunrise-node/issues/169)
+### [Introduce an RPC structure and some basic APIs](https://github.com/celestiaorg/celestia-node/issues/169)
 
 Implement scaffolding for RPC on all node types, such that a user can access the following methods:
 
@@ -110,9 +110,9 @@ balance, preparing the transaction, and propagating it via `TxSub`. **Bridge** n
 to `TxSub` and relaying the transactions into the Core mempool. **Light** and **full** nodes will be able to publish
 transactions to `TxSub`, but do not need to listen for them.
 
-Celestia-node's state interaction will be detailed further in a subsequent ADR.
+Sunrise-node's state interaction will be detailed further in a subsequent ADR.
 
-### [Data Availability Sampling during `HeaderSync`](https://github.com/sunrise-zone/sunrise-node/issues/181)
+### [Data Availability Sampling during `HeaderSync`](https://github.com/celestiaorg/celestia-node/issues/181)
 
 Currently, both **light** and \*_full_ nodes are unable to perform data availability sampling (DAS) while syncing.
 They only begin sampling once the node is synced up to head of chain.
@@ -131,17 +131,17 @@ checkpoint on any new headers.
 ### `HeaderService` becomes main component around which most other services are focused
 
 Initially, we started with BlockService being the more “important” component during devnet architecture, but overlooked
-some problems with regards to sync (we initially made the decision that a celestia full node would have to be started
+some problems with regards to sync (we initially made the decision that a sunrise full node would have to be started
 together at the same time as a core node).
 
 This led us to an issue where eventually we needed to connect to an already-running core node and sync from it. We were
 missing a component to do that, so we implemented `HeaderExchange` over the core client (wrapping another interface we
 had previously created for `BlockService` called `BlockFetcher`), and we had to do this last minute because it wouldn’t
-work otherwise, leading to last-minute solutions, like having to hand both the celestia **light** and **full** node a
+work otherwise, leading to last-minute solutions, like having to hand both the sunrise **light** and **full** node a
 “trusted” hash of a header from the already-running chain so that it can sync from that point and start listening for
 new headers.
 
-#### Proposed new architecture: [`BlockService` is only responsible for reconstructing the block from Shares handed to it by the `ShareService`](https://github.com/sunrise-zone/sunrise-node/issues/251)
+#### Proposed new architecture: [`BlockService` is only responsible for reconstructing the block from Shares handed to it by the `ShareService`](https://github.com/celestiaorg/celestia-node/issues/251)
 
 Right now, the `BlockService` is in charge of fetching new blocks from the core node, erasure coding them, generating
 DAH, generating `ExtendedHeader`, broadcasting `ExtendedHeader` to `HeaderSub` network, and storing the block data
@@ -175,7 +175,7 @@ for
 ### `ShareService` optimizations
 
 - Implement parallelization for retrieving shares by namespace. This
-  [issue](https://github.com/sunrise-zone/sunrise-node/issues/184) is already being worked on.
+  [issue](https://github.com/celestiaorg/celestia-node/issues/184) is already being worked on.
 - NMT/Shares/Namespace storage optimizations:
   - Right now we prepend to each Share 17 additional bytes, Luckily, for each reason why the prepended bytes were added,
     there is an alternative solution: It is possible to get NMT Node type indirectly, without serializing the type itself
@@ -183,10 +183,10 @@ for
     the data itself. It is possible to get the namespace for each share encoded in inner non-leaf nodes of the NMT tree.
 - Pruning for shares.
 
-### [Move IPLD from celetia-node repo into its own repo](https://github.com/sunrise-zone/sunrise-node/issues/111)
+### [Move IPLD from celetia-node repo into its own repo](https://github.com/celestiaorg/celestia-node/issues/111)
 
-Since the IPLD package is pretty much entirely separate from the celestia-node implementation, it makes sense that it
-is removed from the celestia-node repository and maintained separately. The extraction of IPLD should also include a
+Since the IPLD package is pretty much entirely separate from the sunrise-node implementation, it makes sense that it
+is removed from the sunrise-node repository and maintained separately. The extraction of IPLD should also include a
 review and refactoring as there are still some legacy components that are either no longer necessary and the
 documentation also needs updating.
 
