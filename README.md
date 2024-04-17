@@ -31,7 +31,7 @@ Continue reading [here](https://blog.celestia.org/celestia-mvp-release-data-avai
 ## Minimum requirements
 
 | Requirement | Notes          |
-| ----------- |----------------|
+| ----------- | -------------- |
 | Go version  | 1.22 or higher |
 
 ## System Requirements
@@ -55,7 +55,12 @@ For more information on setting up a node and the hardware requirements needed, 
 
 ## API docs
 
-The sunrise-node public API is documented [here](https://node-rpc-docs.celestia.org/).
+<!-- The sunrise-node public API is documented [here](https://node-rpc-docs.celestia.org/). -->
+
+The sunrise-node public API is here
+| Network           | RPC Endpoint                  |
+| ----------------- |-------------------------------|
+| sunrise-private-1 | sunrise-private-1.cauchye.net |
 
 ## Node types
 
@@ -77,20 +82,21 @@ sunrise <node_type> init
 sunrise <node_type> start
 ```
 
-Please refer to [this guide](https://docs.celestia.org/nodes/celestia-node/) for more information on running a node.
+Please refer to [this guide](https://docs.sunriselayer.io/node/build-node) for more information on running a node.
 
 ## Environment variables
 
-| Variable                | Explanation                         | Default value | Required |
-| ----------------------- | ----------------------------------- | ------------- | -------- |
-| `CELESTIA_BOOTSTRAPPER` | Start the node in bootstrapper mode | `false`       | Optional |
+| Variable               | Explanation                         | Default value | Required |
+| ---------------------- | ----------------------------------- | ------------- | -------- |
+| `SUNRISE_BOOTSTRAPPER` | Start the node in bootstrapper mode | `false`       | Optional |
 
 ## Package-specific documentation
 
 - [Header](./header/doc.go)
 - [Share](./share/doc.go)
 - [DAS](./das/doc.go)
-
+<!-- 
 ## Code of Conduct
 
 See our Code of Conduct [here](https://docs.celestia.org/community/coc).
+-->
