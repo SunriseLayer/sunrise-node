@@ -271,4 +271,4 @@ Proposed
 
 - blocking a refactor of dalc [#55](https://github.com/celestiaorg/dalc/pull/55)
 - first discussed and current implementation [#407](https://github.com/sunrise-zone/sunrise-node/pull/407)
-- initial issue [#406](https://github.com/sunrise-zone/sunrise-node/issues/406)
+- initial issue [#406](https://github.com/celestiaorg/celestia-node/issues/406)

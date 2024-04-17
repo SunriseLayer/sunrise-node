@@ -17,7 +17,7 @@ As soon as a full node is found and connection is established with it, then it(f
 
 ## Decision
 
-- <https://github.com/sunrise-zone/sunrise-node/issues/599>
+- <https://github.com/celestiaorg/celestia-node/issues/599>
 
 ## Detailed design
 
