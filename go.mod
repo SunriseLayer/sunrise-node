@@ -58,9 +58,9 @@ require (
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.9.0
-	github.com/sunrise-zone/sunrise-app v0.0.0-20240321155009-b14ef57735ab
-	github.com/sunrise-zone/sunrise-app/pkg/blob v0.0.0-20240315143849-9c4c48f5e8e0
-	github.com/sunrise-zone/sunrise-app/pkg/namespace v0.0.0-20240315143849-9c4c48f5e8e0
+	github.com/sunrise-zone/sunrise-app v0.0.3
+	github.com/sunrise-zone/sunrise-app/pkg/blob v0.0.0-20240418170053-30d0f121cf39
+	github.com/sunrise-zone/sunrise-app/pkg/namespace v0.0.0-20240418170053-30d0f121cf39
 	go.opentelemetry.io/contrib/instrumentation/runtime v0.45.0
 	go.opentelemetry.io/otel v1.24.0
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp v1.24.0
@@ -371,7 +371,7 @@ require (
 )
 
 replace (
-	github.com/cometbft/cometbft => github.com/sunrise-zone/sunrise-core v0.38.3-0.20240417084503-7cbcb5b35370
+	github.com/cometbft/cometbft => github.com/sunrise-zone/sunrise-core v0.0.2-cmt-v0.38.2
 	github.com/filecoin-project/dagstore => github.com/celestiaorg/dagstore v0.0.0-20230824094345-537c012aa403
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 	// broken goleveldb needs to be replaced for the cosmos-sdk and celestia-app
