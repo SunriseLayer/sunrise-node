@@ -13,7 +13,8 @@ import (
 
 	libhead "github.com/celestiaorg/go-header"
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+
+	// "github.com/sunrise-zone/sunrise-app/pkg/appconsts"
 	"github.com/sunrise-zone/sunrise-app/pkg/da"
 )
 
@@ -114,10 +115,11 @@ func (eh *ExtendedHeader) Validate() error {
 		return fmt.Errorf("ValidateBasic error on RawHeader at height %d: %w", eh.Height(), err)
 	}
 
-	if eh.RawHeader.Version.App != appconsts.LatestVersion {
-		return fmt.Errorf("app version mismatch, expected: %d, got %d", appconsts.LatestVersion,
-			eh.RawHeader.Version.App)
-	}
+	// for sunrise-private-2 now, to be activated in the future
+	// if eh.RawHeader.Version.App != appconsts.LatestVersion {
+	// 	return fmt.Errorf("app version mismatch, expected: %d, got %d", appconsts.LatestVersion,
+	// 		eh.RawHeader.Version.App)
+	// }
 
 	err = eh.Commit.ValidateBasic()
 	if err != nil {
