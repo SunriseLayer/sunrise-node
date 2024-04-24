@@ -77,7 +77,45 @@ sunrise <node_type> init
 sunrise <node_type> start
 ```
 
-Please refer to [this guide](https://docs.celestia.org/nodes/celestia-node/) for more information on running a node.
+## Network
+
+- **Mainnet** - the main network of Sunrise. Use tokens with real value
+- **Testnet** - This network is used to test operations on the mainnet. Normally, the same environment as the mainnet is provided, but tokens have no value
+- **Private** - a network for testing new features. It may contain critical bugs. Do NOT normally use
+
+### Run a bridge node
+
+Bridge nodes connect the data availability layer and the consensus layer.
+
+```sh
+sunrise bridge init --core.ip <URI> --p2p.network <NETWORK>
+```
+
+The `--core.ip` gRPC port defaults to 9090. Normally, set up a RPC node running sunrise-app.
+
+```sh
+sunrise bridge start --core.ip <URI> --p2p.network <NETWORK>
+```
+
+### Run a full node
+
+Full storage nodes are Sunrise nodes that store all the data. Full storage nodes send block shares, headers, and fraud proofs to light nodes.
+
+```sh
+sunrise full init --p2p.network <NETWORK>
+sunrise full start --core.ip <URI> --p2p.network <NETWORK>
+```
+
+Start a full node using RPC. The bridge and full nodes refer to [bootstrap.go](./nodebuilder/p2p/bootstrap.go).
+
+### Run a light node
+
+Light nodes ensure data availability. This is the most common way to interact with Sunrise networks. It does NOT require large storage or high-speed connections.
+
+```sh
+sunrise light init --p2p.network <NAME>
+sunrise light start --core.ip <URI> --p2p.network <NAME>
+```
 
 ## Environment variables
 
