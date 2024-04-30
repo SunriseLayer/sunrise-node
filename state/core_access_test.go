@@ -10,7 +10,6 @@ import (
 	"testing"
 	"time"
 
-	"cosmossdk.io/math"
 	sdkmath "cosmossdk.io/math"
 	"github.com/stretchr/testify/require"
 
@@ -59,7 +58,7 @@ func TestSubmitPayForBlob(t *testing.T) {
 	testcases := []struct {
 		name   string
 		blobs  []*blob.Blob
-		fee    math.Int
+		fee    sdkmath.Int
 		gasLim uint64
 		expErr error
 	}{

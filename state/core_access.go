@@ -292,6 +292,9 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 
 	kc := collections.PairKeyCodec(sdktypes.AccAddressKey, collections.StringKey)
 	key, err := collections.EncodeKeyWithPrefix(banktypes.BalancesPrefix, kc, collections.Join(sdktypes.AccAddress(addr.Bytes()), app.BondDenom))
+	if err != nil {
+		return nil, err
+	}
 	abciReq := abci.RequestQuery{
 		// TODO @renayay: once https://github.com/cosmos/cosmos-sdk/pull/12674 is merged, use const instead
 		Path:   fmt.Sprintf("store/%s/key", banktypes.StoreKey),
