@@ -24,9 +24,10 @@ Continue reading [here](https://blog.celestia.org/celestia-mvp-release-data-avai
   - [API docs](#api-docs)
   - [Node types](#node-types)
   - [Run a node](#run-a-node)
+  - [Network](#network)
   - [Environment variables](#environment-variables)
   - [Package-specific documentation](#package-specific-documentation)
-  - [Code of Conduct](#code-of-conduct)
+  <!-- - [Code of Conduct](#code-of-conduct) -->
 
 ## Minimum requirements
 
