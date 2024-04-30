@@ -10,7 +10,7 @@ import (
 // NOTE: Every time we add a new long-running network, it has to be added here.
 const (
 	// DefaultNetwork is the default network of the current build.
-	DefaultNetwork = Private
+	DefaultNetwork = Mainnet
 	// sunrise testnet See: SunriseLayer/networks.
 	Testnet Network = "sunrise-test-1"
 
@@ -20,7 +20,7 @@ const (
 	// Mocha Network = "mocha-4"
 
 	// Private can be used to set up any private network, including local testing setups.
-	Private Network = "sunrise-private-1"
+	Private Network = "sunrise-private-2"
 	// Sunrise mainnet. See: SunriseLayer/networks.
 	Mainnet Network = "sunrise-1"
 	// BlockTime is a network block time.

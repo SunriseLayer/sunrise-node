@@ -64,7 +64,10 @@ var bootstrapList = map[Network][]string{
 	Testnet: {
 		// TODO: Add testnet bootstrap peers.
 	},
-	Private: {},
+	Private: {
+		"/dns4/sunrise-private-2-bridge.cauchye.net/tcp/2121/p2p/12D3KooWLbZFXLRrr6JVG9RcLZH4UT1mpX99UWNm584iLewHs8Ro",
+		"/dns4/sunrise-private-2-full.cauchye.net/tcp/2121/p2p/12D3KooWFpSqyWyNZTUXdKPmWA77jnu9d3hpwPB1r8gPaCYcNev8",
+	},
 }
 
 // parseAddrInfos converts strings to AddrInfos
