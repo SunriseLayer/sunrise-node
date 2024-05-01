@@ -291,7 +291,11 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 	}
 
 	kc := collections.PairKeyCodec(sdktypes.AccAddressKey, collections.StringKey)
-	key, err := collections.EncodeKeyWithPrefix(banktypes.BalancesPrefix, kc, collections.Join(sdktypes.AccAddress(addr.Bytes()), app.BondDenom))
+	key, err := collections.EncodeKeyWithPrefix(
+		banktypes.BalancesPrefix,
+		kc,
+		collections.Join(sdktypes.AccAddress(addr.Bytes()), app.BondDenom),
+	)
 	if err != nil {
 		return nil, err
 	}
