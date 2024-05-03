@@ -7,7 +7,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	ma "github.com/multiformats/go-multiaddr"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
 )
 
 const defaultRoutingRefreshPeriod = time.Minute

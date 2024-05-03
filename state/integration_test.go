@@ -24,8 +24,8 @@ import (
 	"github.com/sunriselayer/sunrise/test/util/testnode"
 	blobtypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/core"
-	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunriselayer/sunrise-da/core"
+	"github.com/sunriselayer/sunrise-da/header"
 )
 
 func TestIntegrationTestSuite(t *testing.T) {

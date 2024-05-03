@@ -8,7 +8,7 @@ import (
 	"github.com/sunriselayer/sunrise/pkg/shares"
 	"github.com/sunriselayer/sunrise/test/util/testfactory"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 // GenerateV0Blobs is a test utility producing v0 share formatted blobs with the

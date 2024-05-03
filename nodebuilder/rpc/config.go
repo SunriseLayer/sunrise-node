@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/sunrise-zone/sunrise-node/libs/utils"
+	"github.com/sunriselayer/sunrise-da/libs/utils"
 )
 
 type Config struct {

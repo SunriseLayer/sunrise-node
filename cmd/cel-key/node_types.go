@@ -9,8 +9,8 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	nodecmd "github.com/sunrise-zone/sunrise-node/cmd"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	nodecmd "github.com/sunriselayer/sunrise-da/cmd"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
 )
 
 var (

@@ -9,7 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 // TestODSReader ensures that the reader returned from ODSReader is capable of reading the CAR

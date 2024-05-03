@@ -8,10 +8,10 @@ import (
 
 	"github.com/spf13/cobra"
 
-	rpc "github.com/sunrise-zone/sunrise-node/api/rpc/client"
-	cmdnode "github.com/sunrise-zone/sunrise-node/cmd"
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/share"
+	rpc "github.com/sunriselayer/sunrise-da/api/rpc/client"
+	cmdnode "github.com/sunriselayer/sunrise-da/cmd"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 func init() {

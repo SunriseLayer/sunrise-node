@@ -6,12 +6,12 @@ import (
 	"github.com/ipfs/boxo/blockservice"
 	"github.com/ipfs/go-datastore"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/header/headertest"
-	"github.com/sunrise-zone/sunrise-node/share"
-	availability_test "github.com/sunrise-zone/sunrise-node/share/availability/test"
-	"github.com/sunrise-zone/sunrise-node/share/getters"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/header/headertest"
+	"github.com/sunriselayer/sunrise-da/share"
+	availability_test "github.com/sunriselayer/sunrise-da/share/availability/test"
+	"github.com/sunriselayer/sunrise-da/share/getters"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
 )
 
 // GetterWithRandSquare provides a share.Getter filled with 'n' NMT trees of 'n' random shares,

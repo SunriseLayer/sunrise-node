@@ -10,13 +10,13 @@ import (
 	"github.com/celestiaorg/go-fraud"
 	libhead "github.com/celestiaorg/go-header"
 
-	"github.com/sunrise-zone/sunrise-node/das"
-	"github.com/sunrise-zone/sunrise-node/header"
-	modfraud "github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
-	"github.com/sunrise-zone/sunrise-node/pruner"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
-	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
+	"github.com/sunriselayer/sunrise-da/das"
+	"github.com/sunriselayer/sunrise-da/header"
+	modfraud "github.com/sunriselayer/sunrise-da/nodebuilder/fraud"
+	"github.com/sunriselayer/sunrise-da/pruner"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds/byzantine"
+	"github.com/sunriselayer/sunrise-da/share/p2p/shrexsub"
 )
 
 var _ Module = (*daserStub)(nil)

@@ -13,7 +13,7 @@ import (
 	types "github.com/sunriselayer/sunrise/pkg/blob"
 	"github.com/sunriselayer/sunrise/pkg/inclusion"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 var errEmptyShares = errors.New("empty shares")

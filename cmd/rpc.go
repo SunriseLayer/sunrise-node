@@ -8,9 +8,9 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	rpc "github.com/sunrise-zone/sunrise-node/api/rpc/client"
-	"github.com/sunrise-zone/sunrise-node/api/rpc/perms"
-	nodemod "github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	rpc "github.com/sunriselayer/sunrise-da/api/rpc/client"
+	"github.com/sunriselayer/sunrise-da/api/rpc/perms"
+	nodemod "github.com/sunriselayer/sunrise-da/nodebuilder/node"
 )
 
 const (

@@ -5,8 +5,8 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	"github.com/sunrise-zone/sunrise-node/state"
+	"github.com/sunriselayer/sunrise-da/blob"
+	"github.com/sunriselayer/sunrise-da/state"
 )
 
 var _ Module = (*API)(nil)

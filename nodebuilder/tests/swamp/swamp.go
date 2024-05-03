@@ -26,16 +26,16 @@ import (
 	"github.com/sunriselayer/sunrise/test/util/testnode"
 	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/core"
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/libs/keystore"
-	"github.com/sunrise-zone/sunrise-node/logs"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder"
-	coremodule "github.com/sunrise-zone/sunrise-node/nodebuilder/core"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunriselayer/sunrise-da/core"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/libs/keystore"
+	"github.com/sunriselayer/sunrise-da/logs"
+	"github.com/sunriselayer/sunrise-da/nodebuilder"
+	coremodule "github.com/sunriselayer/sunrise-da/nodebuilder/core"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/state"
+	"github.com/sunriselayer/sunrise-da/share/eds"
 )
 
 var blackholeIP6 = net.ParseIP("100::")

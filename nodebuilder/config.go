@@ -7,16 +7,16 @@ import (
 	"github.com/BurntSushi/toml"
 	"github.com/imdario/mergo"
 
-	"github.com/sunrise-zone/sunrise-node/libs/fslock"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/das"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/gateway"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/header"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/rpc"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/share"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
+	"github.com/sunriselayer/sunrise-da/libs/fslock"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/core"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/das"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/gateway"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/header"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/rpc"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/share"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/state"
 )
 
 // ConfigLoader defines a function that loads a config from any source.

@@ -11,7 +11,7 @@ import (
 	mocknet "github.com/libp2p/go-libp2p/p2p/net/mock"
 	"github.com/stretchr/testify/require"
 
-	pb "github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub/pb"
+	pb "github.com/sunriselayer/sunrise-da/share/p2p/shrexsub/pb"
 )
 
 func TestPubSub(t *testing.T) {

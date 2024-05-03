@@ -7,7 +7,7 @@ import (
 
 	"github.com/sunriselayer/sunrise/pkg/da"
 
-	header_pb "github.com/sunrise-zone/sunrise-node/header/pb"
+	header_pb "github.com/sunriselayer/sunrise-da/header/pb"
 )
 
 // MarshalExtendedHeader serializes given ExtendedHeader to bytes using protobuf.

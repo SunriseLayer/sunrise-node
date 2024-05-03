@@ -5,8 +5,8 @@ import (
 
 	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/libs/keystore"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/libs/keystore"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
 )
 
 const DefaultAccountName = "my_sunrise_key"

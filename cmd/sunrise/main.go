@@ -7,7 +7,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	cmdnode "github.com/sunrise-zone/sunrise-node/cmd"
+	cmdnode "github.com/sunriselayer/sunrise-da/cmd"
 )
 
 func WithSubcommands() func(*cobra.Command, []*pflag.FlagSet) {

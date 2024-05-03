@@ -3,7 +3,7 @@ package das
 import (
 	"context"
 
-	"github.com/sunrise-zone/sunrise-node/das"
+	"github.com/sunriselayer/sunrise-da/das"
 )
 
 var _ Module = (*API)(nil)

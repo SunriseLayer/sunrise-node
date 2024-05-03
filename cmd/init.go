@@ -4,7 +4,7 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder"
+	"github.com/sunriselayer/sunrise-da/nodebuilder"
 )
 
 // Init constructs a CLI command to initialize Celestia Node of any type with the given flags.

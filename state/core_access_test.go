@@ -20,8 +20,8 @@ import (
 	"github.com/sunriselayer/sunrise/test/util/testnode"
 	blobtypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/blob"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 func TestSubmitPayForBlob(t *testing.T) {

@@ -22,13 +22,13 @@ import (
 	"github.com/celestiaorg/nmt"
 	"github.com/celestiaorg/rsmt2d"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	"github.com/sunrise-zone/sunrise-node/das"
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
-	"github.com/sunrise-zone/sunrise-node/state"
+	"github.com/sunriselayer/sunrise-da/blob"
+	"github.com/sunriselayer/sunrise-da/das"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds/byzantine"
+	"github.com/sunriselayer/sunrise-da/state"
 )
 
 //go:embed "exampledata/extendedHeader.json"

@@ -7,11 +7,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-node/header/headertest"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/availability/full"
-	availability_test "github.com/sunrise-zone/sunrise-node/share/availability/test"
-	"github.com/sunrise-zone/sunrise-node/share/getters"
+	"github.com/sunriselayer/sunrise-da/header/headertest"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/availability/full"
+	availability_test "github.com/sunriselayer/sunrise-da/share/availability/test"
+	"github.com/sunriselayer/sunrise-da/share/getters"
 )
 
 // sharesAvailableTimeout is an arbitrarily picked interval of time in which a TestNode is expected

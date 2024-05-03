@@ -7,7 +7,7 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 const heightAvailabilityEndpoint = "/data_available"

@@ -34,8 +34,8 @@ import (
 	appblob "github.com/sunriselayer/sunrise/x/blob"
 	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunriselayer/sunrise-da/blob"
+	"github.com/sunriselayer/sunrise-da/header"
 )
 
 var (

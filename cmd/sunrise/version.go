@@ -5,7 +5,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
 )
 
 var versionCmd = &cobra.Command{

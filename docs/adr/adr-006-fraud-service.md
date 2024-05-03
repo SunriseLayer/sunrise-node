@@ -32,8 +32,8 @@ In the case where a Full Node receives `ErrByzantineData` from the [rsmt2d](http
 
 BEFPs were first addressed in the two issues below:
 
-- <https://github.com/sunrise-zone/sunrise-node/issues/4>
-- <https://github.com/sunrise-zone/sunrise-node/issues/263>
+- <https://github.com/sunriselayer/sunrise-da/issues/4>
+- <https://github.com/sunriselayer/sunrise-da/issues/263>
 
 ## Detailed Design
 
@@ -236,6 +236,6 @@ Proposed
 
 ## References
 
-Data Availability(Bad Encoding) Fraud Proofs: [#4](https://github.com/sunrise-zone/sunrise-node/issues/4)
+Data Availability(Bad Encoding) Fraud Proofs: [#4](https://github.com/sunriselayer/sunrise-da/issues/4)
 
-Implement stubs for BadEncodingFraudProofs: [#263](https://github.com/sunrise-zone/sunrise-node/issues/263)
+Implement stubs for BadEncodingFraudProofs: [#263](https://github.com/sunriselayer/sunrise-da/issues/263)

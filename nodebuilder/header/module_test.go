@@ -19,10 +19,10 @@ import (
 	"github.com/celestiaorg/go-header/store"
 	"github.com/celestiaorg/go-header/sync"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/libs/pidstore"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	modp2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/libs/pidstore"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	modp2p "github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
 )
 
 // TestConstructModule_StoreParams ensures that all passed via functional options

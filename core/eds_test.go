@@ -10,7 +10,7 @@ import (
 	"github.com/sunriselayer/sunrise/app"
 	"github.com/sunriselayer/sunrise/pkg/appconsts"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 // TestTrulyEmptySquare ensures that a truly empty square (square size 1 and no

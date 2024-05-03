@@ -1,5 +1,5 @@
 package archival
 
-import "github.com/sunrise-zone/sunrise-node/pruner"
+import "github.com/sunriselayer/sunrise-da/pruner"
 
 const Window = pruner.AvailabilityWindow(0)

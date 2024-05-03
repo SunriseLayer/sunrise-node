@@ -15,10 +15,10 @@ import (
 	"github.com/celestiaorg/go-libp2p-messenger/serde"
 	nmt_pb "github.com/celestiaorg/nmt/pb"
 
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
-	"github.com/sunrise-zone/sunrise-node/share/p2p"
-	pb "github.com/sunrise-zone/sunrise-node/share/p2p/shrexnd/pb"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds"
+	"github.com/sunriselayer/sunrise-da/share/p2p"
+	pb "github.com/sunriselayer/sunrise-da/share/p2p/shrexnd/pb"
 )
 
 // Server implements server side of shrex/nd protocol to serve namespaced share to remote

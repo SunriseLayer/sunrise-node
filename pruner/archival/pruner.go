@@ -3,7 +3,7 @@ package archival
 import (
 	"context"
 
-	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunriselayer/sunrise-da/header"
 )
 
 // Pruner is a noop implementation of the pruner.Factory interface

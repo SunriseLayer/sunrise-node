@@ -3,16 +3,16 @@ package rpc
 import (
 	"github.com/cristalhq/jwt"
 
-	"github.com/sunrise-zone/sunrise-node/api/rpc"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/blob"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/da"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/das"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/header"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/share"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
+	"github.com/sunriselayer/sunrise-da/api/rpc"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/blob"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/da"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/das"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/fraud"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/header"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/share"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/state"
 )
 
 // registerEndpoints registers the given services on the rpc.

@@ -20,7 +20,7 @@ import (
 	"github.com/sunriselayer/sunrise/pkg/appconsts"
 	"github.com/sunriselayer/sunrise/pkg/da"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 var (

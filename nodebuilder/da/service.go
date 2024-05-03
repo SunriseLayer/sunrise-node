@@ -12,9 +12,9 @@ import (
 
 	"github.com/sunriselayer/sunrise/pkg/appconsts"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	nodeblob "github.com/sunrise-zone/sunrise-node/nodebuilder/blob"
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/blob"
+	nodeblob "github.com/sunriselayer/sunrise-da/nodebuilder/blob"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 var _ da.DA = (*Service)(nil)

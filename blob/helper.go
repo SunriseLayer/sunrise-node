@@ -7,7 +7,7 @@ import (
 	pkgblob "github.com/sunriselayer/sunrise/pkg/blob"
 	"github.com/sunriselayer/sunrise/pkg/shares"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 // BlobsToShares accepts blobs and convert them to the Shares.

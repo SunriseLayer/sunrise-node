@@ -11,7 +11,7 @@ import (
 	"github.com/sunriselayer/sunrise/pkg/inclusion"
 	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/blob/blobtest"
+	"github.com/sunriselayer/sunrise-da/blob/blobtest"
 )
 
 func TestBlob(t *testing.T) {

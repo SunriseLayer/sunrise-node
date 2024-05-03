@@ -16,8 +16,8 @@ import (
 	"github.com/sunriselayer/sunrise/pkg/square"
 	"github.com/sunriselayer/sunrise/pkg/wrapper"
 
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds"
 )
 
 // extendBlock extends the given block data, returning the resulting
