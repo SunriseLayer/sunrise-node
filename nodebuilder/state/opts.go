@@ -3,7 +3,7 @@ package state
 import (
 	"go.uber.org/fx"
 
-	"github.com/sunrise-zone/sunrise-app/x/blob/types"
+	"github.com/sunriselayer/sunrise/x/blob/types"
 )
 
 // WithKeyringSigner overrides the default keyring signer constructed

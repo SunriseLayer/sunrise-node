@@ -16,9 +16,9 @@ import (
 	"go.opentelemetry.io/otel/codes"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/pkg/shares"
-	blobtypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/pkg/shares"
+	blobtypes "github.com/sunriselayer/sunrise/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/header"
 	"github.com/sunrise-zone/sunrise-node/libs/utils"

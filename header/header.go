@@ -14,8 +14,8 @@ import (
 	libhead "github.com/celestiaorg/go-header"
 	"github.com/celestiaorg/rsmt2d"
 
-	// "github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	// "github.com/sunriselayer/sunrise/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/pkg/da"
 )
 
 // ConstructFn aliases a function that creates an ExtendedHeader.

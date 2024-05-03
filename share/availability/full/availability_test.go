@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
 	"github.com/sunrise-zone/sunrise-node/header/headertest"
 	"github.com/sunrise-zone/sunrise-node/share"

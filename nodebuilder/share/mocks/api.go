@@ -11,7 +11,7 @@ import (
 	rsmt2d "github.com/celestiaorg/rsmt2d"
 	gomock "github.com/golang/mock/gomock"
 
-	// da "github.com/sunrise-zone/sunrise-app/pkg/da"
+	// da "github.com/sunriselayer/sunrise/pkg/da"
 	header "github.com/sunrise-zone/sunrise-node/header"
 	share "github.com/sunrise-zone/sunrise-node/share"
 )

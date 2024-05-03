@@ -9,7 +9,7 @@ import (
 
 	"github.com/gorilla/mux"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/shares"
+	"github.com/sunriselayer/sunrise/pkg/shares"
 
 	"github.com/sunrise-zone/sunrise-node/share"
 )

@@ -20,7 +20,7 @@ import (
 	libhead "github.com/celestiaorg/go-header"
 	"github.com/celestiaorg/go-header/headertest"
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
 	"github.com/sunrise-zone/sunrise-node/header"
 	"github.com/sunrise-zone/sunrise-node/share"

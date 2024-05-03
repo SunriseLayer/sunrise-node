@@ -10,7 +10,7 @@ import (
 	logging "github.com/ipfs/go-log/v2"
 	"github.com/rollkit/go-da"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
 
 	"github.com/sunrise-zone/sunrise-node/blob"
 	nodeblob "github.com/sunrise-zone/sunrise-node/nodebuilder/blob"

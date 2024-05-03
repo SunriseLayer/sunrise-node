@@ -7,7 +7,7 @@ import (
 
 	"github.com/celestiaorg/go-fraud"
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/wrapper"
+	"github.com/sunriselayer/sunrise/pkg/wrapper"
 
 	"github.com/sunrise-zone/sunrise-node/header"
 	"github.com/sunrise-zone/sunrise-node/share"

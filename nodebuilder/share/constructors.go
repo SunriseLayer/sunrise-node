@@ -10,7 +10,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/routing"
 	routingdisc "github.com/libp2p/go-libp2p/p2p/discovery/routing"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
 	"github.com/sunrise-zone/sunrise-node/share"
 	"github.com/sunrise-zone/sunrise-node/share/eds"

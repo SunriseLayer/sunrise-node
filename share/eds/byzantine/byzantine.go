@@ -7,7 +7,7 @@ import (
 	"github.com/ipfs/boxo/blockservice"
 
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
 	"github.com/sunrise-zone/sunrise-node/share/ipld"
 )

@@ -17,8 +17,8 @@ import (
 	mhcore "github.com/multiformats/go-multihash/core"
 
 	"github.com/celestiaorg/nmt"
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
 	"github.com/sunrise-zone/sunrise-node/share"
 )

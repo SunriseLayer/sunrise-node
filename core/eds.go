@@ -10,11 +10,11 @@ import (
 
 	"github.com/celestiaorg/nmt"
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/app"
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/pkg/shares"
-	"github.com/sunrise-zone/sunrise-app/pkg/square"
-	"github.com/sunrise-zone/sunrise-app/pkg/wrapper"
+	"github.com/sunriselayer/sunrise/app"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/pkg/shares"
+	"github.com/sunriselayer/sunrise/pkg/square"
+	"github.com/sunriselayer/sunrise/pkg/wrapper"
 
 	"github.com/sunrise-zone/sunrise-node/share"
 	"github.com/sunrise-zone/sunrise-node/share/eds"

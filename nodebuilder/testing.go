@@ -9,7 +9,7 @@ import (
 	"go.uber.org/fx"
 
 	libhead "github.com/celestiaorg/go-header"
-	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/core"
 	"github.com/sunrise-zone/sunrise-node/header"

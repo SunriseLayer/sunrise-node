@@ -5,7 +5,7 @@ import (
 	pb "github.com/libp2p/go-libp2p-pubsub/pb"
 	"golang.org/x/crypto/blake2b"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
 	header_pb "github.com/sunrise-zone/sunrise-node/header/pb"
 )

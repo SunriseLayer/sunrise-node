@@ -3,7 +3,7 @@ package state
 import (
 	kr "github.com/cosmos/cosmos-sdk/crypto/keyring"
 
-	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/libs/keystore"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"

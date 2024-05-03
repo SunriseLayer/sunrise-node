@@ -3,7 +3,7 @@ package state
 import (
 	libfraud "github.com/celestiaorg/go-fraud"
 	"github.com/celestiaorg/go-header/sync"
-	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/header"
 	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"

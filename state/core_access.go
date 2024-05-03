@@ -27,12 +27,12 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 
 	libhead "github.com/celestiaorg/go-header"
-	"github.com/sunrise-zone/sunrise-app/app"
-	apperrors "github.com/sunrise-zone/sunrise-app/app/errors"
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	pkgblob "github.com/sunrise-zone/sunrise-app/pkg/blob"
-	appblob "github.com/sunrise-zone/sunrise-app/x/blob"
-	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	"github.com/sunriselayer/sunrise/app"
+	apperrors "github.com/sunriselayer/sunrise/app/errors"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
+	pkgblob "github.com/sunriselayer/sunrise/pkg/blob"
+	appblob "github.com/sunriselayer/sunrise/x/blob"
+	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/blob"
 	"github.com/sunrise-zone/sunrise-node/header"

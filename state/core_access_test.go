@@ -14,11 +14,11 @@ import (
 	sdkmath "cosmossdk.io/math"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-app/app"
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/test/util/genesis"
-	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
-	blobtypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	"github.com/sunriselayer/sunrise/app"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/test/util/genesis"
+	"github.com/sunriselayer/sunrise/test/util/testnode"
+	blobtypes "github.com/sunriselayer/sunrise/x/blob/types"
 
 	"github.com/sunrise-zone/sunrise-node/blob"
 	"github.com/sunrise-zone/sunrise-node/share"

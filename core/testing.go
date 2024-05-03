@@ -10,8 +10,8 @@ import (
 	tmrand "github.com/cometbft/cometbft/libs/rand"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-app/test/util/genesis"
-	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
+	"github.com/sunriselayer/sunrise/test/util/genesis"
+	"github.com/sunriselayer/sunrise/test/util/testnode"
 )
 
 // DefaultTestConfig returns the default testing configuration for Tendermint + Celestia App tandem.

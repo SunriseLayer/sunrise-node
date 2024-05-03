@@ -12,7 +12,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
 
 	"github.com/sunrise-zone/sunrise-node/blob"
 	"github.com/sunrise-zone/sunrise-node/blob/blobtest"

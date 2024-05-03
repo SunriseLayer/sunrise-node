@@ -11,7 +11,7 @@ import (
 
 	"github.com/ipfs/go-datastore"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
 	"github.com/sunrise-zone/sunrise-node/share/eds"
 	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"

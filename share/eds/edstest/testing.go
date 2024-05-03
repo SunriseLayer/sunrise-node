@@ -7,7 +7,7 @@ import (
 
 	"github.com/celestiaorg/nmt"
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/wrapper"
+	"github.com/sunriselayer/sunrise/pkg/wrapper"
 
 	"github.com/sunrise-zone/sunrise-node/share"
 	"github.com/sunrise-zone/sunrise-node/share/sharetest"
