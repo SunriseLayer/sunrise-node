@@ -12,10 +12,10 @@ import (
 	"go.opentelemetry.io/otel/trace"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/sunrise-zone/sunrise-node/libs/utils"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds/cache"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunriselayer/sunrise-da/libs/utils"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds/cache"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
 )
 
 // readCloser is a helper struct, that combines io.Reader and io.Closer

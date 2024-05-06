@@ -13,13 +13,13 @@ import (
 
 	"github.com/celestiaorg/nmt"
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/header/headertest"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
-	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/header/headertest"
+	"github.com/sunriselayer/sunrise-da/share/eds"
+	"github.com/sunriselayer/sunrise-da/share/eds/edstest"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
 )
 
 // FraudMaker allows to produce an invalid header at the specified height in order to produce the

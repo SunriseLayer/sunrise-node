@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	appns "github.com/sunrise-zone/sunrise-app/pkg/namespace"
+	appns "github.com/sunriselayer/sunrise/pkg/namespace"
 )
 
 var (

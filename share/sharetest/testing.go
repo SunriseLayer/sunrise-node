@@ -9,9 +9,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/namespace"
+	"github.com/sunriselayer/sunrise/pkg/namespace"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 // RandShares generate 'total' amount of shares filled with random data. It uses require.TestingT

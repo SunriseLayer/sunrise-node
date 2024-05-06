@@ -7,8 +7,8 @@ import (
 
 	libhead "github.com/celestiaorg/go-header"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/share/p2p/shrexsub"
 )
 
 // samplingCoordinator runs and coordinates sampling workers and updates current sampling state

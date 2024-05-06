@@ -9,7 +9,7 @@ import (
 
 	"github.com/celestiaorg/nmt"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 // GetShare fetches and returns the data for leaf `leafIndex` of root `rootCid`.

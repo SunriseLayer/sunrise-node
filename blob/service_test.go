@@ -17,15 +17,15 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/celestiaorg/go-header/store"
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/pkg/shares"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/pkg/shares"
 
-	"github.com/sunrise-zone/sunrise-node/blob/blobtest"
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/header/headertest"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/getters"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunriselayer/sunrise-da/blob/blobtest"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/header/headertest"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/getters"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
 )
 
 func TestBlobService_Get(t *testing.T) {

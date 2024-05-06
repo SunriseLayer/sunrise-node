@@ -11,11 +11,11 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/sunrise-zone/sunrise-node/header/headertest"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/availability/light"
-	availability_test "github.com/sunrise-zone/sunrise-node/share/availability/test"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunriselayer/sunrise-da/header/headertest"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/availability/light"
+	availability_test "github.com/sunriselayer/sunrise-da/share/availability/test"
+	"github.com/sunriselayer/sunrise-da/share/eds"
 )
 
 func init() {

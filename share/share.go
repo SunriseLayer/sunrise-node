@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
 )
 
 var (

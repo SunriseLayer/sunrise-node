@@ -6,11 +6,11 @@ import (
 	logging "github.com/ipfs/go-log/v2"
 	"go.uber.org/fx"
 
-	"github.com/sunrise-zone/sunrise-node/api/gateway"
-	headerServ "github.com/sunrise-zone/sunrise-node/nodebuilder/header"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	shareServ "github.com/sunrise-zone/sunrise-node/nodebuilder/share"
-	stateServ "github.com/sunrise-zone/sunrise-node/nodebuilder/state"
+	"github.com/sunriselayer/sunrise-da/api/gateway"
+	headerServ "github.com/sunriselayer/sunrise-da/nodebuilder/header"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	shareServ "github.com/sunriselayer/sunrise-da/nodebuilder/share"
+	stateServ "github.com/sunriselayer/sunrise-da/nodebuilder/state"
 )
 
 var log = logging.Logger("module/gateway")

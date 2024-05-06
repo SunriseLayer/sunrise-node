@@ -6,7 +6,7 @@ import (
 	"fmt"
 
 	"github.com/celestiaorg/nmt/namespace"
-	appns "github.com/sunrise-zone/sunrise-app/pkg/namespace"
+	appns "github.com/sunriselayer/sunrise/pkg/namespace"
 )
 
 // NamespaceSize is a system-wide size for NMT namespaces.

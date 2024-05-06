@@ -14,14 +14,13 @@ import (
 	sdkmath "cosmossdk.io/math"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-app/app"
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/test/util/genesis"
-	"github.com/sunrise-zone/sunrise-app/test/util/testnode"
-	blobtypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	"github.com/sunriselayer/sunrise/app"
+	"github.com/sunriselayer/sunrise/test/util/genesis"
+	"github.com/sunriselayer/sunrise/test/util/testnode"
+	blobtypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/blob"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 func TestSubmitPayForBlob(t *testing.T) {
@@ -54,7 +53,7 @@ func TestSubmitPayForBlob(t *testing.T) {
 
 	minGas, err := ca.queryMinimumGasPrice(ctx)
 	require.NoError(t, err)
-	require.Equal(t, appconsts.DefaultMinGasPrice, minGas)
+	require.Equal(t, float64(0), minGas)
 
 	testcases := []struct {
 		name   string

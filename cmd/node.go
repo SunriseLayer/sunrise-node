@@ -4,13 +4,13 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/gateway"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/header"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/rpc"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/core"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/gateway"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/header"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/rpc"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/state"
 )
 
 func NewBridge(options ...func(*cobra.Command, []*pflag.FlagSet)) *cobra.Command {

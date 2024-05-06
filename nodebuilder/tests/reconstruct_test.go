@@ -15,12 +15,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/tests/swamp"
-	"github.com/sunrise-zone/sunrise-node/share/availability/light"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunriselayer/sunrise-da/nodebuilder"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/tests/swamp"
+	"github.com/sunriselayer/sunrise-da/share/availability/light"
+	"github.com/sunriselayer/sunrise-da/share/eds"
 )
 
 /*

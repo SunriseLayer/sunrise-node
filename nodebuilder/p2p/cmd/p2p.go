@@ -8,7 +8,7 @@ import (
 	ma2 "github.com/multiformats/go-multiaddr"
 	"github.com/spf13/cobra"
 
-	cmdnode "github.com/sunrise-zone/sunrise-node/cmd"
+	cmdnode "github.com/sunriselayer/sunrise-da/cmd"
 )
 
 type peerInfo struct {

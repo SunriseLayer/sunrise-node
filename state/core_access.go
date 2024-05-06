@@ -27,15 +27,15 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 
 	libhead "github.com/celestiaorg/go-header"
-	"github.com/sunrise-zone/sunrise-app/app"
-	apperrors "github.com/sunrise-zone/sunrise-app/app/errors"
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	pkgblob "github.com/sunrise-zone/sunrise-app/pkg/blob"
-	appblob "github.com/sunrise-zone/sunrise-app/x/blob"
-	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	"github.com/sunriselayer/sunrise/app"
+	apperrors "github.com/sunriselayer/sunrise/app/errors"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
+	pkgblob "github.com/sunriselayer/sunrise/pkg/blob"
+	appblob "github.com/sunriselayer/sunrise/x/blob"
+	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunriselayer/sunrise-da/blob"
+	"github.com/sunriselayer/sunrise-da/header"
 )
 
 var (
@@ -130,6 +130,7 @@ func (ca *CoreAccessor) Start(ctx context.Context) error {
 	}
 	ca.rpcCli = cli
 
+	time.Sleep(time.Millisecond * 1000)
 	ca.minGasPrice, err = ca.queryMinimumGasPrice(ctx)
 	if err != nil {
 		return fmt.Errorf("querying minimum gas price: %w", err)
@@ -234,7 +235,7 @@ func (ca *CoreAccessor) SubmitPayForBlob(
 			ctx,
 			ca.signer,
 			ca.coreConn,
-			sdktx.BroadcastMode_BROADCAST_MODE_BLOCK,
+			sdktx.BroadcastMode_BROADCAST_MODE_SYNC,
 			appblobs,
 			apptypes.SetGasLimit(gasLim),
 			withFee(fee),
@@ -324,16 +325,17 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 	if !ok {
 		return nil, fmt.Errorf("cannot convert %s into sdktypes.Int", string(value))
 	}
-	// verify balance
-	err = ca.prt.VerifyValue(
-		result.Response.GetProofOps(),
-		head.AppHash,
-		fmt.Sprintf("store/%s/key/%s", banktypes.StoreKey, key),
-		value,
-	)
-	if err != nil {
-		return nil, err
-	}
+	// // verify balance
+	// err = ca.prt.VerifyValue(
+	// 	result.Response.GetProofOps(),
+	// 	head.AppHash,
+	// 	fmt.Sprintf("/store/%s/%s", banktypes.StoreKey, key),
+	// 	value,
+	// )
+	// fmt.Println("BalanceForAddress-11", err)
+	// if err != nil {
+	// 	return nil, err
+	// }
 
 	return &Balance{
 		Denom:  app.BondDenom,

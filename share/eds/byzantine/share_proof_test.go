@@ -9,10 +9,10 @@ import (
 	"github.com/ipfs/go-cid"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
-	"github.com/sunrise-zone/sunrise-node/share/sharetest"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
+	"github.com/sunriselayer/sunrise-da/share/sharetest"
 )
 
 func TestGetProof(t *testing.T) {

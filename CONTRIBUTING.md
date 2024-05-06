@@ -3,12 +3,12 @@
 Thank you for your interest in contributing to Celestia-Node!
 
 All work on the code base should be motivated by [our Github
-issues](https://github.com/sunrise-zone/sunrise-node/issues). If you
+issues](https://github.com/sunriselayer/sunrise-da/issues). If you
 would like to work on an issue which already exists, please indicate so
 by leaving a comment.
 
 All new contributions should start with a [Github
-issue](https://github.com/sunrise-zone/sunrise-node/issues/new/choose). The
+issue](https://github.com/sunriselayer/sunrise-da/issues/new/choose). The
 issue helps capture the problem you're trying to solve and allows for
 early feedback. Once the issue is created the process can proceed in different
 directions depending on how well-defined the problem and potential

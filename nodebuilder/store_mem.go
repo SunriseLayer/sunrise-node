@@ -6,7 +6,7 @@ import (
 	"github.com/ipfs/go-datastore"
 	ds_sync "github.com/ipfs/go-datastore/sync"
 
-	"github.com/sunrise-zone/sunrise-node/libs/keystore"
+	"github.com/sunriselayer/sunrise-da/libs/keystore"
 )
 
 type memStore struct {

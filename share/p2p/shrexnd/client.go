@@ -16,9 +16,9 @@ import (
 	"github.com/celestiaorg/go-libp2p-messenger/serde"
 	"github.com/celestiaorg/nmt"
 
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/p2p"
-	pb "github.com/sunrise-zone/sunrise-node/share/p2p/shrexnd/pb"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/p2p"
+	pb "github.com/sunriselayer/sunrise-da/share/p2p/shrexnd/pb"
 )
 
 // Client implements client side of shrex/nd protocol to obtain namespaced shares data from remote

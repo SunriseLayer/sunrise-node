@@ -16,9 +16,9 @@ import (
 	"github.com/celestiaorg/go-header/store"
 	"github.com/celestiaorg/go-header/sync"
 
-	modfraud "github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
-	modp2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
-	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
+	modfraud "github.com/sunriselayer/sunrise-da/nodebuilder/fraud"
+	modp2p "github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/share/eds/byzantine"
 )
 
 // newP2PExchange constructs a new Exchange for headers.

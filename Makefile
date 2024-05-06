@@ -1,7 +1,7 @@
 SHELL=/usr/bin/env bash
 PROJECTNAME=$(shell basename "$(PWD)")
 DIR_FULLPATH=$(shell pwd)
-versioningPath := "github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+versioningPath := "github.com/sunriselayer/sunrise-da/nodebuilder/node"
 LDFLAGS=-ldflags="-X '$(versioningPath).buildTime=$(shell date)' -X '$(versioningPath).lastCommit=$(shell git rev-parse HEAD)' -X '$(versioningPath).semanticVersion=$(shell git describe --tags --dirty=-dev 2>/dev/null || git rev-parse --abbrev-ref HEAD)'"
 TAGS=integration
 SHORT=
@@ -149,7 +149,7 @@ benchmark:
 PB_PKGS=$(shell find . -name 'pb' -type d)
 PB_CORE=$(shell go list -f {{.Dir}} -m github.com/cometbft/cometbft)
 PB_GOGO=$(shell go list -f {{.Dir}} -m github.com/gogo/protobuf)
-PB_CELESTIA_APP=$(shell go list -f {{.Dir}} -m github.com/sunrise-zone/sunrise-app)
+PB_CELESTIA_APP=$(shell go list -f {{.Dir}} -m github.com/sunriselayer/sunrise)
 PB_NMT=$(shell go list -f {{.Dir}} -m github.com/celestiaorg/nmt)
 
 ## pb-gen: Generate protobuf code for all /pb/*.proto files in the project.
@@ -174,14 +174,14 @@ openrpc-gen:
 lint-imports:
 	@echo "--> Running imports linter"
 	@for file in `find . -type f -name '*.go'`; \
-		do goimports-reviser -list-diff -set-exit-status -company-prefixes "github.com/sunrise-zone" -project-name "github.com/sunrise-zone/sunrise-node" -output stdout $$file \
+		do goimports-reviser -list-diff -set-exit-status -company-prefixes "github.com/sunrise-zone" -project-name "github.com/sunriselayer/sunrise-da" -output stdout $$file \
 		 || exit 1;  \
     done;
 .PHONY: lint-imports
 
 ## sort-imports: Sort Go imports.
 sort-imports:
-	@goimports-reviser -company-prefixes "github.com/sunrise-zone" -project-name "github.com/sunrise-zone/sunrise-node" -output stdout ./...
+	@goimports-reviser -company-prefixes "github.com/sunrise-zone" -project-name "github.com/sunriselayer/sunrise-da" -output stdout ./...
 .PHONY: sort-imports
 
 ## adr-gen: Generate ADR from template. Must set NUM and TITLE parameters.

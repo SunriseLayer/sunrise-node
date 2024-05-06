@@ -9,9 +9,9 @@ import (
 	"github.com/filecoin-project/go-jsonrpc/auth"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-node/api/rpc/client"
-	"github.com/sunrise-zone/sunrise-node/libs/authtoken"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder"
+	"github.com/sunriselayer/sunrise-da/api/rpc/client"
+	"github.com/sunriselayer/sunrise-da/libs/authtoken"
+	"github.com/sunriselayer/sunrise-da/nodebuilder"
 )
 
 func getAdminClient(ctx context.Context, nd *nodebuilder.Node, t *testing.T) *client.Client {

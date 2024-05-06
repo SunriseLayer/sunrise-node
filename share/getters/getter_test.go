@@ -15,16 +15,16 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
-	"github.com/sunrise-zone/sunrise-app/pkg/wrapper"
+	"github.com/sunriselayer/sunrise/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/wrapper"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/header/headertest"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
-	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
-	"github.com/sunrise-zone/sunrise-node/share/sharetest"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/header/headertest"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds"
+	"github.com/sunriselayer/sunrise-da/share/eds/edstest"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
+	"github.com/sunriselayer/sunrise-da/share/sharetest"
 )
 
 func TestStoreGetter(t *testing.T) {

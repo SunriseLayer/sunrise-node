@@ -14,10 +14,10 @@ import (
 
 	"github.com/celestiaorg/go-libp2p-messenger/serde"
 
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
-	"github.com/sunrise-zone/sunrise-node/share/p2p"
-	p2p_pb "github.com/sunrise-zone/sunrise-node/share/p2p/shrexeds/pb"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds"
+	"github.com/sunriselayer/sunrise-da/share/p2p"
+	p2p_pb "github.com/sunriselayer/sunrise-da/share/p2p/shrexeds/pb"
 )
 
 // Server is responsible for serving ODSs for blocksync over the ShrEx/EDS protocol.

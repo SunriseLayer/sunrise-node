@@ -12,13 +12,13 @@ import (
 	"github.com/libp2p/go-libp2p/core/peer"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-node/api/rpc/client"
-	"github.com/sunrise-zone/sunrise-node/blob"
-	"github.com/sunrise-zone/sunrise-node/blob/blobtest"
-	"github.com/sunrise-zone/sunrise-node/libs/authtoken"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/tests/swamp"
+	"github.com/sunriselayer/sunrise-da/api/rpc/client"
+	"github.com/sunriselayer/sunrise-da/blob"
+	"github.com/sunriselayer/sunrise-da/blob/blobtest"
+	"github.com/sunriselayer/sunrise-da/libs/authtoken"
+	"github.com/sunriselayer/sunrise-da/nodebuilder"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/tests/swamp"
 )
 
 const (

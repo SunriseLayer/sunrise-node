@@ -63,6 +63,6 @@ linters-settings:
   misspell:
     locale: US
   goimports:
-    local-prefixes: github.com/sunrise-zone/sunrise-node
+    local-prefixes: github.com/sunriselayer/sunrise-da
   dupl:
     threshold: 200

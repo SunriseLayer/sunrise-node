@@ -14,9 +14,9 @@ import (
 	dsbadger "github.com/ipfs/go-ds-badger4"
 	"github.com/mitchellh/go-homedir"
 
-	"github.com/sunrise-zone/sunrise-node/libs/fslock"
-	"github.com/sunrise-zone/sunrise-node/libs/keystore"
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/libs/fslock"
+	"github.com/sunriselayer/sunrise-da/libs/keystore"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 var (
