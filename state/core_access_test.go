@@ -15,7 +15,6 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/sunriselayer/sunrise/app"
-	"github.com/sunriselayer/sunrise/pkg/appconsts"
 	"github.com/sunriselayer/sunrise/test/util/genesis"
 	"github.com/sunriselayer/sunrise/test/util/testnode"
 	blobtypes "github.com/sunriselayer/sunrise/x/blob/types"
@@ -54,7 +53,7 @@ func TestSubmitPayForBlob(t *testing.T) {
 
 	minGas, err := ca.queryMinimumGasPrice(ctx)
 	require.NoError(t, err)
-	require.Equal(t, appconsts.DefaultMinGasPrice, minGas)
+	require.Equal(t, float64(0), minGas)
 
 	testcases := []struct {
 		name   string

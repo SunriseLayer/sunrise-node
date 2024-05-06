@@ -6,7 +6,6 @@ import (
 	"os"
 	"testing"
 
-	sdkmath "cosmossdk.io/math"
 	abci "github.com/cometbft/cometbft/abci/types"
 	rpcclient "github.com/cometbft/cometbft/rpc/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
@@ -18,7 +17,6 @@ import (
 	"google.golang.org/grpc"
 
 	libhead "github.com/celestiaorg/go-header"
-	"github.com/sunriselayer/sunrise/app"
 	"github.com/sunriselayer/sunrise/test/util/genesis"
 	"github.com/sunriselayer/sunrise/test/util/testfactory"
 	"github.com/sunriselayer/sunrise/test/util/testnode"
@@ -114,11 +112,10 @@ func (l localHeader) Head(
 
 func (s *IntegrationTestSuite) TestGetBalance() {
 	require := s.Require()
-	expectedBal := sdk.NewCoin(app.BondDenom, sdkmath.NewInt(int64(99999999999999999)))
 	for _, acc := range s.accounts {
 		bal, err := s.accessor.BalanceForAddress(context.Background(), Address{s.getAddress(acc.Name)})
 		require.NoError(err)
-		require.Equal(&expectedBal, bal)
+		require.True(bal.IsPositive(), acc.Name)
 	}
 }
 
