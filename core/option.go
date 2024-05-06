@@ -1,6 +1,6 @@
 package core
 
-import "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+import "github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
 
 type Option func(*params)
 

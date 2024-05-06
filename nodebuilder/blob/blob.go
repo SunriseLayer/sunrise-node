@@ -3,8 +3,8 @@ package blob
 import (
 	"context"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/blob"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 var _ Module = (*API)(nil)

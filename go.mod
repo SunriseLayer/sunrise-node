@@ -1,4 +1,4 @@
-module github.com/sunrise-zone/sunrise-node
+module github.com/sunriselayer/sunrise-da
 
 go 1.22.0
 

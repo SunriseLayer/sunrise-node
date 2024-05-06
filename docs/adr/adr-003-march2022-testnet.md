@@ -57,7 +57,7 @@ refactoring and improving this structure to include more features (defined later
 
 ## New Features
 
-### [New node type definitions](https://github.com/sunrise-zone/sunrise-node/issues/250)
+### [New node type definitions](https://github.com/sunriselayer/sunrise-da/issues/250)
 
 - Introduce a standalone **full** node and rename current full node implementation to **bridge** node.
 - Remove **dev** as a node type and make it a flag on every available node type.
@@ -80,7 +80,7 @@ operations as usual.
 Eventually, we may choose to use the reputation tracking system provided by [gossipsub](https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/gossipsub-v1.1.md#peer-scoring) for nodes who broadcast invalid fraud
 proofs to the network, but that is not a requirement for this iteration.
 
-### [Introduce an RPC structure and some basic APIs](https://github.com/sunrise-zone/sunrise-node/issues/169)
+### [Introduce an RPC structure and some basic APIs](https://github.com/sunriselayer/sunrise-da/issues/169)
 
 Implement scaffolding for RPC on all node types, such that a user can access the following methods:
 
@@ -112,7 +112,7 @@ transactions to `TxSub`, but do not need to listen for them.
 
 Celestia-node's state interaction will be detailed further in a subsequent ADR.
 
-### [Data Availability Sampling during `HeaderSync`](https://github.com/sunrise-zone/sunrise-node/issues/181)
+### [Data Availability Sampling during `HeaderSync`](https://github.com/sunriselayer/sunrise-da/issues/181)
 
 Currently, both **light** and \*_full_ nodes are unable to perform data availability sampling (DAS) while syncing.
 They only begin sampling once the node is synced up to head of chain.
@@ -141,7 +141,7 @@ work otherwise, leading to last-minute solutions, like having to hand both the c
 “trusted” hash of a header from the already-running chain so that it can sync from that point and start listening for
 new headers.
 
-#### Proposed new architecture: [`BlockService` is only responsible for reconstructing the block from Shares handed to it by the `ShareService`](https://github.com/sunrise-zone/sunrise-node/issues/251)
+#### Proposed new architecture: [`BlockService` is only responsible for reconstructing the block from Shares handed to it by the `ShareService`](https://github.com/sunriselayer/sunrise-da/issues/251)
 
 Right now, the `BlockService` is in charge of fetching new blocks from the core node, erasure coding them, generating
 DAH, generating `ExtendedHeader`, broadcasting `ExtendedHeader` to `HeaderSub` network, and storing the block data
@@ -175,7 +175,7 @@ for
 ### `ShareService` optimizations
 
 - Implement parallelization for retrieving shares by namespace. This
-  [issue](https://github.com/sunrise-zone/sunrise-node/issues/184) is already being worked on.
+  [issue](https://github.com/sunriselayer/sunrise-da/issues/184) is already being worked on.
 - NMT/Shares/Namespace storage optimizations:
   - Right now we prepend to each Share 17 additional bytes, Luckily, for each reason why the prepended bytes were added,
     there is an alternative solution: It is possible to get NMT Node type indirectly, without serializing the type itself
@@ -183,7 +183,7 @@ for
     the data itself. It is possible to get the namespace for each share encoded in inner non-leaf nodes of the NMT tree.
 - Pruning for shares.
 
-### [Move IPLD from celetia-node repo into its own repo](https://github.com/sunrise-zone/sunrise-node/issues/111)
+### [Move IPLD from celetia-node repo into its own repo](https://github.com/sunriselayer/sunrise-da/issues/111)
 
 Since the IPLD package is pretty much entirely separate from the celestia-node implementation, it makes sense that it
 is removed from the celestia-node repository and maintained separately. The extraction of IPLD should also include a

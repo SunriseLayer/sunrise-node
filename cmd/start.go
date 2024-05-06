@@ -13,7 +13,7 @@ import (
 	"github.com/sunriselayer/sunrise/app"
 	"github.com/sunriselayer/sunrise/app/encoding"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder"
+	"github.com/sunriselayer/sunrise-da/nodebuilder"
 )
 
 // Start constructs a CLI command to start Celestia Node daemon of any type with the given flags.
@@ -36,7 +36,7 @@ Options passed on start override configuration options only on start and are not
 
 			// construct ring
 			// TODO @renaynay: Include option for setting custom `userInput` parameter with
-			//  implementation of https://github.com/sunrise-zone/sunrise-node/issues/415.
+			//  implementation of https://github.com/sunriselayer/sunrise-da/issues/415.
 			encConf := encoding.MakeConfig(app.ModuleEncodingRegisters...)
 			ring, err := keyring.New(app.Name, cfg.State.KeyringBackend, keysPath, os.Stdin, encConf.Codec)
 			if err != nil {

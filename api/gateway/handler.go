@@ -3,10 +3,10 @@ package gateway
 import (
 	logging "github.com/ipfs/go-log/v2"
 
-	"github.com/sunrise-zone/sunrise-node/das"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/header"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/share"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
+	"github.com/sunriselayer/sunrise-da/das"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/header"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/share"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/state"
 )
 
 var log = logging.Logger("gateway")

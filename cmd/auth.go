@@ -13,10 +13,10 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/sunrise-zone/sunrise-node/api/rpc/perms"
-	"github.com/sunrise-zone/sunrise-node/libs/authtoken"
-	"github.com/sunrise-zone/sunrise-node/libs/keystore"
-	nodemod "github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/api/rpc/perms"
+	"github.com/sunriselayer/sunrise-da/libs/authtoken"
+	"github.com/sunriselayer/sunrise-da/libs/keystore"
+	nodemod "github.com/sunriselayer/sunrise-da/nodebuilder/node"
 )
 
 func AuthCmd(fsets ...*flag.FlagSet) *cobra.Command {

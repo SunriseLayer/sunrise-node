@@ -11,7 +11,7 @@ import (
 
 	"github.com/sunriselayer/sunrise/pkg/shares"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 const (

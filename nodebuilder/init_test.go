@@ -13,8 +13,8 @@ import (
 	"github.com/sunriselayer/sunrise/app"
 	"github.com/sunriselayer/sunrise/app/encoding"
 
-	"github.com/sunrise-zone/sunrise-node/libs/fslock"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/libs/fslock"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
 )
 
 func TestInit(t *testing.T) {

@@ -106,10 +106,10 @@ Storing EDS as a whole requires EDS (de)serialization. For this, the [CAR format
 To write EDS into a stream/file, `WriteEDS` is introduced. Internally, it
 
 - [Re-imports](https://github.com/celestiaorg/rsmt2d/blob/80d231f733e9dd8ca166c3d670470ed9a1c165d9/extendeddatasquare.go#L44) EDS similarly to
-  [`ipld.ImportShares`](https://github.com/sunrise-zone/sunrise-node/blob/da4f54bca1bfef86f53880ced569d37ffb4b8b84/share/add.go#L48)
+  [`ipld.ImportShares`](https://github.com/sunriselayer/sunrise-da/blob/da4f54bca1bfef86f53880ced569d37ffb4b8b84/share/add.go#L48)
   - Using [`Blockservice`][blockservice] with [offline
       exchange][offexchange] and in-memory [`Blockstore`][blockstore]
-  - With [`NodeVisitor`](https://github.com/sunrise-zone/sunrise-node/blob/da4f54bca1bfef86f53880ced569d37ffb4b8b84/share/add.go#L63), which saves to the
+  - With [`NodeVisitor`](https://github.com/sunriselayer/sunrise-da/blob/da4f54bca1bfef86f53880ced569d37ffb4b8b84/share/add.go#L63), which saves to the
       [`Blockstore`][blockstore] only NMT Merkle proofs(no shares) _NOTE: `len(node.Links()) == 2`_
     - Actual shares are written further in a particular way explained further
 - Creates and [writes](https://github.com/ipld/go-car/blob/dab0fd5bb19dead0da1377270f37be9acf858cf0/car.go#L86) header [`CARv1Header`](https://github.com/ipld/go-car/blob/dab0fd5bb19dead0da1377270f37be9acf858cf0/car.go#L30)

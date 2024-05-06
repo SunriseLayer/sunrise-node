@@ -20,9 +20,9 @@ import (
 	"github.com/sunriselayer/sunrise/pkg/da"
 	"github.com/sunriselayer/sunrise/pkg/wrapper"
 
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds/byzantine"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
 )
 
 var (

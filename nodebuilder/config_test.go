@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
 )
 
 // TestConfigWriteRead tests that the configs for all node types can be encoded to and from TOML.

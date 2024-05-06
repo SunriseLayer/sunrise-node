@@ -3,7 +3,7 @@ package light
 import (
 	"time"
 
-	"github.com/sunrise-zone/sunrise-node/pruner"
+	"github.com/sunriselayer/sunrise-da/pruner"
 )
 
 // Window is the availability window for light nodes in the Celestia

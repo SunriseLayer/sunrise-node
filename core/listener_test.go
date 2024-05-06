@@ -13,10 +13,10 @@ import (
 
 	"github.com/celestiaorg/go-header/p2p"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	nodep2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
-	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
+	"github.com/sunriselayer/sunrise-da/header"
+	nodep2p "github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/share/eds"
+	"github.com/sunriselayer/sunrise-da/share/p2p/shrexsub"
 )
 
 const networkID = "test-app"

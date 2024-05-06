@@ -1,7 +1,7 @@
 package das
 
 import (
-	"github.com/sunrise-zone/sunrise-node/das"
+	"github.com/sunriselayer/sunrise-da/das"
 )
 
 // WithMetrics is a utility function that is expected to be

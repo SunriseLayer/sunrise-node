@@ -1,14 +1,14 @@
 package main
 
 import (
-	"github.com/sunrise-zone/sunrise-node/cmd"
-	blob "github.com/sunrise-zone/sunrise-node/nodebuilder/blob/cmd"
-	das "github.com/sunrise-zone/sunrise-node/nodebuilder/das/cmd"
-	header "github.com/sunrise-zone/sunrise-node/nodebuilder/header/cmd"
-	node "github.com/sunrise-zone/sunrise-node/nodebuilder/node/cmd"
-	p2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p/cmd"
-	share "github.com/sunrise-zone/sunrise-node/nodebuilder/share/cmd"
-	state "github.com/sunrise-zone/sunrise-node/nodebuilder/state/cmd"
+	"github.com/sunriselayer/sunrise-da/cmd"
+	blob "github.com/sunriselayer/sunrise-da/nodebuilder/blob/cmd"
+	das "github.com/sunriselayer/sunrise-da/nodebuilder/das/cmd"
+	header "github.com/sunriselayer/sunrise-da/nodebuilder/header/cmd"
+	node "github.com/sunriselayer/sunrise-da/nodebuilder/node/cmd"
+	p2p "github.com/sunriselayer/sunrise-da/nodebuilder/p2p/cmd"
+	share "github.com/sunriselayer/sunrise-da/nodebuilder/share/cmd"
+	state "github.com/sunriselayer/sunrise-da/nodebuilder/state/cmd"
 )
 
 func init() {

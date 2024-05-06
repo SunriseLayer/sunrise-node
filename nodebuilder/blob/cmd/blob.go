@@ -10,9 +10,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	cmdnode "github.com/sunrise-zone/sunrise-node/cmd"
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/blob"
+	cmdnode "github.com/sunriselayer/sunrise-da/cmd"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 var (

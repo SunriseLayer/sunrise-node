@@ -1,7 +1,7 @@
 package core
 
 import (
-	"github.com/sunrise-zone/sunrise-node/core"
+	"github.com/sunriselayer/sunrise-da/core"
 )
 
 func remote(cfg Config) (core.Client, error) {

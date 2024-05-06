@@ -6,7 +6,7 @@ import (
 
 	pubsub "github.com/libp2p/go-libp2p-pubsub"
 
-	pb "github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub/pb"
+	pb "github.com/sunriselayer/sunrise-da/share/p2p/shrexsub/pb"
 )
 
 // Subscription is a wrapper over pubsub.Subscription that handles

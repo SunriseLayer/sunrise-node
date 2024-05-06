@@ -14,9 +14,9 @@ import (
 	"go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetrichttp"
 	"go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp"
 
-	"github.com/sunrise-zone/sunrise-node/logs"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder"
-	modp2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/logs"
+	"github.com/sunriselayer/sunrise-da/nodebuilder"
+	modp2p "github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
 )
 
 var (

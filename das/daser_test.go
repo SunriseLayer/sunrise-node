@@ -21,17 +21,17 @@ import (
 	"github.com/celestiaorg/go-fraud/fraudtest"
 	libhead "github.com/celestiaorg/go-header"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/header/headertest"
-	headerfraud "github.com/sunrise-zone/sunrise-node/header/headertest/fraud"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/availability/full"
-	"github.com/sunrise-zone/sunrise-node/share/availability/light"
-	"github.com/sunrise-zone/sunrise-node/share/availability/mocks"
-	availability_test "github.com/sunrise-zone/sunrise-node/share/availability/test"
-	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
-	"github.com/sunrise-zone/sunrise-node/share/getters"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/header/headertest"
+	headerfraud "github.com/sunriselayer/sunrise-da/header/headertest/fraud"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/availability/full"
+	"github.com/sunriselayer/sunrise-da/share/availability/light"
+	"github.com/sunriselayer/sunrise-da/share/availability/mocks"
+	availability_test "github.com/sunriselayer/sunrise-da/share/availability/test"
+	"github.com/sunriselayer/sunrise-da/share/eds/byzantine"
+	"github.com/sunriselayer/sunrise-da/share/getters"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
 )
 
 var timeout = time.Second * 15

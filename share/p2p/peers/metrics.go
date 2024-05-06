@@ -12,8 +12,8 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/metric"
 
-	"github.com/sunrise-zone/sunrise-node/libs/utils"
-	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
+	"github.com/sunriselayer/sunrise-da/libs/utils"
+	"github.com/sunriselayer/sunrise-da/share/p2p/shrexsub"
 )
 
 const (

@@ -10,7 +10,7 @@ import (
 	"github.com/sunriselayer/sunrise/pkg/blob"
 	"github.com/sunriselayer/sunrise/pkg/shares"
 
-	"github.com/sunrise-zone/sunrise-node/share/sharetest"
+	"github.com/sunriselayer/sunrise-da/share/sharetest"
 )
 
 func Test_dataFromShares(t *testing.T) {

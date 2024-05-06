@@ -12,7 +12,7 @@ builds:
       # need to be created.
       # REF: https://goreleaser.com/limitations/cgo/
       - CGO_ENABLED=0
-      - VersioningPath={{ "github.com/sunrise-zone/sunrise-node/nodebuilder/node" }}
+      - VersioningPath={{ "github.com/sunriselayer/sunrise-da/nodebuilder/node" }}
     goos:
       - linux
       - darwin

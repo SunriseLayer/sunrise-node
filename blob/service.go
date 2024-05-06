@@ -20,9 +20,9 @@ import (
 	"github.com/sunriselayer/sunrise/pkg/shares"
 	blobtypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/libs/utils"
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/libs/utils"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 var (

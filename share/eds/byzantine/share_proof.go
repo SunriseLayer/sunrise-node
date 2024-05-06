@@ -11,9 +11,9 @@ import (
 	"github.com/celestiaorg/nmt"
 	nmt_pb "github.com/celestiaorg/nmt/pb"
 
-	"github.com/sunrise-zone/sunrise-node/share"
-	pb "github.com/sunrise-zone/sunrise-node/share/eds/byzantine/pb"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunriselayer/sunrise-da/share"
+	pb "github.com/sunriselayer/sunrise-da/share/eds/byzantine/pb"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
 )
 
 var log = logging.Logger("share/byzantine")

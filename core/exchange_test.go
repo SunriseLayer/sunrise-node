@@ -12,8 +12,8 @@ import (
 
 	"github.com/sunriselayer/sunrise/test/util/testnode"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/share/eds"
 )
 
 func TestCoreExchange_RequestHeaders(t *testing.T) {

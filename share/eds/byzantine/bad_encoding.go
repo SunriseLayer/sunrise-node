@@ -9,10 +9,10 @@ import (
 	"github.com/celestiaorg/rsmt2d"
 	"github.com/sunriselayer/sunrise/pkg/wrapper"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/share"
-	pb "github.com/sunrise-zone/sunrise-node/share/eds/byzantine/pb"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/share"
+	pb "github.com/sunriselayer/sunrise-da/share/eds/byzantine/pb"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
 )
 
 const (

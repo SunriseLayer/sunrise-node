@@ -9,11 +9,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-node/header/headertest"
-	"github.com/sunrise-zone/sunrise-node/share"
-	availability_test "github.com/sunrise-zone/sunrise-node/share/availability/test"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
-	"github.com/sunrise-zone/sunrise-node/share/sharetest"
+	"github.com/sunriselayer/sunrise-da/header/headertest"
+	"github.com/sunriselayer/sunrise-da/share"
+	availability_test "github.com/sunriselayer/sunrise-da/share/availability/test"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
+	"github.com/sunriselayer/sunrise-da/share/sharetest"
 )
 
 func TestSharesAvailableCaches(t *testing.T) {

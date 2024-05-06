@@ -17,9 +17,9 @@ import (
 	"github.com/celestiaorg/rsmt2d"
 	"github.com/sunriselayer/sunrise/pkg/wrapper"
 
-	"github.com/sunrise-zone/sunrise-node/libs/utils"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunriselayer/sunrise-da/libs/utils"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
 )
 
 var ErrEmptySquare = errors.New("share: importing empty data")

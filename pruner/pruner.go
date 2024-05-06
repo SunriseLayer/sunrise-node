@@ -3,7 +3,7 @@ package pruner
 import (
 	"context"
 
-	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunriselayer/sunrise-da/header"
 )
 
 // Pruner contains methods necessary to prune data
