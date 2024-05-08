@@ -48,7 +48,7 @@ func run() error {
 }
 
 var rootCmd = &cobra.Command{
-	Use: "sunrise [  bridge  ||  full ||  light  ] [subcommand]",
+	Use: "sunrise-da [  bridge  ||  full ||  light  ] [subcommand]",
 	Short: `
 	   _____                      _
 	  / ____|                    (_)
