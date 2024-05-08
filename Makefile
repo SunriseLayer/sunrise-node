@@ -32,19 +32,19 @@ install-hooks:
 	@git config core.hooksPath .githooks
 .PHONY: install-hooks
 
-## build: Build sunrise-node binary.
+## build: Build sunrise-da binary.
 build:
 	@echo "--> Building Sunrise-DA"
 	@go build -o build/ ${LDFLAGS} ./cmd/sunrise-da
 .PHONY: build
 
-## build-jemalloc: Build sunrise-node binary with jemalloc allocator for BadgerDB instead of Go's native one
+## build-jemalloc: Build sunrise-da binary with jemalloc allocator for BadgerDB instead of Go's native one
 build-jemalloc: jemalloc
 	@echo "--> Building Sunrise-DA with jemalloc"
 	@go build -o build/ ${LDFLAGS} -tags jemalloc ./cmd/sunrise-da
 .PHONY: build-jemalloc
 
-## clean: Clean up sunrise-node binary.
+## clean: Clean up sunrise-da binary.
 clean:
 	@echo "--> Cleaning up ./build"
 	@rm -rf build/*
@@ -69,7 +69,7 @@ install:
 	@install -v ./build/* -t ${PREFIX}/bin/
 .PHONY: install
 
-## go-install: Build and install the sunrise-node binary into the GOBIN directory.
+## go-install: Build and install the sunrise-da binary into the GOBIN directory.
 go-install:
 	@echo "--> Installing Sunrise-DA"
 	@go install ${LDFLAGS} ./cmd/sunrise-da
@@ -174,14 +174,14 @@ openrpc-gen:
 lint-imports:
 	@echo "--> Running imports linter"
 	@for file in `find . -type f -name '*.go'`; \
-		do goimports-reviser -list-diff -set-exit-status -company-prefixes "github.com/sunrise-zone" -project-name "github.com/sunriselayer/sunrise-da" -output stdout $$file \
+		do goimports-reviser -list-diff -set-exit-status -company-prefixes "github.com/sunriselayer" -project-name "github.com/sunriselayer/sunrise-da" -output stdout $$file \
 		 || exit 1;  \
     done;
 .PHONY: lint-imports
 
 ## sort-imports: Sort Go imports.
 sort-imports:
-	@goimports-reviser -company-prefixes "github.com/sunrise-zone" -project-name "github.com/sunriselayer/sunrise-da" -output stdout ./...
+	@goimports-reviser -company-prefixes "github.com/sunriselayer" -project-name "github.com/sunriselayer/sunrise-da" -output stdout ./...
 .PHONY: sort-imports
 
 ## adr-gen: Generate ADR from template. Must set NUM and TITLE parameters.

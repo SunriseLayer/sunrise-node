@@ -8,7 +8,7 @@
 
 Golang implementation of Sunrise's data availability node types (`light` | `full` | `bridge`).
 
-The sunrise-node types described above comprise the sunrise data availability (DA) network.
+The sunrise-da types described above comprise the sunrise data availability (DA) network.
 
 The DA network wraps the sunrise-core consensus network by listening for blocks from the consensus network and making them digestible for data availability sampling (DAS).
 
@@ -16,7 +16,7 @@ Continue reading [here](https://blog.celestia.org/celestia-mvp-release-data-avai
 
 ## Table of Contents
 
-- [Sunrise Node](#sunrise-node)
+- [Sunrise Node](#sunrise-da)
   - [Table of Contents](#table-of-contents)
   - [Minimum requirements](#minimum-requirements)
   - [System Requirements](#system-requirements)
@@ -46,7 +46,7 @@ See the official docs page for system requirements per node type:
 
 ```sh
 git clone https://github.com/sunriselayer/sunrise-da.git
-cd sunrise-node
+cd sunrise-da
 make build
 sudo make install
 ```
@@ -55,7 +55,7 @@ For more information on setting up a node and the hardware requirements needed, 
 
 ## API docs
 
-The sunrise-node public API is documented [here](https://node-rpc-docs.celestia.org/).
+The sunrise-da public API is documented [here](https://node-rpc-docs.celestia.org/).
 
 ## Node types
 
