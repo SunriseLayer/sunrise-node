@@ -34,13 +34,13 @@ install-hooks:
 
 ## build: Build sunrise-node binary.
 build:
-	@echo "--> Building Sunrise"
+	@echo "--> Building Sunrise-DA"
 	@go build -o build/ ${LDFLAGS} ./cmd/sunrise-da
 .PHONY: build
 
 ## build-jemalloc: Build sunrise-node binary with jemalloc allocator for BadgerDB instead of Go's native one
 build-jemalloc: jemalloc
-	@echo "--> Building Sunrise with jemalloc"
+	@echo "--> Building Sunrise-DA with jemalloc"
 	@go build -o build/ ${LDFLAGS} -tags jemalloc ./cmd/sunrise-da
 .PHONY: build-jemalloc
 
@@ -65,13 +65,13 @@ deps:
 
 ## install: Install all build binaries into the $PREFIX (/usr/local/ by default) directory.
 install:
-	@echo "--> Installing Sunrise"
+	@echo "--> Installing Sunrise-DA"
 	@install -v ./build/* -t ${PREFIX}/bin/
 .PHONY: install
 
 ## go-install: Build and install the sunrise-node binary into the GOBIN directory.
 go-install:
-	@echo "--> Installing Sunrise"
+	@echo "--> Installing Sunrise-DA"
 	@go install ${LDFLAGS} ./cmd/sunrise-da
 .PHONY: go-install
 
@@ -163,7 +163,7 @@ pb-gen:
 	done;
 .PHONY: pb-gen
 
-## openrpc-gen: Generate OpenRPC spec for Sunrise-Node's RPC api
+## openrpc-gen: Generate OpenRPC spec for Sunrise-DA's RPC api
 openrpc-gen:
 	@echo "--> Generating OpenRPC spec"
 	@go run ./cmd/docgen fraud header state share das p2p node blob da
