@@ -2,6 +2,7 @@ package state
 
 import (
 	"context"
+	"encoding/hex"
 	"errors"
 	"fmt"
 	"math"
@@ -231,6 +232,7 @@ func (ca *CoreAccessor) SubmitPayForBlob(
 
 	var lastErr error
 	for attempt := 0; attempt < maxRetries; attempt++ {
+		// <sunrise-da>
 		response, err := appblob.SubmitPayForBlob(
 			ctx,
 			ca.signer,
@@ -240,6 +242,7 @@ func (ca *CoreAccessor) SubmitPayForBlob(
 			apptypes.SetGasLimit(gasLim),
 			withFee(fee),
 		)
+		// </sunrise-da>
 
 		// the node is capable of changing the min gas price at any time so we must be able to detect it and
 		// update our version accordingly
@@ -291,8 +294,15 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 		return nil, err
 	}
 
+	// <sunrise-da>
 	kc := collections.PairKeyCodec(sdktypes.AccAddressKey, collections.StringKey)
-	key, err := collections.EncodeKeyWithPrefix(banktypes.BalancesPrefix, kc, collections.Join(sdktypes.AccAddress(addr.Bytes()), app.BondDenom))
+	subkey := collections.Join(sdktypes.AccAddress(addr.Bytes()), app.BondDenom)
+	key, err := collections.EncodeKeyWithPrefix(banktypes.BalancesPrefix, kc, subkey)
+	if err != nil {
+		return nil, err
+	}
+	// </sunrise-da>
+
 	abciReq := abci.RequestQuery{
 		// TODO @renayay: once https://github.com/cosmos/cosmos-sdk/pull/12674 is merged, use const instead
 		Path:   fmt.Sprintf("store/%s/key", banktypes.StoreKey),
@@ -325,17 +335,18 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 	if !ok {
 		return nil, fmt.Errorf("cannot convert %s into sdktypes.Int", string(value))
 	}
-	// // verify balance
-	// err = ca.prt.VerifyValue(
-	// 	result.Response.GetProofOps(),
-	// 	head.AppHash,
-	// 	fmt.Sprintf("/store/%s/%s", banktypes.StoreKey, key),
-	// 	value,
-	// )
-	// fmt.Println("BalanceForAddress-11", err)
-	// if err != nil {
-	// 	return nil, err
-	// }
+	// <sunrise-da>
+	// verify balance
+	err = ca.prt.VerifyValue(
+		result.Response.GetProofOps(),
+		head.AppHash,
+		fmt.Sprintf("/%s/%s", banktypes.StoreKey, fmt.Sprintf("x:%s", hex.EncodeToString(key))),
+		value,
+	)
+	if err != nil {
+		return nil, err
+	}
+	// </sunrise-da>
 
 	return &Balance{
 		Denom:  app.BondDenom,

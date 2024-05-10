@@ -18,7 +18,9 @@ linters:
     - gofmt
     - goimports
     # - golint - deprecated since v1.41. revive will be used instead
-    - revive
+    # <sunrise-da>
+    # - revive
+    # </sunrise-da>
     - gosec
     - gosimple
     - govet

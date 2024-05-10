@@ -58,7 +58,7 @@ require (
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/pflag v1.0.5
 	github.com/stretchr/testify v1.9.0
-	github.com/sunriselayer/sunrise v0.0.7
+	github.com/sunriselayer/sunrise v0.0.8
 	github.com/sunriselayer/sunrise/pkg/blob v0.0.3
 	github.com/sunriselayer/sunrise/pkg/namespace v0.0.3
 	go.opentelemetry.io/contrib/instrumentation/runtime v0.45.0
