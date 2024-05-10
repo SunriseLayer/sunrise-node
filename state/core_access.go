@@ -2,6 +2,7 @@ package state
 
 import (
 	"context"
+	"encoding/hex"
 	"errors"
 	"fmt"
 	"math"
@@ -325,17 +326,16 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 	if !ok {
 		return nil, fmt.Errorf("cannot convert %s into sdktypes.Int", string(value))
 	}
-	// // verify balance
-	// err = ca.prt.VerifyValue(
-	// 	result.Response.GetProofOps(),
-	// 	head.AppHash,
-	// 	fmt.Sprintf("/store/%s/%s", banktypes.StoreKey, key),
-	// 	value,
-	// )
-	// fmt.Println("BalanceForAddress-11", err)
-	// if err != nil {
-	// 	return nil, err
-	// }
+	// verify balance
+	err = ca.prt.VerifyValue(
+		result.Response.GetProofOps(),
+		head.AppHash,
+		fmt.Sprintf("/%s/%s", banktypes.StoreKey, fmt.Sprintf("x:%s", hex.EncodeToString(key))),
+		value,
+	)
+	if err != nil {
+		return nil, err
+	}
 
 	return &Balance{
 		Denom:  app.BondDenom,
