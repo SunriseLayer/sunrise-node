@@ -57,7 +57,7 @@ func TestSubmitPayForBlob(t *testing.T) {
 	testcases := []struct {
 		name   string
 		blobs  []*blob.Blob
-		fee    sdkmath.Int
+		fee    math.Int
 		gasLim uint64
 		expErr error
 	}{
