@@ -5,7 +5,7 @@ import (
 
 	logging "github.com/ipfs/go-log/v2"
 
-	"github.com/sunrise-zone/sunrise-node/share/p2p"
+	"github.com/sunriselayer/sunrise-da/share/p2p"
 )
 
 const protocolString = "/shrex/nd/v0.0.3"

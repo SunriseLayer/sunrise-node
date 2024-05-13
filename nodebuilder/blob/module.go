@@ -5,11 +5,11 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	"github.com/sunrise-zone/sunrise-node/header"
-	headerService "github.com/sunrise-zone/sunrise-node/nodebuilder/header"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/state"
+	"github.com/sunriselayer/sunrise-da/blob"
+	"github.com/sunriselayer/sunrise-da/header"
+	headerService "github.com/sunriselayer/sunrise-da/nodebuilder/header"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/state"
 )
 
 func ConstructModule() fx.Option {

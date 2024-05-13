@@ -53,7 +53,7 @@ shutdown of `DASer` and potentially node.
 
 ### Public API
 
-The public API is currently being drafted [here](https://github.com/sunrise-zone/sunrise-node/pull/506/files). There are
+The public API is currently being drafted [here](https://github.com/sunriselayer/sunrise-da/pull/506/files). There are
 several components that will go into implementing the overall design as well as the individual module implementations.
 
 ### [Bad Encoding Fraud Proof](https://github.com/celestiaorg/celestia-node/issues/528) (continuation)

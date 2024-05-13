@@ -16,15 +16,15 @@ import (
 	go_openrpc_reflect "github.com/etclabscore/go-openrpc-reflect"
 	meta_schema "github.com/open-rpc/meta-schema"
 
-	"github.com/sunrise-zone/sunrise-node/api/rpc/client"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/api/rpc/client"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
 )
 
 const (
 	APIDescription = "The Sunrise Node API is the collection of RPC methods that " +
 		"can be used to interact with the services provided by Sunrise Data Availability Nodes."
 	APIName  = "Sunrise Node API"
-	DocsURL  = "https://github.com/sunrise-zone/sunrise-node"
+	DocsURL  = "https://github.com/sunriselayer/sunrise-da"
 	DocsName = "Sunrise Node GitHub"
 )
 

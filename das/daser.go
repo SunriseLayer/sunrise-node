@@ -13,10 +13,10 @@ import (
 	"github.com/celestiaorg/go-fraud"
 	libhead "github.com/celestiaorg/go-header"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
-	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds/byzantine"
+	"github.com/sunriselayer/sunrise-da/share/p2p/shrexsub"
 )
 
 var log = logging.Logger("das")

@@ -25,7 +25,7 @@ This would likely require a lot of overhead, and not eliminate any of the existi
 
 ## Decision
 
-Postponed for now. Per these comments, [comment1](https://github.com/sunrise-zone/sunrise-node/pull/414#issuecomment-1055871523) [comment2](https://github.com/sunrise-zone/sunrise-node/pull/414#discussion_r817744441), we are planning on taking a different approach that focuses on exposing a general purpose API. While this will not provide the custom functionality that plugins provide, it will be less cumbersome to support in the future while also serving our most of our needs. However, there is still a possibility that we merge the Plugin implementation, or a different design that provides similar functionality, in the future should we decide to support custom nodes.
+Postponed for now. Per these comments, [comment1](https://github.com/sunriselayer/sunrise-da/pull/414#issuecomment-1055871523) [comment2](https://github.com/sunriselayer/sunrise-da/pull/414#discussion_r817744441), we are planning on taking a different approach that focuses on exposing a general purpose API. While this will not provide the custom functionality that plugins provide, it will be less cumbersome to support in the future while also serving our most of our needs. However, there is still a possibility that we merge the Plugin implementation, or a different design that provides similar functionality, in the future should we decide to support custom nodes.
 
 ## Detailed Design
 
@@ -237,7 +237,7 @@ func (plug *testPlugin) Components(cfg *Config, store Store) fxutil.Option {
 
 > - How will the changes be tested?
 
-please see tests in the implementation PR [#407 tests](https://github.com/sunrise-zone/sunrise-node/blob/8416bcc5e414525e337904afbd87e20beddb50fd/node/plugin_test.go)
+please see tests in the implementation PR [#407 tests](https://github.com/sunriselayer/sunrise-da/blob/8416bcc5e414525e337904afbd87e20beddb50fd/node/plugin_test.go)
 along with the refactored version of optimint's dalc [#55](https://github.com/celestiaorg/dalc/pull/55)
 
 > - Will these changes require a breaking (major) release?

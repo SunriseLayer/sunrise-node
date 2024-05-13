@@ -3,9 +3,9 @@ package core
 import (
 	"go.uber.org/fx"
 
-	"github.com/sunrise-zone/sunrise-node/core"
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/libs/fxutil"
+	"github.com/sunriselayer/sunrise-da/core"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/libs/fxutil"
 )
 
 // WithClient sets custom client for core process

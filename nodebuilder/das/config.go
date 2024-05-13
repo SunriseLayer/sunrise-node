@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/sunrise-zone/sunrise-node/das"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	modp2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/das"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	modp2p "github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
 )
 
 // Config contains configuration parameters for the DASer (or DASing process)

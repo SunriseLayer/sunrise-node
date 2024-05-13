@@ -9,15 +9,15 @@ import (
 	"go.uber.org/fx"
 
 	libhead "github.com/celestiaorg/go-header"
-	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/core"
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/header/headertest"
-	"github.com/sunrise-zone/sunrise-node/libs/fxutil"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
+	"github.com/sunriselayer/sunrise-da/core"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/header/headertest"
+	"github.com/sunriselayer/sunrise-da/libs/fxutil"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/state"
 )
 
 // MockStore provides mock in memory Store for testing purposes.

@@ -19,12 +19,12 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds/cache"
-	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds/cache"
+	"github.com/sunriselayer/sunrise-da/share/eds/edstest"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
 )
 
 func TestEDSStore(t *testing.T) {

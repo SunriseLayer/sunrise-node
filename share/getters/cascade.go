@@ -9,10 +9,10 @@ import (
 
 	"github.com/celestiaorg/rsmt2d"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/libs/utils"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/libs/utils"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds/byzantine"
 )
 
 var _ share.Getter = (*CascadeGetter)(nil)

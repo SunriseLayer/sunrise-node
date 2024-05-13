@@ -8,7 +8,7 @@ import (
 	"go.uber.org/fx"
 	"go.uber.org/fx/fxtest"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
 )
 
 // TestConstructModule_DASBridgeStub verifies that a bridge node implements a stub daser that

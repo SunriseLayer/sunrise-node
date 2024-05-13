@@ -14,10 +14,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
-	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
-	"github.com/sunrise-zone/sunrise-node/share/p2p"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds"
+	"github.com/sunriselayer/sunrise-da/share/eds/edstest"
+	"github.com/sunriselayer/sunrise-da/share/p2p"
 )
 
 func TestExchange_RequestEDS(t *testing.T) {

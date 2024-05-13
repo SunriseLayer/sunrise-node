@@ -6,7 +6,7 @@ import (
 
 	"github.com/cristalhq/jwt"
 
-	"github.com/sunrise-zone/sunrise-node/libs/keystore"
+	"github.com/sunriselayer/sunrise-da/libs/keystore"
 )
 
 var SecretName = keystore.KeyName("jwt-secret.jwt")

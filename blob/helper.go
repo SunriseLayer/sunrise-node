@@ -4,10 +4,10 @@ import (
 	"bytes"
 	"sort"
 
-	pkgblob "github.com/sunrise-zone/sunrise-app/pkg/blob"
-	"github.com/sunrise-zone/sunrise-app/pkg/shares"
+	pkgblob "github.com/sunriselayer/sunrise/pkg/blob"
+	"github.com/sunriselayer/sunrise/pkg/shares"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 // BlobsToShares accepts blobs and convert them to the Shares.

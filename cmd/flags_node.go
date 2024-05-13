@@ -11,8 +11,8 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/nodebuilder"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
 )
 
 const (

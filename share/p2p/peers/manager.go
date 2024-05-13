@@ -19,9 +19,9 @@ import (
 
 	libhead "github.com/celestiaorg/go-header"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexsub"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/p2p/shrexsub"
 )
 
 const (

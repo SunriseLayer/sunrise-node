@@ -1,12 +1,12 @@
 package share
 
 import (
-	"github.com/sunrise-zone/sunrise-node/share/eds"
-	"github.com/sunrise-zone/sunrise-node/share/getters"
-	disc "github.com/sunrise-zone/sunrise-node/share/p2p/discovery"
-	"github.com/sunrise-zone/sunrise-node/share/p2p/peers"
-	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexeds"
-	"github.com/sunrise-zone/sunrise-node/share/p2p/shrexnd"
+	"github.com/sunriselayer/sunrise-da/share/eds"
+	"github.com/sunriselayer/sunrise-da/share/getters"
+	disc "github.com/sunriselayer/sunrise-da/share/p2p/discovery"
+	"github.com/sunriselayer/sunrise-da/share/p2p/peers"
+	"github.com/sunriselayer/sunrise-da/share/p2p/shrexeds"
+	"github.com/sunriselayer/sunrise-da/share/p2p/shrexnd"
 )
 
 // WithPeerManagerMetrics is a utility function to turn on peer manager metrics and that is

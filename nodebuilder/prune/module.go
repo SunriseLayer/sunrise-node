@@ -5,10 +5,10 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/pruner"
-	"github.com/sunrise-zone/sunrise-node/pruner/archival"
-	"github.com/sunrise-zone/sunrise-node/pruner/light"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/pruner"
+	"github.com/sunriselayer/sunrise-da/pruner/archival"
+	"github.com/sunriselayer/sunrise-da/pruner/light"
 )
 
 func ConstructModule(tp node.Type) fx.Option {

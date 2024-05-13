@@ -16,7 +16,7 @@ import (
 	"github.com/libp2p/go-libp2p/core/protocol"
 	"go.uber.org/fx"
 
-	"github.com/sunrise-zone/sunrise-node/share/eds"
+	"github.com/sunriselayer/sunrise-da/share/eds"
 )
 
 const (

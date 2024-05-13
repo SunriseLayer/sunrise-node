@@ -5,9 +5,9 @@ import (
 	"errors"
 
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
-	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunriselayer/sunrise-da/header"
 )
 
 // ErrNotAvailable is returned whenever DA sampling fails.

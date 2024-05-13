@@ -74,4 +74,4 @@ Several params values that come hardcoded in DASer (`samplingRange`, `concurrenc
 
 ## References
 
-- [DASer PR](https://github.com/sunrise-zone/sunrise-node/pull/988/)
+- [DASer PR](https://github.com/sunriselayer/sunrise-da/pull/988/)

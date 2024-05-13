@@ -1,11 +1,11 @@
 package gateway
 
 import (
-	"github.com/sunrise-zone/sunrise-node/api/gateway"
-	"github.com/sunrise-zone/sunrise-node/das"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/header"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/share"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/state"
+	"github.com/sunriselayer/sunrise-da/api/gateway"
+	"github.com/sunriselayer/sunrise-da/das"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/header"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/share"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/state"
 )
 
 // Handler constructs a new RPC Handler from the given services.

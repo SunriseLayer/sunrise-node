@@ -17,14 +17,14 @@ import (
 
 	"github.com/celestiaorg/go-fraud"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	headerfraud "github.com/sunrise-zone/sunrise-node/header/headertest/fraud"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/tests/swamp"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
-	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
+	"github.com/sunriselayer/sunrise-da/header"
+	headerfraud "github.com/sunriselayer/sunrise-da/header/headertest/fraud"
+	"github.com/sunriselayer/sunrise-da/nodebuilder"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/core"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/tests/swamp"
+	"github.com/sunriselayer/sunrise-da/share/eds"
+	"github.com/sunriselayer/sunrise-da/share/eds/byzantine"
 )
 
 /*

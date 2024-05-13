@@ -4,15 +4,15 @@ before:
   hooks:
     - go mod tidy
 builds:
-  - main: ./cmd/sunrise
-    binary: sunrise
+  - main: ./cmd/sunrise-da-da
+    binary: sunrise-da
     env:
       # NOTE: goreleaser doesn't fully support CGO natively. If CGO is needed
       # for any node features, this should be removed and a workaround might
       # need to be created.
       # REF: https://goreleaser.com/limitations/cgo/
       - CGO_ENABLED=0
-      - VersioningPath={{ "github.com/sunrise-zone/sunrise-node/nodebuilder/node" }}
+      - VersioningPath={{ "github.com/sunriselayer/sunrise-da/nodebuilder/node" }}
     goos:
       - linux
       - darwin

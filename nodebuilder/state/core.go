@@ -3,13 +3,13 @@ package state
 import (
 	libfraud "github.com/celestiaorg/go-fraud"
 	"github.com/celestiaorg/go-header/sync"
-	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/core"
-	modfraud "github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
-	"github.com/sunrise-zone/sunrise-node/share/eds/byzantine"
-	"github.com/sunrise-zone/sunrise-node/state"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/core"
+	modfraud "github.com/sunriselayer/sunrise-da/nodebuilder/fraud"
+	"github.com/sunriselayer/sunrise-da/share/eds/byzantine"
+	"github.com/sunriselayer/sunrise-da/state"
 )
 
 // coreAccessor constructs a new instance of state.Module over

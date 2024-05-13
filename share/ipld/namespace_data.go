@@ -13,7 +13,7 @@ import (
 
 	"github.com/celestiaorg/nmt"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 var ErrNamespaceOutsideRange = errors.New("share/ipld: " +

@@ -52,7 +52,7 @@ RUN uname -a &&\
     -u ${UID}
 
 # Copy in the binary
-COPY --from=builder /src/build/sunrise /bin/sunrise
+COPY --from=builder /src/build/sunrise-da /bin/sunrise-da
 COPY --from=builder /src/./cel-key /bin/cel-key
 
 COPY --chown=${USER_NAME}:${USER_NAME} docker/entrypoint.sh /opt/entrypoint.sh
@@ -62,4 +62,4 @@ USER ${USER_NAME}
 EXPOSE 2121
 
 ENTRYPOINT [ "/bin/bash", "/opt/entrypoint.sh" ]
-CMD [ "sunrise" ]
+CMD [ "sunrise-da" ]

@@ -13,15 +13,15 @@ import (
 
 	"github.com/celestiaorg/nmt"
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
-	"github.com/sunrise-zone/sunrise-app/pkg/wrapper"
+	"github.com/sunriselayer/sunrise/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/wrapper"
 
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/share"
-	"github.com/sunrise-zone/sunrise-node/share/eds"
-	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
-	"github.com/sunrise-zone/sunrise-node/share/ipld"
-	"github.com/sunrise-zone/sunrise-node/share/sharetest"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/share"
+	"github.com/sunriselayer/sunrise-da/share/eds"
+	"github.com/sunriselayer/sunrise-da/share/eds/edstest"
+	"github.com/sunriselayer/sunrise-da/share/ipld"
+	"github.com/sunriselayer/sunrise-da/share/sharetest"
 )
 
 func TestRepo(t *testing.T) {

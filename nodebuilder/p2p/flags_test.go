@@ -14,7 +14,7 @@ import (
 func TestParseNetwork_matchesByAlias(t *testing.T) {
 	cmd := createCmdWithNetworkFlag()
 
-	err := cmd.Flags().Set(networkFlag, "testnet")
+	err := cmd.Flags().Set(networkFlag, "sunrise-test-1")
 	require.NoError(t, err)
 
 	net, err := ParseNetwork(cmd)
@@ -27,12 +27,12 @@ func TestParseNetwork_matchesByAlias(t *testing.T) {
 func TestParseNetwork_matchesByValue(t *testing.T) {
 	cmd := createCmdWithNetworkFlag()
 
-	err := cmd.Flags().Set(networkFlag, string(Testnet))
+	err := cmd.Flags().Set(networkFlag, string(DefaultNetwork))
 	require.NoError(t, err)
 
 	net, err := ParseNetwork(cmd)
 	require.NoError(t, err)
-	assert.Equal(t, Testnet, net)
+	assert.Equal(t, DefaultNetwork, net)
 }
 
 // TestParseNetwork_parsesFromEnv checks to ensure flag parsing
@@ -117,7 +117,7 @@ func TestParseNetwork_envOverridesFlag(t *testing.T) {
 	t.Setenv(EnvCustomNetwork, "custom-network")
 
 	cmd := createCmdWithNetworkFlag()
-	err := cmd.Flags().Set(networkFlag, string(Mainnet))
+	err := cmd.Flags().Set(networkFlag, string("mocha"))
 	require.NoError(t, err)
 
 	network, err := ParseNetwork(cmd)

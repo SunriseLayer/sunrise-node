@@ -7,7 +7,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	cmdnode "github.com/sunrise-zone/sunrise-node/cmd"
+	cmdnode "github.com/sunriselayer/sunrise-da/cmd"
 )
 
 func WithSubcommands() func(*cobra.Command, []*pflag.FlagSet) {
@@ -48,7 +48,7 @@ func run() error {
 }
 
 var rootCmd = &cobra.Command{
-	Use: "sunrise [  bridge  ||  full ||  light  ] [subcommand]",
+	Use: "sunrise-da [  bridge  ||  full ||  light  ] [subcommand]",
 	Short: `
 	   _____                      _
 	  / ____|                    (_)

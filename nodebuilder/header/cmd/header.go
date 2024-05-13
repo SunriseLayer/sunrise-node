@@ -7,7 +7,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	cmdnode "github.com/sunrise-zone/sunrise-node/cmd"
+	cmdnode "github.com/sunriselayer/sunrise-da/cmd"
 )
 
 func init() {

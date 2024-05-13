@@ -2,6 +2,7 @@ package state
 
 import (
 	"context"
+	"encoding/hex"
 	"errors"
 	"fmt"
 	"math"
@@ -27,15 +28,15 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 
 	libhead "github.com/celestiaorg/go-header"
-	"github.com/sunrise-zone/sunrise-app/app"
-	apperrors "github.com/sunrise-zone/sunrise-app/app/errors"
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	pkgblob "github.com/sunrise-zone/sunrise-app/pkg/blob"
-	appblob "github.com/sunrise-zone/sunrise-app/x/blob"
-	apptypes "github.com/sunrise-zone/sunrise-app/x/blob/types"
+	"github.com/sunriselayer/sunrise/app"
+	apperrors "github.com/sunriselayer/sunrise/app/errors"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
+	pkgblob "github.com/sunriselayer/sunrise/pkg/blob"
+	appblob "github.com/sunriselayer/sunrise/x/blob"
+	apptypes "github.com/sunriselayer/sunrise/x/blob/types"
 
-	"github.com/sunrise-zone/sunrise-node/blob"
-	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunriselayer/sunrise-da/blob"
+	"github.com/sunriselayer/sunrise-da/header"
 )
 
 var (
@@ -130,6 +131,7 @@ func (ca *CoreAccessor) Start(ctx context.Context) error {
 	}
 	ca.rpcCli = cli
 
+	time.Sleep(time.Millisecond * 1000)
 	ca.minGasPrice, err = ca.queryMinimumGasPrice(ctx)
 	if err != nil {
 		return fmt.Errorf("querying minimum gas price: %w", err)
@@ -230,15 +232,17 @@ func (ca *CoreAccessor) SubmitPayForBlob(
 
 	var lastErr error
 	for attempt := 0; attempt < maxRetries; attempt++ {
+		// <sunrise-da>
 		response, err := appblob.SubmitPayForBlob(
 			ctx,
 			ca.signer,
 			ca.coreConn,
-			sdktx.BroadcastMode_BROADCAST_MODE_BLOCK,
+			sdktx.BroadcastMode_BROADCAST_MODE_SYNC,
 			appblobs,
 			apptypes.SetGasLimit(gasLim),
 			withFee(fee),
 		)
+		// </sunrise-da>
 
 		// the node is capable of changing the min gas price at any time so we must be able to detect it and
 		// update our version accordingly
@@ -290,15 +294,15 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 		return nil, err
 	}
 
+	// <sunrise-da>
 	kc := collections.PairKeyCodec(sdktypes.AccAddressKey, collections.StringKey)
-	key, err := collections.EncodeKeyWithPrefix(
-		banktypes.BalancesPrefix,
-		kc,
-		collections.Join(sdktypes.AccAddress(addr.Bytes()), app.BondDenom),
-	)
+	subkey := collections.Join(sdktypes.AccAddress(addr.Bytes()), app.BondDenom)
+	key, err := collections.EncodeKeyWithPrefix(banktypes.BalancesPrefix, kc, subkey)
 	if err != nil {
 		return nil, err
 	}
+	// </sunrise-da>
+
 	abciReq := abci.RequestQuery{
 		// TODO @renayay: once https://github.com/cosmos/cosmos-sdk/pull/12674 is merged, use const instead
 		Path:   fmt.Sprintf("store/%s/key", banktypes.StoreKey),
@@ -331,16 +335,18 @@ func (ca *CoreAccessor) BalanceForAddress(ctx context.Context, addr Address) (*B
 	if !ok {
 		return nil, fmt.Errorf("cannot convert %s into sdktypes.Int", string(value))
 	}
+	// <sunrise-da>
 	// verify balance
 	err = ca.prt.VerifyValue(
 		result.Response.GetProofOps(),
 		head.AppHash,
-		fmt.Sprintf("store/%s/key/%s", banktypes.StoreKey, key),
+		fmt.Sprintf("/%s/%s", banktypes.StoreKey, fmt.Sprintf("x:%s", hex.EncodeToString(key))),
 		value,
 	)
 	if err != nil {
 		return nil, err
 	}
+	// </sunrise-da>
 
 	return &Balance{
 		Denom:  app.BondDenom,

@@ -7,8 +7,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/sunrise-zone/sunrise-node/api/docgen"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder"
+	"github.com/sunriselayer/sunrise-da/api/docgen"
+	"github.com/sunriselayer/sunrise-da/nodebuilder"
 )
 
 var rootCmd = &cobra.Command{

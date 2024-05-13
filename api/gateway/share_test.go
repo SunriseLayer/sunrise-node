@@ -6,11 +6,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/pkg/blob"
-	"github.com/sunrise-zone/sunrise-app/pkg/shares"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/pkg/blob"
+	"github.com/sunriselayer/sunrise/pkg/shares"
 
-	"github.com/sunrise-zone/sunrise-node/share/sharetest"
+	"github.com/sunriselayer/sunrise-da/share/sharetest"
 )
 
 func Test_dataFromShares(t *testing.T) {

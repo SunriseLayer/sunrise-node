@@ -6,10 +6,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/sunrise-zone/sunrise-node/core"
-	coremodule "github.com/sunrise-zone/sunrise-node/nodebuilder/core"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/core"
+	coremodule "github.com/sunriselayer/sunrise-da/nodebuilder/core"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
 )
 
 func TestBridge_WithMockedCoreClient(t *testing.T) {

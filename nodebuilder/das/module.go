@@ -5,10 +5,10 @@ import (
 
 	"go.uber.org/fx"
 
-	"github.com/sunrise-zone/sunrise-node/das"
-	"github.com/sunrise-zone/sunrise-node/header"
-	modfraud "github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
+	"github.com/sunriselayer/sunrise-da/das"
+	"github.com/sunriselayer/sunrise-da/header"
+	modfraud "github.com/sunriselayer/sunrise-da/nodebuilder/fraud"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
 )
 
 func ConstructModule(tp node.Type, cfg *Config) fx.Option {

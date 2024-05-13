@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/celestiaorg/rsmt2d"
-	"github.com/sunrise-zone/sunrise-app/pkg/da"
+	"github.com/sunriselayer/sunrise/pkg/da"
 
-	"github.com/sunrise-zone/sunrise-node/share/eds/edstest"
+	"github.com/sunriselayer/sunrise-da/share/eds/edstest"
 )
 
 // TestNamespaceFromCID checks that deriving the Namespaced hash from

@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/shares"
+	"github.com/sunriselayer/sunrise/pkg/shares"
 )
 
 // parser is a helper struct that allows collecting shares and transforming them into the blob.

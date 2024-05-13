@@ -8,7 +8,7 @@ import (
 	"github.com/celestiaorg/go-header/p2p"
 	"github.com/celestiaorg/go-header/sync"
 
-	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunriselayer/sunrise-da/header"
 )
 
 // Service represents the header Service that can be started / stopped on a node.

@@ -13,11 +13,11 @@ import (
 	"github.com/celestiaorg/go-header/p2p"
 	"github.com/celestiaorg/go-header/sync"
 
-	"github.com/sunrise-zone/sunrise-node/header"
-	"github.com/sunrise-zone/sunrise-node/libs/pidstore"
-	modfraud "github.com/sunrise-zone/sunrise-node/nodebuilder/fraud"
-	"github.com/sunrise-zone/sunrise-node/nodebuilder/node"
-	modp2p "github.com/sunrise-zone/sunrise-node/nodebuilder/p2p"
+	"github.com/sunriselayer/sunrise-da/header"
+	"github.com/sunriselayer/sunrise-da/libs/pidstore"
+	modfraud "github.com/sunriselayer/sunrise-da/nodebuilder/fraud"
+	"github.com/sunriselayer/sunrise-da/nodebuilder/node"
+	modp2p "github.com/sunriselayer/sunrise-da/nodebuilder/p2p"
 )
 
 var log = logging.Logger("module/header")

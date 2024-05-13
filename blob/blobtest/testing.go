@@ -3,12 +3,12 @@ package blobtest
 import (
 	tmrand "github.com/cometbft/cometbft/libs/rand"
 
-	"github.com/sunrise-zone/sunrise-app/pkg/appconsts"
-	"github.com/sunrise-zone/sunrise-app/pkg/blob"
-	"github.com/sunrise-zone/sunrise-app/pkg/shares"
-	"github.com/sunrise-zone/sunrise-app/test/util/testfactory"
+	"github.com/sunriselayer/sunrise/pkg/appconsts"
+	"github.com/sunriselayer/sunrise/pkg/blob"
+	"github.com/sunriselayer/sunrise/pkg/shares"
+	"github.com/sunriselayer/sunrise/test/util/testfactory"
 
-	"github.com/sunrise-zone/sunrise-node/share"
+	"github.com/sunriselayer/sunrise-da/share"
 )
 
 // GenerateV0Blobs is a test utility producing v0 share formatted blobs with the

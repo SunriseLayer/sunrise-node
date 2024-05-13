@@ -3,7 +3,7 @@ package light
 import (
 	"context"
 
-	"github.com/sunrise-zone/sunrise-node/header"
+	"github.com/sunriselayer/sunrise-da/header"
 )
 
 type Pruner struct{}
