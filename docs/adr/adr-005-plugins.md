@@ -270,5 +270,5 @@ Proposed
 ## References
 
 - blocking a refactor of dalc [#55](https://github.com/celestiaorg/dalc/pull/55)
-- first discussed and current implementation [#407](https://github.com/sunriselayer/sunrise-da/pull/407)
-- initial issue [#406](https://github.com/sunriselayer/sunrise-da/issues/406)
+- first discussed and current implementation [#407](https://github.com/celestiaorg/celestia-node/pull/407)
+- initial issue [#406](https://github.com/celestiaorg/celestia-node/issues/406)

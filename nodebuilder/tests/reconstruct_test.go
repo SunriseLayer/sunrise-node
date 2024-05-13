@@ -283,7 +283,7 @@ func TestFullReconstructFromLights(t *testing.T) {
 	addrsBridge, err := peer.AddrInfoToP2pAddrs(host.InfoFromHost(bridge.Host))
 	require.NoError(t, err)
 
-	os.Setenv(p2p.EnvKeyCelestiaBootstrapper, "true")
+	os.Setenv(p2p.EnvKeySunriseBootstrapper, "true")
 	cfg.Header.TrustedPeers = []string{
 		"/ip4/1.2.3.4/tcp/12345/p2p/12D3KooWNaJ1y1Yio3fFJEXCZyd1Cat3jmrPdgkYCrHfKD3Ce21p",
 	}
@@ -305,7 +305,7 @@ func TestFullReconstructFromLights(t *testing.T) {
 	cfg.Header.TrustedPeers = append(cfg.Header.TrustedPeers, addrsBridge[0].String())
 	nodesConfig := nodebuilder.WithBootstrappers([]peer.AddrInfo{*bootstrapperAddr})
 	full := sw.NewNodeWithConfig(node.Full, cfg, nodesConfig)
-	os.Setenv(p2p.EnvKeyCelestiaBootstrapper, "false")
+	os.Setenv(p2p.EnvKeySunriseBootstrapper, "false")
 
 	lights := make([]*nodebuilder.Node, lnodes)
 	subs := make([]event.Subscription, lnodes)

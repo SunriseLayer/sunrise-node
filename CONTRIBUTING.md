@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for your interest in contributing to Celestia-Node!
+Thank you for your interest in contributing to Sunrise-Node!
 
 All work on the code base should be motivated by [our Github
 issues](https://github.com/sunriselayer/sunrise-da/issues). If you
@@ -81,7 +81,7 @@ Before merging a pull request:
 
 ### Git Commit Style
 
-We follow the [Go style guide on commit messages](https://tip.golang.org/doc/contribute.html#commit_messages). Write concise commits that start with the package name and have a description that finishes the sentence "This change modifies Celestia-Node to...". For example,
+We follow the [Go style guide on commit messages](https://tip.golang.org/doc/contribute.html#commit_messages). Write concise commits that start with the package name and have a description that finishes the sentence "This change modifies Sunrise-Node to...". For example,
 
 ```sh
 cmd/debug: execute p.Signal only when p is not nil

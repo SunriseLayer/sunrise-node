@@ -38,7 +38,7 @@ func dataExchange(params bitSwapParams) exchange.Interface {
 		params.Bs,
 		server.ProvideEnabled(false), // we don't provide blocks over DHT
 		// NOTE: These below are required for our protocol to work reliably.
-		// // See https://github.com/sunriselayer/sunrise-da/issues/732
+		// // See https://github.com/celestiaorg/celestia-node/issues/732
 		server.SetSendDontHaves(false),
 	)
 

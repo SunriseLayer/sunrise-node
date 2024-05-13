@@ -8,10 +8,10 @@ import (
 	ma "github.com/multiformats/go-multiaddr"
 )
 
-const EnvKeyCelestiaBootstrapper = "CELESTIA_BOOTSTRAPPER"
+const EnvKeySunriseBootstrapper = "SUNRISE_BOOTSTRAPPER"
 
 func isBootstrapper() bool {
-	return os.Getenv(EnvKeyCelestiaBootstrapper) == strconv.FormatBool(true)
+	return os.Getenv(EnvKeySunriseBootstrapper) == strconv.FormatBool(true)
 }
 
 // BootstrappersFor returns address information of bootstrap peers for a given network.

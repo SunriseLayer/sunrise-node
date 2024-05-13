@@ -1,4 +1,4 @@
-# Sunrise Node
+# Sunrise DA
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/sunriselayer/sunrise-da.svg)](https://pkg.go.dev/github.com/sunriselayer/sunrise-da)
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/celestiaorg/celestia-node)](https://github.com/sunriselayer/sunrise-da/releases/latest)
@@ -16,7 +16,7 @@ Continue reading [here](https://blog.celestia.org/celestia-mvp-release-data-avai
 
 ## Table of Contents
 
-- [Sunrise Node](#sunrise-da)
+- [Sunrise DA](#sunrise-da)
   - [Table of Contents](#table-of-contents)
   - [Minimum requirements](#minimum-requirements)
   - [System Requirements](#system-requirements)
@@ -24,14 +24,15 @@ Continue reading [here](https://blog.celestia.org/celestia-mvp-release-data-avai
   - [API docs](#api-docs)
   - [Node types](#node-types)
   - [Run a node](#run-a-node)
+  - [Network](#network)
   - [Environment variables](#environment-variables)
   - [Package-specific documentation](#package-specific-documentation)
-  - [Code of Conduct](#code-of-conduct)
+  <!-- - [Code of Conduct](#code-of-conduct) -->
 
 ## Minimum requirements
 
 | Requirement | Notes          |
-| ----------- |----------------|
+| ----------- | -------------- |
 | Go version  | 1.22 or higher |
 
 ## System Requirements
@@ -119,16 +120,17 @@ sunrise-da light start --core.ip <URI> --p2p.network <NAME>
 
 ## Environment variables
 
-| Variable                | Explanation                         | Default value | Required |
-| ----------------------- | ----------------------------------- | ------------- | -------- |
-| `CELESTIA_BOOTSTRAPPER` | Start the node in bootstrapper mode | `false`       | Optional |
+| Variable               | Explanation                         | Default value | Required |
+| ---------------------- | ----------------------------------- | ------------- | -------- |
+| `SUNRISE_BOOTSTRAPPER` | Start the node in bootstrapper mode | `false`       | Optional |
 
 ## Package-specific documentation
 
 - [Header](./header/doc.go)
 - [Share](./share/doc.go)
 - [DAS](./das/doc.go)
-
+<!-- 
 ## Code of Conduct
 
 See our Code of Conduct [here](https://docs.celestia.org/community/coc).
+-->
