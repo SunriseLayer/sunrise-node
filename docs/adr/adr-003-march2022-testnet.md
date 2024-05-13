@@ -185,8 +185,8 @@ for
 
 ### [Move IPLD from celetia-node repo into its own repo](https://github.com/celestiaorg/celestia-node/issues/111)
 
-Since the IPLD package is pretty much entirely separate from the sunrise-node implementation, it makes sense that it
-is removed from the sunrise-node repository and maintained separately. The extraction of IPLD should also include a
+Since the IPLD package is pretty much entirely separate from the sunrise-da implementation, it makes sense that it
+is removed from the sunrise-da repository and maintained separately. The extraction of IPLD should also include a
 review and refactoring as there are still some legacy components that are either no longer necessary and the
 documentation also needs updating.
 
