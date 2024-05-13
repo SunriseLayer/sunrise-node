@@ -1,4 +1,4 @@
-# Sunrise Node
+# Sunrise DA
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/sunriselayer/sunrise-da.svg)](https://pkg.go.dev/github.com/sunriselayer/sunrise-da)
 [![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/celestiaorg/celestia-node)](https://github.com/sunriselayer/sunrise-da/releases/latest)
@@ -16,7 +16,7 @@ Continue reading [here](https://blog.celestia.org/celestia-mvp-release-data-avai
 
 ## Table of Contents
 
-- [Sunrise Node](#sunrise-da)
+- [Sunrise DA](#sunrise-da)
   - [Table of Contents](#table-of-contents)
   - [Minimum requirements](#minimum-requirements)
   - [System Requirements](#system-requirements)
